@@ -28,7 +28,7 @@ public class MetricsStochasticBalancer extends MetricsBalancer {
   /**
    * Use the stochastic source instead of the default source.
    */
-  protected MetricsStochasticBalancerSource stochasticSource = null;
+  private MetricsStochasticBalancerSource stochasticSource = null;
 
   public MetricsStochasticBalancer() {
     initSource();

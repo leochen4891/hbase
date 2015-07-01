@@ -18,9 +18,6 @@
 
 package org.apache.hadoop.hbase.master.balancer;
 
-
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.metrics2.MetricsCollector;
 import org.apache.hadoop.metrics2.MetricsRecordBuilder;
 import org.apache.hadoop.metrics2.lib.Interns;
@@ -30,8 +27,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceImpl implements
     MetricsStochasticBalancerSource {
-  private static final Log LOG = LogFactory.getLog(MetricsBalancerSourceImpl.class);
-  Map<String, Map<String, Double>> stochasticCosts =
+  private static final String TABLE_FUNCTION_SEP = "_";
+  private Map<String, Map<String, Double>> stochasticCosts =
       new ConcurrentHashMap<String, Map<String, Double>>();
 
   /**
@@ -43,13 +40,13 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
       return;
     }
 
-    Map<String, Double> map = stochasticCosts.get(tableName);
-    if (map == null) {
-      map = new ConcurrentHashMap<String, Double>();
+    Map<String, Double> costs= stochasticCosts.get(tableName);
+    if (costs== null) {
+      costs= new ConcurrentHashMap<String, Double>();
     }
 
-    map.put(costFunctionName, value);
-    stochasticCosts.put(tableName, map);
+    costs.put(costFunctionName, value);
+    stochasticCosts.put(tableName, costs);
   }
 
   @Override
@@ -61,7 +58,7 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
         Map<String, Double> costs = stochasticCosts.get(tableName);
         for (String key : costs.keySet()) {
           double cost = costs.get(key);
-          String attrName = tableName + ((tableName.length() <= 0) ? "" : "_") + key;
+          String attrName = tableName + ((tableName.length() <= 0) ? "" : TABLE_FUNCTION_SEP) + key;
           metricsRecordBuilder.addGauge(Interns.info(attrName, attrName), cost);
         }
       }
