@@ -18,20 +18,35 @@
 
 package org.apache.hadoop.hbase.master.balancer;
 
+import java.util.Collections;
+import java.util.LinkedHashMap;
+import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import org.apache.hadoop.metrics2.MetricsCollector;
 import org.apache.hadoop.metrics2.MetricsRecordBuilder;
 import org.apache.hadoop.metrics2.lib.Interns;
 
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-
 public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceImpl implements
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
-  // FIXME: This map is ever growing in a dynamic cluster where tables are short lived.
-  //        Need to find a way to clean unused costs. For details, refer HBASE-13965
-  private Map<String, Map<String, Double>> stochasticCosts =
-      new ConcurrentHashMap<String, Map<String, Double>>();
+  private static final int MRU_SIZE = 1000;
+  private static final float MRU_LOAD_FACTOR = 0.75f;
+  private static final int MRU_CAPACITY = (int)Math.ceil(MRU_SIZE/MRU_LOAD_FACTOR) + 1;
+
+  private Map<String, Map<String, Double>> stochasticCosts = null; 
+  
+  public MetricsStochasticBalancerSourceImpl() {
+    stochasticCosts = Collections.synchronizedMap(
+        new LinkedHashMap<String, Map<String, Double>>(MRU_CAPACITY, MRU_LOAD_FACTOR, true) {
+          private static final long serialVersionUID = 8204713453436906599L;
+
+          @Override
+          protected boolean removeEldestEntry(Map.Entry<String, Map<String, Double>> eldest) {
+            return size() > MRU_SIZE;
+          }
+        });
+  }
 
   /**
    * The function that report stochastic load balancer costs to JMX
