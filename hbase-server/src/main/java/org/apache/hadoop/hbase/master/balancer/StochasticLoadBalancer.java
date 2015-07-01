@@ -435,7 +435,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
    * Get the names of the cost functions
    */
   public String[] getCostFunctionNames() {
-    if (null == costFunctions) return null;
+    if (costFunctions == null) return null;
     String[] ret = new String[costFunctions.length];
     for (int i = 0; i < costFunctions.length; i++) {
       CostFunction c = costFunctions[i];
@@ -1425,21 +1425,21 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       for (List<HRegionInfo> list: clusterState.values()) {
         for(HRegionInfo info : list) {
           TableName name = info.getTable();
-          if (null != name) tableName = name.getNameAsString();
-          if (null != tableName) break;
+          if (name != null) tableName = name.getNameAsString();
+          if (tableName != null) break;
         }
-          if (null != tableName) break;
+          if (tableName != null) break;
       }
       
       // table name cannot be null
-      return (null == tableName?"":tableName);
+      return (tableName==null?"":tableName);
   }
 
   /**
    * A helper function to compose the attribute name from tablename and costfunction name
    */
   public static String composeAttributeName(String tableName, String costFunctionName) {
-    if (null == tableName) tableName = "";
+    if (tableName == null) tableName = "";
     return tableName + ((tableName.length() <= 0) ? "" : "_") + costFunctionName;
   }
 }
