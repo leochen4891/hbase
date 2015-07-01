@@ -39,6 +39,8 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.ClusterStatus;
+import org.apache.hadoop.hbase.CompatibilitySingletonFactory;
+import org.apache.hadoop.hbase.CompatibilitySingletonFactory.SingletonStorage;
 import org.apache.hadoop.hbase.HBaseIOException;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.RegionLoad;
@@ -79,6 +81,24 @@ public abstract class BaseLoadBalancer implements LoadBalancer {
     public String getRack(ServerName server) {
       return UNKNOWN_RACK;
     }
+  }
+  
+  /**
+   * The constructor that uses the basic MetricsBalancer
+   */
+  protected BaseLoadBalancer() {
+    metricsBalancer = new MetricsBalancer();
+  }
+  
+  /**
+   * This constructor that accepts an instance of MetricsBalancer, 
+   * which will be used instead of creating a new one
+   */
+  protected BaseLoadBalancer(MetricsBalancer metricsBalancer) {
+    if (metricsBalancer != null)
+      this.metricsBalancer = metricsBalancer; 
+    else
+      this.metricsBalancer = new MetricsBalancer();
   }
 
   /**
@@ -803,7 +823,7 @@ public abstract class BaseLoadBalancer implements LoadBalancer {
     "hbase.balancer.tablesOnMaster";
 
   protected final Set<String> tablesOnMaster = new HashSet<String>();
-  protected final MetricsBalancer metricsBalancer = new MetricsBalancer();
+  protected MetricsBalancer metricsBalancer = null;
   protected ClusterStatus clusterStatus = null;
   protected ServerName masterServerName;
   protected MasterServices services;
