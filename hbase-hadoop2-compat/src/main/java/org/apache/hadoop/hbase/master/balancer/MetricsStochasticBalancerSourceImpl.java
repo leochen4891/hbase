@@ -28,6 +28,8 @@ import java.util.concurrent.ConcurrentHashMap;
 public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceImpl implements
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
+  // FIXME: This map is ever growing in a dynamic cluster where tables are short lived.
+  //        Need to find a way to clean unused costs. For details, refer HBASE-13965
   private Map<String, Map<String, Double>> stochasticCosts =
       new ConcurrentHashMap<String, Map<String, Double>>();
 
