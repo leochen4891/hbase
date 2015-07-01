@@ -28,6 +28,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
+import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
@@ -38,6 +39,7 @@ import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.RegionLoad;
 import org.apache.hadoop.hbase.ServerLoad;
 import org.apache.hadoop.hbase.ServerName;
+import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.master.MasterServices;
 import org.apache.hadoop.hbase.master.RegionPlan;
 import org.apache.hadoop.hbase.master.balancer.BaseLoadBalancer.Cluster.Action;
@@ -117,12 +119,26 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   private CandidateGenerator[] candidateGenerators;
   private CostFromRegionLoadFunction[] regionLoadFunctions;
   private CostFunction[] costFunctions;
+
+  // to save and report costs to JMX
+  private Double curOverallCost;
+  private Double[] lastSubcosts;
+  private Double[] curSubcosts;
+
   // Keep locality based picker and cost function to alert them
   // when new services are offered
   private LocalityBasedCandidateGenerator localityCandidateGenerator;
   private LocalityCostFunction localityCost;
   private RegionReplicaHostCostFunction regionReplicaHostCostFunction;
   private RegionReplicaRackCostFunction regionReplicaRackCostFunction;
+  
+  /**
+   * The constructor that pass a MetricsStochasticBalancer to BaseLoadBalancer to replace its
+   * default MetricsBalancer
+   */
+  public StochasticLoadBalancer() {
+    super(new MetricsStochasticBalancer());
+  }
 
   @Override
   public void onConfigurationChange(Configuration conf) {
@@ -177,6 +193,10 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       regionLoadFunctions[2],
       regionLoadFunctions[3],
     };
+    
+    lastSubcosts = new Double[costFunctions.length];
+    curSubcosts = new Double[costFunctions.length];
+
   }
 
   @Override
@@ -277,6 +297,11 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       // Should this be kept?
       if (newCost < currentCost) {
         currentCost = newCost;
+
+        curOverallCost = currentCost;
+        for (int i = 0; i < this.curSubcosts.length; i++) {
+          curSubcosts[i] = lastSubcosts[i];
+        }
       } else {
         // Put things back the way they were before.
         // TODO: undo by remembering old values
@@ -304,6 +329,23 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
             + plans.size() + " regions; Going from a computed cost of "
             + initCost + " to a new cost of " + currentCost);
       }
+
+      // check if the metricsBalancer is MetricsStochasticBalancer before casting
+      if (metricsBalancer instanceof MetricsStochasticBalancer) {
+        String tableName = getTableNameFromCluster(clusterState);
+        // overall cost
+        ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName, "Overall",
+          "Overall cost", curOverallCost);
+
+        // each cost function
+        for (int i = 0; i < costFunctions.length; i++) {
+          CostFunction costFunction = costFunctions[i];
+          String costFunctionName = costFunction.getClass().getSimpleName();
+          ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName,
+            costFunctionName, costFunctionName, curSubcosts[i]);
+        }
+      }
+
       return plans;
     }
     if (LOG.isDebugEnabled()) {
@@ -390,6 +432,20 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   }
 
   /**
+   * Get the names of the cost functions
+   */
+  public String[] getCostFunctionNames() {
+    if (null == costFunctions) return null;
+    String[] ret = new String[costFunctions.length];
+    for (int i = 0; i < costFunctions.length; i++) {
+      CostFunction c = costFunctions[i];
+      ret[i] = c.getClass().getSimpleName();
+    }
+
+    return ret;
+  }
+
+  /**
    * This is the main cost function.  It will compute a cost associated with a proposed cluster
    * state.  All different costs will be combined with their multipliers to produce a double cost.
    *
@@ -401,17 +457,25 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   protected double computeCost(Cluster cluster, double previousCost) {
     double total = 0;
 
-    for (CostFunction c:costFunctions) {
+    for (int i = 0; i < costFunctions.length; i++) {
+      CostFunction c = costFunctions[i];
+      this.lastSubcosts[i] = 0.0;
+      
       if (c.getMultiplier() <= 0) {
         continue;
       }
 
-      total += c.getMultiplier() * c.cost();
+      Float multiplier = c.getMultiplier();
+      Double cost = c.cost();
+
+      this.lastSubcosts[i] = multiplier*cost;
+      total += multiplier * cost;
 
       if (total > previousCost) {
-        return total;
+        break;
       }
     }
+    
     return total;
   }
 
@@ -1348,5 +1412,34 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     protected double getCostFromRl(RegionLoad rl) {
       return rl.getStorefileSizeMB();
     }
+  }
+  
+  /**
+   * A temporary function to get the table name used as key in assignmentsByTable in HMaster's balance()
+   * // TODO: find better way to get the table name? 
+   */
+  public static String getTableNameFromCluster( Map<ServerName, List<HRegionInfo>> clusterState) {
+    String tableName = null;
+
+      // find the first region with not empty table name
+      for (List<HRegionInfo> list: clusterState.values()) {
+        for(HRegionInfo info : list) {
+          TableName name = info.getTable();
+          if (null != name) tableName = name.getNameAsString();
+          if (null != tableName) break;
+        }
+          if (null != tableName) break;
+      }
+      
+      // table name cannot be null
+      return (null == tableName?"":tableName);
+  }
+
+  /**
+   * A helper function to compose the attribute name from tablename and costfunction name
+   */
+  public static String composeAttributeName(String tableName, String costFunctionName) {
+    if (null == tableName) tableName = "";
+    return tableName + ((tableName.length() <= 0) ? "" : "_") + costFunctionName;
   }
 }

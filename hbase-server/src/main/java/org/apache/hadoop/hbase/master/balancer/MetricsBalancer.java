@@ -25,9 +25,13 @@ import org.apache.hadoop.hbase.CompatibilitySingletonFactory;
  */
 public class MetricsBalancer {
 
-  private final MetricsBalancerSource source;
+  private MetricsBalancerSource source = null;
 
   public MetricsBalancer() {
+    initSource();
+  }
+  
+  protected void initSource() {
     source = CompatibilitySingletonFactory.getInstance(MetricsBalancerSource.class);
   }
 
