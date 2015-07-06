@@ -28,7 +28,6 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Random;
 
-import org.apache.commons.lang.StringUtils;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
@@ -566,7 +565,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       return getAction(thisServer, thisRegion, otherServer, otherRegion);
     }
 
-    protected Cluster.Action getAction (int fromServer, int fromRegion,
+    protected Cluster.Action getAction(int fromServer, int fromRegion,
         int toServer, int toRegion) {
       if (fromServer < 0 || toServer < 0) {
         return Cluster.NullAction;
@@ -774,7 +773,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
       int toServerIndex = pickOtherRandomServer(cluster, serverIndex);
       int toRegionIndex = pickRandomRegion(cluster, toServerIndex, 0.9f);
-      return getAction (serverIndex, regionIndex, toServerIndex, toRegionIndex);
+      return getAction(serverIndex, regionIndex, toServerIndex, toRegionIndex);
     }
   }
 
@@ -807,7 +806,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       int rand = RANDOM.nextInt(cluster.serversPerRack[toRackIndex].length);
       int toServerIndex = cluster.serversPerRack[toRackIndex][rand];
       int toRegionIndex = pickRandomRegion(cluster, toServerIndex, 0.9f);
-      return getAction (serverIndex, regionIndex, toServerIndex, toRegionIndex);
+      return getAction(serverIndex, regionIndex, toServerIndex, toRegionIndex);
     }
   }
 
@@ -1341,7 +1340,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
     public RegionReplicaRackCostFunction(Configuration conf) {
       super(conf);
-      this.setMultiplier(conf.getFloat(REGION_REPLICA_RACK_COST_KEY, DEFAULT_REGION_REPLICA_RACK_COST_KEY));
+      this.setMultiplier(conf.getFloat(REGION_REPLICA_RACK_COST_KEY, 
+        DEFAULT_REGION_REPLICA_RACK_COST_KEY));
     }
 
     @Override
@@ -1415,10 +1415,10 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   }
   
   /**
-   * A temporary function to get the table name used as key in assignmentsByTable in HMaster's balance()
+   * Get the table name used as key in assignmentsByTable in HMaster's balance()
    * // TODO: find better way to get the table name? 
    */
-  public static String getTableNameFromCluster( Map<ServerName, List<HRegionInfo>> clusterState) {
+  public static String getTableNameFromCluster(Map<ServerName, List<HRegionInfo>> clusterState) {
     String tableName = null;
 
       // find the first region with not empty table name

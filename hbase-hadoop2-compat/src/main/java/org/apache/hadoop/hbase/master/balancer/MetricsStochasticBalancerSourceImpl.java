@@ -21,6 +21,7 @@ package org.apache.hadoop.hbase.master.balancer;
 import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 import org.apache.hadoop.metrics2.MetricsCollector;
@@ -30,6 +31,9 @@ import org.apache.hadoop.metrics2.lib.Interns;
 public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceImpl implements
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
+  
+  // TODO this MRU_SIZE is the limit of how many metrics can be reported for stochastic load balancer
+  // It is hard-coded right now, and may be better if is configurable
   private static final int MRU_SIZE = 1000;
   private static final float MRU_LOAD_FACTOR = 0.75f;
   private static final int MRU_CAPACITY = (int)Math.ceil(MRU_SIZE/MRU_LOAD_FACTOR) + 1;
