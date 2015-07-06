@@ -121,8 +121,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
   // to save and report costs to JMX
   private Double curOverallCost;
-  private Double[] lastSubcosts;
-  private Double[] curSubcosts;
+  private Double[] lastSubCosts;
+  private Double[] curSubCosts;
 
   // Keep locality based picker and cost function to alert them
   // when new services are offered
@@ -193,8 +193,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       regionLoadFunctions[3],
     };
     
-    lastSubcosts = new Double[costFunctions.length];
-    curSubcosts = new Double[costFunctions.length];
+    lastSubCosts = new Double[costFunctions.length];
+    curSubCosts = new Double[costFunctions.length];
 
   }
 
@@ -298,8 +298,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
         currentCost = newCost;
 
         curOverallCost = currentCost;
-        for (int i = 0; i < this.curSubcosts.length; i++) {
-          curSubcosts[i] = lastSubcosts[i];
+        for (int i = 0; i < this.curSubCosts.length; i++) {
+          curSubCosts[i] = lastSubCosts[i];
         }
       } else {
         // Put things back the way they were before.
@@ -341,7 +341,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
           CostFunction costFunction = costFunctions[i];
           String costFunctionName = costFunction.getClass().getSimpleName();
           ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName,
-            costFunctionName, costFunctionName, curSubcosts[i]);
+            costFunctionName, costFunctionName, curSubCosts[i]);
         }
       }
 
@@ -458,7 +458,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
     for (int i = 0; i < costFunctions.length; i++) {
       CostFunction c = costFunctions[i];
-      this.lastSubcosts[i] = 0.0;
+      this.lastSubCosts[i] = 0.0;
       
       if (c.getMultiplier() <= 0) {
         continue;
@@ -467,8 +467,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       Float multiplier = c.getMultiplier();
       Double cost = c.cost();
 
-      this.lastSubcosts[i] = multiplier*cost;
-      total += multiplier * cost;
+      this.lastSubCosts[i] = multiplier*cost;
+      total += this.lastSubCosts[i];
 
       if (total > previousCost) {
         break;
