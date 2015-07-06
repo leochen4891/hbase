@@ -21,29 +21,44 @@ package org.apache.hadoop.hbase.master.balancer;
 import org.apache.hadoop.hbase.CompatibilitySingletonFactory;
 
 /**
- * Faced for exposing metrics about the balancer.
+ * This metrics balancer uses extended source for stochastic load balancer
+ * to report its related metrics to JMX. For details, refer to HBASE-13965
  */
-public class MetricsBalancer {
+public class MetricsStochasticBalancer extends MetricsBalancer {
+  /**
+   * Use the stochastic source instead of the default source.
+   */
+  private MetricsStochasticBalancerSource stochasticSource = null;
 
-  private MetricsBalancerSource source = null;
-
-  public MetricsBalancer() {
+  public MetricsStochasticBalancer() {
     initSource();
   }
-  
+
   /**
-   * A function to instantiate the metrics source. This function can be overridden in its 
-   * subclasses to provide extended sources
+   * This function overrides the initSource in the MetricsBalancer, use
+   * MetricsStochasticBalancerSource instead of the MetricsBalancerSource.
    */
+  @Override
   protected void initSource() {
-    source = CompatibilitySingletonFactory.getInstance(MetricsBalancerSource.class);
+    stochasticSource =
+        CompatibilitySingletonFactory.getInstance(MetricsStochasticBalancerSource.class);
   }
 
+  @Override
   public void balanceCluster(long time) {
-    source.updateBalanceCluster(time);
+    stochasticSource.updateBalanceCluster(time);
   }
 
+  @Override
   public void incrMiscInvocations() {
-    source.incrMiscInvocations();
+    stochasticSource.incrMiscInvocations();
+  }
+
+  /**
+   * The function that report stochastic load balancer costs to JMX
+   */
+  public void updateStochasticCost(String tableName, String costFunctionName,
+      String costFunctionDesc, Double value) {
+    stochasticSource.updateStochasticCost(tableName, costFunctionName, costFunctionDesc, value);
   }
 }
