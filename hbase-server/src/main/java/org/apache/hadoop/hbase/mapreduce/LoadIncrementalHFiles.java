@@ -574,6 +574,7 @@ public class LoadIncrementalHFiles extends Configured implements Tool {
     FileSystem fs = tmpDir.getFileSystem(getConf());
     fs.setPermission(tmpDir, FsPermission.valueOf("-rwxrwxrwx"));
     fs.setPermission(botOut, FsPermission.valueOf("-rwxrwxrwx"));
+    fs.setPermission(topOut, FsPermission.valueOf("-rwxrwxrwx"));
 
     // Add these back at the *front* of the queue, so there's a lower
     // chance that the region will just split again before we get there.
@@ -826,8 +827,7 @@ public class LoadIncrementalHFiles extends Configured implements Tool {
       HFileScanner scanner = halfReader.getScanner(false, false, false);
       scanner.seekTo();
       do {
-        KeyValue kv = KeyValueUtil.ensureKeyValue(scanner.getKeyValue());
-        halfWriter.append(kv);
+        halfWriter.append(scanner.getCell());
       } while (scanner.next());
 
       for (Map.Entry<byte[],byte[]> entry : fileInfo.entrySet()) {
