@@ -20,13 +20,9 @@ package org.apache.hadoop.hbase.master.balancer;
 
 import java.util.Collections;
 import java.util.LinkedHashMap;
-import java.util.LinkedList;
-import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.metrics2.MetricsCollector;
 import org.apache.hadoop.metrics2.MetricsRecordBuilder;
@@ -36,47 +32,49 @@ import org.apache.hadoop.metrics2.lib.Interns;
 public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceImpl implements
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
-  
-  // TODO this MRU_SIZE is the limit of how many metrics can be reported for stochastic load balancer
-  // It is hard-coded right now, and may be better if is configurable
+
+  // TODO this MRU_SIZE is the limit of how many metrics can be reported for stochastic load
+  // balancer. It is hard-coded right now, and may be better if is configurable. HBASE-13965
   private static final int MRU_SIZE = 1000;
   private static final float MRU_LOAD_FACTOR = 0.75f;
-  private static final int MRU_CAPACITY = (int)Math.ceil(MRU_SIZE/MRU_LOAD_FACTOR) + 1;
-  private static final Log LOG = LogFactory.getLog(MetricsStochasticBalancerSourceImpl.class);
+  private static final int MRU_CAPACITY = (int) Math.ceil(MRU_SIZE / MRU_LOAD_FACTOR) + 1;
 
-  private Map<String, Map<String, List<Object>>> stochasticCosts = null; 
-  
+  private Map<String, Map<String, Double>> stochasticCosts = null;
+  private Map<String, String> costFunctionDescs = null;
+
   public MetricsStochasticBalancerSourceImpl() {
-    stochasticCosts = Collections.synchronizedMap(
-        new LinkedHashMap<String, Map<String, List<Object>>>(MRU_CAPACITY, MRU_LOAD_FACTOR, true) {
+    stochasticCosts =
+        Collections.synchronizedMap(new LinkedHashMap<String, Map<String, Double>>(MRU_CAPACITY,
+            MRU_LOAD_FACTOR, true) {
           private static final long serialVersionUID = 8204713453436906599L;
 
           @Override
-          protected boolean removeEldestEntry(Map.Entry<String, Map<String, List<Object>>> eldest) {
+          protected boolean removeEldestEntry(Map.Entry<String, Map<String, Double>> eldest) {
             return size() > MRU_SIZE;
           }
         });
+    costFunctionDescs = new ConcurrentHashMap<String, String>();
   }
 
   /**
    * Reports stochastic load balancer costs to JMX
    */
-  public void updateStochasticCost(String tableName, String costFunctionName,
-      String costFunctionDesc, Double value) {
-    if (tableName == null || costFunctionName == null || value == null) {
+  public void updateStochasticCost(String tableName, String costFunctionName, String functionDesc,
+      Double cost) {
+    if (tableName == null || costFunctionName == null || cost == null) {
       return;
     }
 
-    Map<String, List<Object>> costs= stochasticCosts.get(tableName);
-    if (costs== null) {
-      costs= new ConcurrentHashMap<String, List<Object>>();
+    if (null != functionDesc) {
+      costFunctionDescs.put(costFunctionName, functionDesc);
     }
-    
-    List<Object> descAndValue = new LinkedList<Object>();
-    descAndValue.add(costFunctionDesc);
-    descAndValue.add(value);
 
-    costs.put(costFunctionName, descAndValue);
+    Map<String, Double> costs = stochasticCosts.get(tableName);
+    if (costs == null) {
+      costs = new ConcurrentHashMap<String, Double>();
+    }
+
+    costs.put(costFunctionName, cost);
     stochasticCosts.put(tableName, costs);
   }
 
@@ -86,17 +84,13 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
 
     if (stochasticCosts != null) {
       for (String tableName : stochasticCosts.keySet()) {
-        Map<String, List<Object>> costs = stochasticCosts.get(tableName);
-        for (String key : costs.keySet()) {
-          List<Object> descAndValue = costs.get(key);
-          try {
-            String desc = (String)descAndValue.get(0);
-            Double value = (Double)descAndValue.get(1);
-            String attrName = tableName + TABLE_FUNCTION_SEP + key;
-            metricsRecordBuilder.addGauge(Interns.info(attrName, desc), value);
-          } catch (Exception e) {
-            LOG.warn("Add metrics for stochastic cost " + key + " failed:" + e.getMessage());
-          }
+        Map<String, Double> costs = stochasticCosts.get(tableName);
+        for (String costFunctionName : costs.keySet()) {
+          Double cost = costs.get(costFunctionName);
+          String attrName = tableName + TABLE_FUNCTION_SEP + costFunctionName;
+          String functionDesc = costFunctionDescs.get(costFunctionName);
+          if (null == functionDesc) functionDesc = costFunctionName;
+          metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
         }
       }
     }
