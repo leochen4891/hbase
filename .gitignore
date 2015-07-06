@@ -1,7 +1,8 @@
 /.arc_jira_lib
 /.externalToolBuilders
-*.settings/
 .project
+*.settings/
+.classpath
 /build
 /.idea/
 /logs
