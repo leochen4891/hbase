@@ -65,7 +65,7 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
       return;
     }
 
-    if (null != functionDesc) {
+    if (functionDesc != null) {
       costFunctionDescs.put(costFunctionName, functionDesc);
     }
 
@@ -89,7 +89,7 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
           Double cost = costs.get(costFunctionName);
           String attrName = tableName + TABLE_FUNCTION_SEP + costFunctionName;
           String functionDesc = costFunctionDescs.get(costFunctionName);
-          if (null == functionDesc) functionDesc = costFunctionName;
+          if (functionDesc == null) functionDesc = costFunctionName;
           metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
         }
       }
