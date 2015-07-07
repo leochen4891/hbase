@@ -1179,11 +1179,13 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
   }
 
   public boolean balance() throws IOException {
+    LOG.info("++++ mark 1");
     // if master not initialized, don't run balancer.
     if (!this.initialized) {
       LOG.debug("Master has not been initialized, don't run balancer.");
       return false;
     }
+    LOG.info("++++ mark 2");
     // Do this call outside of synchronized block.
     int maximumBalanceTime = getBalancerCutoffTime();
     synchronized (this.balancer) {
@@ -1198,12 +1200,14 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
             abbreviate(regionsInTransition.toString(), 256));
         return false;
       }
+      LOG.info("++++ mark 3");
       if (this.serverManager.areDeadServersInProgress()) {
         LOG.debug("Not running balancer because processing dead regionserver(s): " +
           this.serverManager.getDeadServers());
         return false;
       }
 
+      LOG.info("++++ mark 4");
       if (this.cpHost != null) {
         try {
           if (this.cpHost.preBalance()) {
@@ -1215,6 +1219,7 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
           return false;
         }
       }
+      LOG.info("++++ mark 5");
 
       Map<TableName, Map<ServerName, List<HRegionInfo>>> assignmentsByTable =
         this.assignmentManager.getRegionStates().getAssignmentsByTable();
@@ -1226,6 +1231,7 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
         List<RegionPlan> partialPlans = this.balancer.balanceCluster(assignments);
         if (partialPlans != null) plans.addAll(partialPlans);
       }
+      LOG.info("++++ mark 6");
       long cutoffTime = System.currentTimeMillis() + maximumBalanceTime;
       int rpCount = 0;  // number of RegionPlans balanced so far
       long totalRegPlanExecTime = 0;

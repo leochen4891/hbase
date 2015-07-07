@@ -100,7 +100,7 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
     Map<ServerName, List<HRegionInfo>> clusterState = mockClusterServers(mockCluster);
     loadBalancer.balanceCluster(clusterState);
 
-    String tableName = StochasticLoadBalancer.getTableNameFromCluster(clusterState);
+    String tableName = StochasticLoadBalancer.getTableName(clusterState);
 
     JMXConnector connector =
         JMXConnectorFactory.connect(JMXListener.buildJMXServiceURL(connectorPort, connectorPort));
