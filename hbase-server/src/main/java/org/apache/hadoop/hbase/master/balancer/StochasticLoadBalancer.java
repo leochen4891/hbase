@@ -237,12 +237,10 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   @Override
   public synchronized List<RegionPlan> balanceCluster(Map<ServerName,
     List<HRegionInfo>> clusterState) {
-    LOG.info("++++ mark a");
     List<RegionPlan> plans = balanceMasterRegions(clusterState);
     if (plans != null || clusterState == null || clusterState.size() <= 1) {
       return plans;
     }
-    LOG.info("++++ mark b");
     if (masterServerName != null && clusterState.containsKey(masterServerName)) {
       if (clusterState.size() <= 2) {
         return null;
@@ -250,7 +248,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       clusterState = new HashMap<ServerName, List<HRegionInfo>>(clusterState);
       clusterState.remove(masterServerName);
     }
-    LOG.info("++++ mark c");
 
     // On clusters with lots of HFileLinks or lots of reference files,
     // instantiating the storefile infos can be quite expensive.
@@ -265,11 +262,9 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     //of all the regions in the table(s) (that's true today)
     // Keep track of servers to iterate through them.
     Cluster cluster = new Cluster(clusterState, loads, finder, rackManager);
-    // FIXME: for test
-    // if (!needsBalance(cluster)) {
-    // return null;
-    // }
-    LOG.info("++++ mark d");
+    if (!needsBalance(cluster)) {
+      return null;
+    }
 
     long startTime = EnvironmentEdgeManager.currentTime();
 
@@ -279,10 +274,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
     double initCost = currentCost;
     double newCost = currentCost;
-    
-    // report init cost to JMX
-    updateStochasticCosts(getTableName(clusterState), tempOverallCost, tempFunctionCosts);
-        
 
     long computedMaxSteps = Math.min(this.maxSteps,
         ((long)cluster.numRegions * (long)this.stepsPerRegion * (long)cluster.numServers));
@@ -325,14 +316,12 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
         break;
       }
     }
-    LOG.info("++++ mark e");
 
     long endTime = EnvironmentEdgeManager.currentTime();
 
     metricsBalancer.balanceCluster(endTime - startTime);
 
     if (initCost > currentCost) {
-      LOG.info("++++ mark f, initCost > currentCost");
       plans = createRegionPlans(cluster);
       if (LOG.isDebugEnabled()) {
         LOG.debug("Finished computing new load balance plan.  Computation took "
@@ -345,9 +334,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
       return plans;
     }
-
-    LOG.info("++++ mark f, initCost <= currentCost");
-
     if (LOG.isDebugEnabled()) {
       LOG.debug("Could not find a better load balance plan.  Tried "
           + step + " different configurations in " + (endTime - startTime)
@@ -371,9 +357,10 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
         for (int i = 0; i < costFunctions.length; i++) {
           CostFunction costFunction = costFunctions[i];
           String costFunctionName = costFunction.getClass().getSimpleName();
+          Double costPercent = (overall == 0) ? 0 : (subCosts[i] / overall);
           // TODO: cost function may need a specific description
           ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName,
-            costFunctionName, "The cost of " + costFunctionName, subCosts[i]);
+            costFunctionName, "The percent of " + costFunctionName, costPercent);
         }
       }
   }
