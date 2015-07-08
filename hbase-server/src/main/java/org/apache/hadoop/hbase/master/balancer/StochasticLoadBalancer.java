@@ -349,7 +349,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       // check if the metricsBalancer is MetricsStochasticBalancer before casting
       if (metricsBalancer instanceof MetricsStochasticBalancer) {
         // overall cost
-        LOG.info("++++ mark z, overall cost = " + overall);
         ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName, "Overall",
           "Overall cost", overall);
 
