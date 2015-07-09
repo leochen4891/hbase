@@ -33,9 +33,10 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
 
-  // Use Most Recent Used (MRU cache)
+  // Use Most Recent Used(MRU) cache
   private static final float MRU_LOAD_FACTOR = 0.75f;
-  private int mruCap = calcMruCap(1000);
+  private int metricsSize = 1000;
+  private int mruCap = calcMruCap(metricsSize);
 
   private Map<String, Map<String, Double>> stochasticCosts = null;
   private Map<String, String> costFunctionDescs = null;
@@ -64,6 +65,7 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
   @Override
   public void updateMetricsSize(int size) {
     if (size > 0) {
+      metricsSize = size;
       mruCap = calcMruCap(size);
     }
   }

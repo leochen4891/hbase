@@ -27,7 +27,7 @@ package org.apache.hadoop.hbase.master.balancer;
 public interface MetricsStochasticBalancerSource extends MetricsBalancerSource {
 
   /**
-   * Updates the number metrics that will be reported to JMX
+   * Updates the number of metrics reported to JMX
    */
   public void updateMetricsSize(int size);
 
