@@ -35,6 +35,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.ClusterStatus;
 import org.apache.hadoop.hbase.HBaseInterfaceAudience;
 import org.apache.hadoop.hbase.HRegionInfo;
+import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.RegionLoad;
 import org.apache.hadoop.hbase.ServerLoad;
 import org.apache.hadoop.hbase.ServerName;
@@ -217,6 +218,14 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       try {
         // update the metrics size
         int tablesCount = services.getTableDescriptors().getAll().size();
+        
+        // FIXME TEST
+        LOG.info("++++");
+        LOG.info("++++ table count = " + tablesCount);
+        for (HTableDescriptor t : services.getTableDescriptors().getAll().values()) {
+          LOG.info("++++  " + t.getTableName());
+        }
+        
         int functionsCount = getCostFunctionNames().length;
         ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(tablesCount
             * functionsCount + 1); //
@@ -275,9 +284,13 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     //of all the regions in the table(s) (that's true today)
     // Keep track of servers to iterate through them.
     Cluster cluster = new Cluster(clusterState, loads, finder, rackManager);
-    if (!needsBalance(cluster)) {
-      return null;
-    }
+
+    //FIXME: TEST
+//    if (!needsBalance(cluster)) {
+//      return null;
+//    }
+    
+    LOG.info("++++ start balancing");
 
     long startTime = EnvironmentEdgeManager.currentTime();
 
