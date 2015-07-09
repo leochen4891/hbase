@@ -55,7 +55,14 @@ public class MetricsStochasticBalancer extends MetricsBalancer {
   }
 
   /**
-   * The function that report stochastic load balancer costs to JMX
+   * Updates the number of metrics reported to JMX
+   */
+  public void updateMetricsSize(int size) {
+    stochasticSource.updateMetricsSize(size);
+  }
+
+  /**
+   * Reports stochastic load balancer costs to JMX
    */
   public void updateStochasticCost(String tableName, String costFunctionName,
       String costFunctionDesc, Double value) {

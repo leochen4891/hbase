@@ -33,27 +33,41 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
 
-  // TODO this MRU_SIZE is the limit of how many metrics can be reported for stochastic load
-  // balancer. It is hard-coded right now, and may be better if is configurable. HBASE-13965
-  private static final int MRU_SIZE = 1000;
+  // Use Most Recent Used(MRU) cache
   private static final float MRU_LOAD_FACTOR = 0.75f;
-  private static final int MRU_CAPACITY = (int) Math.ceil(MRU_SIZE / MRU_LOAD_FACTOR) + 1;
+  private int metricsSize = 1000;
+  private int mruCap = calcMruCap(metricsSize);
 
   private Map<String, Map<String, Double>> stochasticCosts = null;
   private Map<String, String> costFunctionDescs = null;
 
   public MetricsStochasticBalancerSourceImpl() {
     stochasticCosts =
-        Collections.synchronizedMap(new LinkedHashMap<String, Map<String, Double>>(MRU_CAPACITY,
+        Collections.synchronizedMap(new LinkedHashMap<String, Map<String, Double>>(mruCap,
             MRU_LOAD_FACTOR, true) {
           private static final long serialVersionUID = 8204713453436906599L;
 
           @Override
           protected boolean removeEldestEntry(Map.Entry<String, Map<String, Double>> eldest) {
-            return size() > MRU_SIZE;
+            return size() > mruCap;
           }
         });
     costFunctionDescs = new ConcurrentHashMap<String, String>();
+  }
+  
+  /**
+   *  Calculates the mru cache capacity from the metrics size
+   */
+  private static int calcMruCap(int metricsSize) {
+    return (int) Math.ceil(metricsSize / MRU_LOAD_FACTOR) + 1;
+  }
+  
+  @Override
+  public void updateMetricsSize(int size) {
+    if (size > 0) {
+      metricsSize = size;
+      mruCap = calcMruCap(size);
+    }
   }
 
   /**
@@ -96,4 +110,5 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
     }
     metricsRegistry.snapshot(metricsRecordBuilder, all);
   }
+
 }

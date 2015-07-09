@@ -35,6 +35,7 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.ClusterStatus;
 import org.apache.hadoop.hbase.HBaseInterfaceAudience;
 import org.apache.hadoop.hbase.HRegionInfo;
+import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.RegionLoad;
 import org.apache.hadoop.hbase.ServerLoad;
 import org.apache.hadoop.hbase.ServerName;
@@ -103,6 +104,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       "hbase.master.balancer.stochastic.maxRunningTime";
   protected static final String KEEP_REGION_LOADS =
       "hbase.master.balancer.stochastic.numRegionLoadsToRemember";
+  private static final String TABLE_FUNCTION_SEP = "_";
 
   private static final Random RANDOM = new Random(System.currentTimeMillis());
   private static final Log LOG = LogFactory.getLog(StochasticLoadBalancer.class);
@@ -120,7 +122,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   private CostFunction[] costFunctions;
 
   // to save and report costs to JMX
-  private Double tempOverallCost;
   private Double curOverallCost;
   private Double[] tempFunctionCosts;
   private Double[] curFunctionCosts;
@@ -211,6 +212,27 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     for(CostFromRegionLoadFunction cost : regionLoadFunctions) {
       cost.setClusterStatus(st);
     }
+
+    // update metrics size
+    if (metricsBalancer instanceof MetricsStochasticBalancer) {
+      try {
+        // update the metrics size
+        int tablesCount = services.getTableDescriptors().getAll().size();
+        
+        // FIXME TEST
+        LOG.info("++++");
+        LOG.info("++++ table count = " + tablesCount);
+        for (HTableDescriptor t : services.getTableDescriptors().getAll().values()) {
+          LOG.info("++++  " + t.getTableName());
+        }
+        
+        int functionsCount = getCostFunctionNames().length;
+        ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(tablesCount
+            * functionsCount + 1); //
+      } catch (Exception e) {
+        LOG.info("stochastic load balancer update metrics size failed:" + e.getMessage());
+      }
+    }
   }
 
   @Override
@@ -279,10 +301,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
     double initCost = currentCost;
     double newCost = currentCost;
-    
-    // report init cost to JMX
-    updateStochasticCosts(getTableName(clusterState), tempOverallCost, tempFunctionCosts);
-        
 
     long computedMaxSteps = Math.min(this.maxSteps,
         ((long)cluster.numRegions * (long)this.stepsPerRegion * (long)cluster.numServers));
@@ -341,6 +359,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
             + plans.size() + " regions; Going from a computed cost of "
             + initCost + " to a new cost of " + currentCost);
       }
+      
       updateStochasticCosts(getTableName(clusterState), curOverallCost, curFunctionCosts);
 
       return plans;
@@ -360,22 +379,23 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
    * update costs to JMX
    */
   private void updateStochasticCosts(String tableName, Double overall, Double[] subCosts) {
-      // check if the metricsBalancer is MetricsStochasticBalancer before casting
-      if (metricsBalancer instanceof MetricsStochasticBalancer) {
-        // overall cost
+    // check if the metricsBalancer is MetricsStochasticBalancer before casting
+    if (metricsBalancer instanceof MetricsStochasticBalancer) {
+      // overall cost
         LOG.info("++++ mark z, overall cost = " + overall);
-        ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName, "Overall",
-          "Overall cost", overall);
+      ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName, "Overall",
+        "Overall cost", overall);
 
-        // each cost function
-        for (int i = 0; i < costFunctions.length; i++) {
-          CostFunction costFunction = costFunctions[i];
-          String costFunctionName = costFunction.getClass().getSimpleName();
-          // TODO: cost function may need a specific description
-          ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName,
-            costFunctionName, "The cost of " + costFunctionName, subCosts[i]);
-        }
+      // each cost function
+      for (int i = 0; i < costFunctions.length; i++) {
+        CostFunction costFunction = costFunctions[i];
+        String costFunctionName = costFunction.getClass().getSimpleName();
+        Double costPercent = (overall == 0) ? 0 : (subCosts[i] / overall);
+        // TODO: cost function may need a specific description
+        ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName,
+          costFunctionName, "The percent of " + costFunctionName, costPercent);
       }
+    }
   }
 
 
@@ -499,8 +519,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       }
     }
    
-    tempOverallCost = total;
-    
     return total;
   }
 
@@ -1445,27 +1463,22 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
    * // TODO: find better way to get the table name? 
    */
   public static String getTableName(Map<ServerName, List<HRegionInfo>> clusterState) {
-    String tableName = null;
-
       // find the first region with not empty table name
       for (List<HRegionInfo> list: clusterState.values()) {
         for(HRegionInfo info : list) {
-          TableName name = info.getTable();
-          if (name != null) tableName = name.getNameAsString();
-          if (tableName != null) break;
+          TableName tableName = info.getTable();
+          String name = tableName.getNameAsString();
+          if (name != null) return name;
         }
-          if (tableName != null) break;
       }
       
-      // table name cannot be null
-      return (tableName==null?"":tableName);
+      return "";
   }
 
   /**
    * A helper function to compose the attribute name from tablename and costfunction name
    */
   public static String composeAttributeName(String tableName, String costFunctionName) {
-    if (tableName == null) tableName = "";
-    return tableName + ((tableName.length() <= 0) ? "" : "_") + costFunctionName;
+    return tableName + TABLE_FUNCTION_SEP + costFunctionName;
   }
 }
