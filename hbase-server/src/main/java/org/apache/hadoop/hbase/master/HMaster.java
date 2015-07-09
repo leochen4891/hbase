@@ -1220,6 +1220,7 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
         this.assignmentManager.getRegionStates().getAssignmentsByTable();
 
       List<RegionPlan> plans = new ArrayList<RegionPlan>();
+
       //Give the balancer the current cluster state.
       this.balancer.setClusterStatus(getClusterStatus());
       for (Map<ServerName, List<HRegionInfo>> assignments : assignmentsByTable.values()) {

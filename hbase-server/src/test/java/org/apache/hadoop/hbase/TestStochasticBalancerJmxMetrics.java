@@ -30,14 +30,12 @@ import org.apache.hadoop.hbase.master.balancer.StochasticLoadBalancer;
 import org.apache.hadoop.hbase.testclassification.MediumTests;
 import org.apache.hadoop.hbase.testclassification.MiscTests;
 import org.apache.hadoop.net.DNSToSwitchMapping;
-
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
 import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runners.MethodSorters;
-
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Hashtable;
@@ -96,7 +94,6 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
    */
   @Test
   public void testJmxAttributes() throws Exception {
-
     Map<ServerName, List<HRegionInfo>> clusterState = mockClusterServers(mockCluster);
     loadBalancer.balanceCluster(clusterState);
 
