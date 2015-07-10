@@ -217,8 +217,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       cost.setClusterStatus(st);
     }
 
-    // update metrics size
-    if (metricsBalancer instanceof MetricsStochasticBalancer) {
+    int metricsSize = 0;
+    // calculate the metrics size
       try {
         int tablesCount = 0;
         int functionsCount = getCostFunctionNames().length;
@@ -235,11 +235,21 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
           tablesCount = 1;
         }
 
-        ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(tablesCount
-            * (functionsCount + 1));
+        metricsSize = tablesCount * (functionsCount + 1);
       } catch (Exception e) {
         LOG.info("stochastic load balancer update metrics size failed:" + e.getMessage());
       }
+      
+      // update metrics size
+      updateMetricsSize(metricsSize);
+  }
+  
+  /**
+   * Update the number of metrics that are reported to JMX
+   */
+  public void updateMetricsSize(int size) {
+    if (metricsBalancer instanceof MetricsStochasticBalancer) {
+        ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(size);
     }
   }
 

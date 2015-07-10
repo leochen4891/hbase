@@ -959,7 +959,7 @@ public class RegionStates {
         for (Map.Entry<ServerName, Set<HRegionInfo>> e: serverHoldings.entrySet()) {
           svrToRegions.put(e.getKey(), new ArrayList<HRegionInfo>(e.getValue()));
         }
-        result.put(TableName.valueOf("ensemble"), svrToRegions);
+        result.put(TableName.valueOf(HConstants.ENSEMBLE_TABLE_NAME), svrToRegions);
       } else {
         for (Map.Entry<ServerName, Set<HRegionInfo>> e: serverHoldings.entrySet()) {
           for (HRegionInfo hri: e.getValue()) {
