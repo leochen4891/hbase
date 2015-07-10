@@ -235,7 +235,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
               LOG.info("++++  " + t.getTableName());
             }
           }
-          //TODO: hbase:namespace is passed in by HMaster?
+          //TODO: should hbase:mespace be passed in by HMaster?
           tablesCount++;
         } else { // combined to ensemble table
           tablesCount = 1;
