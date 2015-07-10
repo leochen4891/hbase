@@ -34,6 +34,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
@@ -1219,18 +1220,25 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
           return false;
         }
       }
-      LOG.info("++++ mark 5");
 
       Map<TableName, Map<ServerName, List<HRegionInfo>>> assignmentsByTable =
         this.assignmentManager.getRegionStates().getAssignmentsByTable();
 
+      LOG.info("++++ mark 5, size assignmentsByTable = " + assignmentsByTable.size());
+      int index = 0;
+      for (TableName t : assignmentsByTable.keySet()) {
+        LOG.info("++++ " + index++ + ":" + t.getNameAsString());
+      }
+
       List<RegionPlan> plans = new ArrayList<RegionPlan>();
       //Give the balancer the current cluster state.
       this.balancer.setClusterStatus(getClusterStatus());
-      for (Map<ServerName, List<HRegionInfo>> assignments : assignmentsByTable.values()) {
-        List<RegionPlan> partialPlans = this.balancer.balanceCluster(assignments);
+      for (Entry<TableName, Map<ServerName, List<HRegionInfo>>> e : assignmentsByTable.entrySet()) {
+        LOG.info("++++ HMaster->balancing on table " + e.getKey().getNameAsString());
+        List<RegionPlan> partialPlans = this.balancer.balanceCluster(e.getKey(), e.getValue());
         if (partialPlans != null) plans.addAll(partialPlans);
       }
+
       LOG.info("++++ mark 6");
       long cutoffTime = System.currentTimeMillis() + maximumBalanceTime;
       int rpCount = 0;  // number of RegionPlans balanced so far

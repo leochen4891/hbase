@@ -34,6 +34,7 @@ import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.ClusterStatus;
 import org.apache.hadoop.hbase.HBaseInterfaceAudience;
+import org.apache.hadoop.hbase.HConstants;
 import org.apache.hadoop.hbase.HRegionInfo;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.RegionLoad;
@@ -105,6 +106,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   protected static final String KEEP_REGION_LOADS =
       "hbase.master.balancer.stochastic.numRegionLoadsToRemember";
   private static final String TABLE_FUNCTION_SEP = "_";
+  private static final String ENSEMBLE_TABLE_NAME = "ENSEMBLE";
 
   private static final Random RANDOM = new Random(System.currentTimeMillis());
   private static final Log LOG = LogFactory.getLog(StochasticLoadBalancer.class);
@@ -122,7 +124,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   private CostFunction[] costFunctions;
 
   // to save and report costs to JMX
-  private Double curOverallCost;
+  private Double curOverallCost = 0d;
   private Double[] tempFunctionCosts;
   private Double[] curFunctionCosts;
 
@@ -132,6 +134,9 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   private LocalityCostFunction localityCost;
   private RegionReplicaHostCostFunction regionReplicaHostCostFunction;
   private RegionReplicaRackCostFunction regionReplicaRackCostFunction;
+  
+  private boolean isByTable = false;
+  private TableName tableName = null;
   
   /**
    * The constructor that pass a MetricsStochasticBalancer to BaseLoadBalancer to replace its
@@ -157,6 +162,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     maxRunningTime = conf.getLong(MAX_RUNNING_TIME_KEY, maxRunningTime);
 
     numRegionLoadsToRemember = conf.getInt(KEEP_REGION_LOADS, numRegionLoadsToRemember);
+    isByTable = conf.getBoolean(HConstants.HBASE_MASTER_LOADBALANCE_BYTABLE, isByTable);
+    LOG.info("++++ load conf: isByTable = " + isByTable);
 
     if (localityCandidateGenerator == null) {
       localityCandidateGenerator = new LocalityBasedCandidateGenerator(services);
@@ -216,19 +223,28 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     // update metrics size
     if (metricsBalancer instanceof MetricsStochasticBalancer) {
       try {
-        // update the metrics size
-        int tablesCount = services.getTableDescriptors().getAll().size();
-        
-        // FIXME TEST
-        LOG.info("++++");
-        LOG.info("++++ table count = " + tablesCount);
-        for (HTableDescriptor t : services.getTableDescriptors().getAll().values()) {
-          LOG.info("++++  " + t.getTableName());
-        }
-        
+        int tablesCount = 0;
         int functionsCount = getCostFunctionNames().length;
+
+        if (isByTable) {
+          // FIXME TEST
+          LOG.info("++++");
+          for (HTableDescriptor t : services.getTableDescriptors().getAll().values()) {
+            if (!t.getTableName().isSystemTable()) {
+              tablesCount++;
+              LOG.info("++++  " + t.getTableName());
+            }
+          }
+          //TODO: hbase:namespace is passed in by HMaster?
+          tablesCount++;
+        } else { // combined to ensemble table
+          tablesCount = 1;
+        }
+
+        LOG.info("++++ table count = " + tablesCount);
+
         ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(tablesCount
-            * functionsCount + 1); //
+            * (functionsCount + 1));
       } catch (Exception e) {
         LOG.info("stochastic load balancer update metrics size failed:" + e.getMessage());
       }
@@ -252,6 +268,13 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     return false;
   }
 
+  @Override
+  public synchronized List<RegionPlan> balanceCluster(TableName tableName, Map<ServerName,
+    List<HRegionInfo>> clusterState) {
+    this.tableName = tableName;
+    return balanceCluster(clusterState);
+  }
+  
   /**
    * Given the cluster state this will try and approach an optimal balance. This
    * should always approach the optimal state given enough steps.
@@ -298,6 +321,12 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     initCosts(cluster);
 
     double currentCost = computeCost(cluster, Double.MAX_VALUE);
+    curOverallCost = currentCost;
+    for (int i = 0; i < this.curFunctionCosts.length; i++) {
+      curFunctionCosts[i] = tempFunctionCosts[i];
+    }
+
+    LOG.info("++++ StochasticLoadBalancer-> table name = " + tableName);
 
     double initCost = currentCost;
     double newCost = currentCost;
@@ -349,6 +378,10 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
     metricsBalancer.balanceCluster(endTime - startTime);
 
+    // update costs metrics
+
+    updateStochasticCosts(tableName, curOverallCost, curFunctionCosts);
+
     if (initCost > currentCost) {
       LOG.info("++++ mark f, initCost > currentCost");
       plans = createRegionPlans(cluster);
@@ -360,8 +393,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
             + initCost + " to a new cost of " + currentCost);
       }
       
-      updateStochasticCosts(getTableName(clusterState), curOverallCost, curFunctionCosts);
-
       return plans;
     }
 
@@ -378,12 +409,15 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   /**
    * update costs to JMX
    */
-  private void updateStochasticCosts(String tableName, Double overall, Double[] subCosts) {
+  private void updateStochasticCosts(TableName tableName, Double overall, Double[] subCosts) {
+    if (null == tableName)
+      return;
+
     // check if the metricsBalancer is MetricsStochasticBalancer before casting
     if (metricsBalancer instanceof MetricsStochasticBalancer) {
       // overall cost
         LOG.info("++++ mark z, overall cost = " + overall);
-      ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName, "Overall",
+      ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName.getNameAsString(), "Overall",
         "Overall cost", overall);
 
       // each cost function
@@ -392,9 +426,13 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
         String costFunctionName = costFunction.getClass().getSimpleName();
         Double costPercent = (overall == 0) ? 0 : (subCosts[i] / overall);
         // TODO: cost function may need a specific description
-        ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName,
+        ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName.getNameAsString(),
           costFunctionName, "The percent of " + costFunctionName, costPercent);
       }
+      
+      //FIXME: TEST
+      ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(-1);
+      
     }
   }
 
@@ -1458,23 +1496,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     }
   }
   
-  /**
-   * Get the table name used as key in assignmentsByTable in HMaster's balance()
-   * // TODO: find better way to get the table name? 
-   */
-  public static String getTableName(Map<ServerName, List<HRegionInfo>> clusterState) {
-      // find the first region with not empty table name
-      for (List<HRegionInfo> list: clusterState.values()) {
-        for(HRegionInfo info : list) {
-          TableName tableName = info.getTable();
-          String name = tableName.getNameAsString();
-          if (name != null) return name;
-        }
-      }
-      
-      return "";
-  }
-
   /**
    * A helper function to compose the attribute name from tablename and costfunction name
    */

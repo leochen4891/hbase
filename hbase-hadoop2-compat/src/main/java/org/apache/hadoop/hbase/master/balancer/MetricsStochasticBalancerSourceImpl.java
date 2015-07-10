@@ -23,6 +23,8 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.metrics2.MetricsCollector;
 import org.apache.hadoop.metrics2.MetricsRecordBuilder;
@@ -40,6 +42,8 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
 
   private Map<String, Map<String, Double>> stochasticCosts = null;
   private Map<String, String> costFunctionDescs = null;
+
+  private static final Log LOG = LogFactory.getLog(MetricsStochasticBalancerSourceImpl.class);
 
   public MetricsStochasticBalancerSourceImpl() {
     stochasticCosts =
@@ -67,6 +71,16 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
     if (size > 0) {
       metricsSize = size;
       mruCap = calcMruCap(size);
+    } 
+    // FIXME: TEST
+    else {
+      LOG.info("++++");
+      LOG.info("++++ stochasticCostsSize = " + stochasticCosts.size() + ", metricsSize = " + metricsSize);
+      for (Map.Entry<String, Map<String, Double>> t : stochasticCosts.entrySet()) {
+        for (Map.Entry<String, Double> e : t.getValue().entrySet() ) {
+          LOG.info(" ++++ " + t.getKey() + " - " + e.getKey() + " : " + e.getValue());
+        }
+      }
     }
   }
 
