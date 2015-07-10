@@ -18,13 +18,10 @@
 
 package org.apache.hadoop.hbase;
 
-
 import static org.junit.Assert.assertTrue;
 
-import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Hashtable;
-import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -52,8 +49,6 @@ import org.junit.Test;
 import org.junit.experimental.categories.Category;
 import org.junit.runners.MethodSorters;
 
-
-
 @Category({ MiscTests.class, MediumTests.class })
 @FixMethodOrder(MethodSorters.NAME_ASCENDING)
 public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
@@ -65,9 +60,9 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
    * a simple cluster for testing JMX.
    */
   private static int[] mockCluster_ensemble = new int[] { 0, 1, 2, 3 };
-  private static int[] mockCluster_pertable_1 = new int[] { 0, 1, 2};
-  private static int[] mockCluster_pertable_2 = new int[] { 3, 1, 1};
-  private static int[] mockCluster_pertable_namespace = new int[] {1};
+  private static int[] mockCluster_pertable_1 = new int[] { 0, 1, 2 };
+  private static int[] mockCluster_pertable_2 = new int[] { 3, 1, 1 };
+  private static int[] mockCluster_pertable_namespace = new int[] { 1, 3, 1 };
 
   private static final String TABLE_NAME_1 = "Table1";
   private static final String TABLE_NAME_2 = "Table2";
@@ -89,7 +84,6 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
     conf.set(CoprocessorHost.REGIONSERVER_COPROCESSOR_CONF_KEY, JMXListener.class.getName());
     conf.setInt("regionserver.rmi.registry.port", connectorPort);
 
-
     UTIL.startMiniCluster();
   }
 
@@ -97,8 +91,7 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
   public static void tearDownAfterClass() throws Exception {
     UTIL.shutdownMiniCluster();
   }
-  
-  
+
   /**
    * In Ensemble mode, there should be only one ensemble table
    */
@@ -112,19 +105,18 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
     TableName tableName = TableName.valueOf(HConstants.ENSEMBLE_TABLE_NAME);
     Map<ServerName, List<HRegionInfo>> clusterState = mockClusterServers(mockCluster_ensemble);
     loadBalancer.balanceCluster(tableName, clusterState);
-    
-    String[] tableNames = new String[]{tableName.getNameAsString()};
+
+    String[] tableNames = new String[] { tableName.getNameAsString() };
     String[] functionNames = loadBalancer.getCostFunctionNames();
     Set<String> jmxMetrics = readJmxMetrics();
     Set<String> expectedMetrics = getExpectedJmxMetrics(tableNames, functionNames);
-    
-    //FIXME debug print
-    printMetrics(jmxMetrics, "existing metrics in ensemble mode");
-    printMetrics(expectedMetrics, "expected metrics in ensemble mode");
+
+    // printMetrics(jmxMetrics, "existing metrics in ensemble mode");
+    // printMetrics(expectedMetrics, "expected metrics in ensemble mode");
 
     // assert that every expected is in the JMX
     for (String expected : expectedMetrics) {
-      assertTrue("Metric " + expected + " can not be found in JMX in ensemble mode." , 
+      assertTrue("Metric " + expected + " can not be found in JMX in ensemble mode.",
         jmxMetrics.contains(expected));
     }
   }
@@ -138,12 +130,12 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
 
     conf.setBoolean(HConstants.HBASE_MASTER_LOADBALANCE_BYTABLE, true);
     loadBalancer.setConf(conf);
-    
+
     // NOTE the size is normally set in setClusterStatus, for test purpose, we set it manually
     // Tables: hbase:namespace, table1, table2
     // Functions: costFunctions, overall
     String[] functionNames = loadBalancer.getCostFunctionNames();
-    loadBalancer.updateMetricsSize(3*(functionNames.length + 1));
+    loadBalancer.updateMetricsSize(3 * (functionNames.length + 1));
 
     // table 1
     TableName tableName = TableName.valueOf(TABLE_NAME_1);
@@ -154,27 +146,26 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
     tableName = TableName.valueOf(TABLE_NAME_2);
     clusterState = mockClusterServers(mockCluster_pertable_2);
     loadBalancer.balanceCluster(tableName, clusterState);
-    
+
     // table hbase:namespace
     tableName = TableName.valueOf(TABLE_NAME_NAMESPACE);
     clusterState = mockClusterServers(mockCluster_pertable_namespace);
     loadBalancer.balanceCluster(tableName, clusterState);
 
-    String[] tableNames = new String[]{TABLE_NAME_1, TABLE_NAME_2, TABLE_NAME_NAMESPACE};
+    String[] tableNames = new String[] { TABLE_NAME_1, TABLE_NAME_2, TABLE_NAME_NAMESPACE };
     Set<String> jmxMetrics = readJmxMetrics();
     Set<String> expectedMetrics = getExpectedJmxMetrics(tableNames, functionNames);
-    
-    //FIXME debug print
-    printMetrics(jmxMetrics, "existing metrics in per-table mode");
-    printMetrics(expectedMetrics, "expected metrics in per-table mode");
+
+    // printMetrics(jmxMetrics, "existing metrics in per-table mode");
+    // printMetrics(expectedMetrics, "expected metrics in per-table mode");
 
     // assert that every expected is in the JMX
     for (String expected : expectedMetrics) {
-      assertTrue("Metric " + expected + " can not be found in JMX in per-table mode." , 
+      assertTrue("Metric " + expected + " can not be found in JMX in per-table mode.",
         jmxMetrics.contains(expected));
     }
   }
-  
+
   /**
    * Read the attributes from Hadoop->HBase->Master->Balancer in JMX
    */
@@ -210,28 +201,28 @@ public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
     }
     return null;
   }
-  
+
   /**
-   *  Given the tables and functions, return metrics names that should exist in JMX
+   * Given the tables and functions, return metrics names that should exist in JMX
    */
   private Set<String> getExpectedJmxMetrics(String[] tableNames, String[] functionNames) {
     Set<String> ret = new HashSet<String>();
-    
+
     for (String tableName : tableNames) {
+      ret.add(StochasticLoadBalancer.composeAttributeName(tableName, "Overall"));
       for (String functionName : functionNames) {
         String metricsName = StochasticLoadBalancer.composeAttributeName(tableName, functionName);
         ret.add(metricsName);
       }
     }
-    
+
     return ret;
   }
-  
-  private static void printMetrics(Set<String> metrics, String info) {
-    if (null != info) 
-      LOG.info("++++ " + info);
 
-    LOG.info("++++ metrics count = " + metrics);
+  private static void printMetrics(Set<String> metrics, String info) {
+    if (null != info) LOG.info("++++ ------ " + info + " ------");
+
+    LOG.info("++++ metrics count = " + metrics.size());
     for (String str : metrics) {
       LOG.info(" ++++ " + str);
     }

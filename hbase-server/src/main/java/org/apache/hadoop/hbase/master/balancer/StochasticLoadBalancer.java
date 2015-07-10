@@ -314,7 +314,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       return null;
     }
     
-
     long startTime = EnvironmentEdgeManager.currentTime();
 
     initCosts(cluster);

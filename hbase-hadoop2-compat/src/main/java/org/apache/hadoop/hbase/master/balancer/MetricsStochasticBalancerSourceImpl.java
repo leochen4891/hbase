@@ -18,7 +18,6 @@
 
 package org.apache.hadoop.hbase.master.balancer;
 
-import java.util.Collections;
 import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -43,25 +42,24 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
 
   public MetricsStochasticBalancerSourceImpl() {
     stochasticCosts =
-        Collections.synchronizedMap(new LinkedHashMap<String, Map<String, Double>>(mruCap,
-            MRU_LOAD_FACTOR, true) {
+        new LinkedHashMap<String, Map<String, Double>>(mruCap, MRU_LOAD_FACTOR, true) {
           private static final long serialVersionUID = 8204713453436906599L;
 
           @Override
           protected boolean removeEldestEntry(Map.Entry<String, Map<String, Double>> eldest) {
             return size() > mruCap;
           }
-        });
+        };
     costFunctionDescs = new ConcurrentHashMap<String, String>();
   }
-  
+
   /**
-   *  Calculates the mru cache capacity from the metrics size
+   * Calculates the mru cache capacity from the metrics size
    */
   private static int calcMruCap(int metricsSize) {
     return (int) Math.ceil(metricsSize / MRU_LOAD_FACTOR) + 1;
   }
-  
+
   @Override
   public void updateMetricsSize(int size) {
     if (size > 0) {
@@ -83,28 +81,31 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
       costFunctionDescs.put(costFunctionName, functionDesc);
     }
 
-    Map<String, Double> costs = stochasticCosts.get(tableName);
-    if (costs == null) {
-      costs = new ConcurrentHashMap<String, Double>();
-    }
+    synchronized (stochasticCosts) {
+      Map<String, Double> costs = stochasticCosts.get(tableName);
+      if (costs == null) {
+        costs = new ConcurrentHashMap<String, Double>();
+      }
 
-    costs.put(costFunctionName, cost);
-    stochasticCosts.put(tableName, costs);
+      costs.put(costFunctionName, cost);
+      stochasticCosts.put(tableName, costs);
+    }
   }
 
   @Override
   public void getMetrics(MetricsCollector metricsCollector, boolean all) {
     MetricsRecordBuilder metricsRecordBuilder = metricsCollector.addRecord(metricsName);
 
-    if (stochasticCosts != null) {
-      for (String tableName : stochasticCosts.keySet()) {
-        Map<String, Double> costs = stochasticCosts.get(tableName);
-        for (String costFunctionName : costs.keySet()) {
-          Double cost = costs.get(costFunctionName);
-          String attrName = tableName + TABLE_FUNCTION_SEP + costFunctionName;
-          String functionDesc = costFunctionDescs.get(costFunctionName);
-          if (functionDesc == null) functionDesc = costFunctionName;
-          metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
+    synchronized (stochasticCosts) {
+      if (stochasticCosts != null) {
+        for (Map.Entry<String, Map<String, Double>> tableEntry : stochasticCosts.entrySet()) {
+          for (Map.Entry<String, Double> costEntry : tableEntry.getValue().entrySet()) {
+            String attrName = tableEntry.getKey() + TABLE_FUNCTION_SEP + costEntry.getKey();
+            Double cost = costEntry.getValue();
+            String functionDesc = costFunctionDescs.get(costEntry.getKey());
+            if (functionDesc == null) functionDesc = costEntry.getKey();
+            metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
+          }
         }
       }
     }
