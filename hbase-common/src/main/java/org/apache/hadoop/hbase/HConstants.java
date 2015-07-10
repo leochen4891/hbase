@@ -127,7 +127,7 @@ public final class HConstants {
   public static final String HBASE_MASTER_LOADBALANCE_BYTABLE = "hbase.master.loadbalance.bytable";
 
   /** The name of the combined table when bytable is off*/
-  public static final String ENSEMBLE_TABLE_NAME = "ensemble";
+  public static final String ENSEMBLE_TABLE_NAME = "hbase:ensemble";
 
   /** Config for pluggable region normalizer */
   public static final String HBASE_MASTER_NORMALIZER_CLASS =
