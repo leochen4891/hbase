@@ -108,6 +108,12 @@ public class TestBaseLoadBalancer extends BalancerTestBase {
       return null;
     }
 
+    @Override
+    public List<RegionPlan> balanceCluster(TableName tableName,
+        Map<ServerName, List<HRegionInfo>> clusterState) throws HBaseIOException {
+      return null;
+    }
+
   }
 
   /**
