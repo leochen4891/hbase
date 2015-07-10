@@ -235,8 +235,6 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
           tablesCount = 1;
         }
 
-        LOG.info("++++ table count = " + tablesCount);
-
         ((MetricsStochasticBalancer) metricsBalancer).updateMetricsSize(tablesCount
             * (functionsCount + 1));
       } catch (Exception e) {
