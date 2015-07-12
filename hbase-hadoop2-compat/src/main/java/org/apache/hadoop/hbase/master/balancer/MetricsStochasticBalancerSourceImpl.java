@@ -32,7 +32,7 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
     MetricsStochasticBalancerSource {
   private static final String TABLE_FUNCTION_SEP = "_";
 
-  // Use Most Recent Used(MRU) cache
+  // Most Recently Used(MRU) cache
   private static final float MRU_LOAD_FACTOR = 0.75f;
   private int metricsSize = 1000;
   private int mruCap = calcMruCap(metricsSize);
@@ -97,15 +97,13 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
     MetricsRecordBuilder metricsRecordBuilder = metricsCollector.addRecord(metricsName);
 
     synchronized (stochasticCosts) {
-      if (stochasticCosts != null) {
-        for (Map.Entry<String, Map<String, Double>> tableEntry : stochasticCosts.entrySet()) {
-          for (Map.Entry<String, Double> costEntry : tableEntry.getValue().entrySet()) {
-            String attrName = tableEntry.getKey() + TABLE_FUNCTION_SEP + costEntry.getKey();
-            Double cost = costEntry.getValue();
-            String functionDesc = costFunctionDescs.get(costEntry.getKey());
-            if (functionDesc == null) functionDesc = costEntry.getKey();
-            metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
-          }
+      for (Map.Entry<String, Map<String, Double>> tableEntry : stochasticCosts.entrySet()) {
+        for (Map.Entry<String, Double> costEntry : tableEntry.getValue().entrySet()) {
+          String attrName = tableEntry.getKey() + TABLE_FUNCTION_SEP + costEntry.getKey();
+          Double cost = costEntry.getValue();
+          String functionDesc = costFunctionDescs.get(costEntry.getKey());
+          if (functionDesc == null) functionDesc = costEntry.getKey();
+          metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
         }
       }
     }

@@ -229,7 +229,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
               tablesCount++;
             }
           }
-          //TODO: should hbase:mespace be passed in by HMaster?
+          //hbase:namespace is passed in by HMaster, but it is a system table
+          // the balancing costs of hbase:namespace table is added to JMX
           tablesCount++;
         } else { // combined to ensemble table
           tablesCount = 1;
@@ -399,14 +400,14 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
    * update costs to JMX
    */
   private void updateStochasticCosts(TableName tableName, Double overall, Double[] subCosts) {
-    if (null == tableName)
-      return;
+    if (tableName == null) return;
 
     // check if the metricsBalancer is MetricsStochasticBalancer before casting
     if (metricsBalancer instanceof MetricsStochasticBalancer) {
+      MetricsStochasticBalancer balancer = (MetricsStochasticBalancer) metricsBalancer;
       // overall cost
-      ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName.getNameAsString(), "Overall",
-        "Overall cost", overall);
+      balancer.updateStochasticCost(tableName.getNameAsString(), 
+        "Overall", "Overall cost", overall);
 
       // each cost function
       for (int i = 0; i < costFunctions.length; i++) {
@@ -414,8 +415,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
         String costFunctionName = costFunction.getClass().getSimpleName();
         Double costPercent = (overall == 0) ? 0 : (subCosts[i] / overall);
         // TODO: cost function may need a specific description
-        ((MetricsStochasticBalancer) metricsBalancer).updateStochasticCost(tableName.getNameAsString(),
-          costFunctionName, "The percent of " + costFunctionName, costPercent);
+        balancer.updateStochasticCost(tableName.getNameAsString(), costFunctionName,
+          "The percent of " + costFunctionName, costPercent);
       }
     }
   }
