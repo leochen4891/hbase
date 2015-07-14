@@ -953,7 +953,8 @@ public class RegionStates {
     Map<TableName, Map<ServerName, List<HRegionInfo>>> result =
       new HashMap<TableName, Map<ServerName,List<HRegionInfo>>>();
     synchronized (this) {
-      if (!server.getConfiguration().getBoolean(HConstants.HBASE_MASTER_LOADBALANCE_BYTABLE, false)) {
+      if (!server.getConfiguration().getBoolean(
+            HConstants.HBASE_MASTER_LOADBALANCE_BYTABLE, false)) {
         Map<ServerName, List<HRegionInfo>> svrToRegions =
           new HashMap<ServerName, List<HRegionInfo>>(serverHoldings.size());
         for (Map.Entry<ServerName, Set<HRegionInfo>> e: serverHoldings.entrySet()) {
