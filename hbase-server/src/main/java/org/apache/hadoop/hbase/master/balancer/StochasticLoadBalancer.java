@@ -217,32 +217,16 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       cost.setClusterStatus(st);
     }
 
-    int metricsSize = 0;
-    // calculate the metrics size
-      try {
-        int tablesCount = 0;
-        int functionsCount = getCostFunctionNames().length;
-        
-        if (isByTable) {
-          for (HTableDescriptor t : services.getTableDescriptors().getAll().values()) {
-            if (!t.getTableName().isSystemTable()) {
-              tablesCount++;
-            }
-          }
-          //hbase:namespace is passed in by HMaster, but it is a system table
-          // the balancing costs of hbase:namespace table is added to JMX
-          tablesCount++;
-        } else { // combined to ensemble table
-          tablesCount = 1;
-        }
+    // update metrics size
+    try {
+      // by-table or ensemble mode
+      int tablesCount = isByTable ? services.getTableDescriptors().getAll().size() : 1;
+      int functionsCount = getCostFunctionNames().length;
 
-        metricsSize = tablesCount * (functionsCount + 1);
-      } catch (Exception e) {
-        LOG.info("stochastic load balancer update metrics size failed:" + e.getMessage());
-      }
-      
-      // update metrics size
-      updateMetricsSize(metricsSize);
+      updateMetricsSize(tablesCount * (functionsCount + 1)); // +1 for overall
+    } catch (Exception e) {
+      LOG.info("failed to get the size of all tables, exception = " + e.getMessage());
+    }
   }
   
   /**
