@@ -89,4 +89,9 @@ public class MetricsRegionWrapperStub implements MetricsRegionWrapper {
   public Map<String, DescriptiveStatistics> getCoprocessorExecutionStatistics() {
     return new HashMap<String, DescriptiveStatistics>();
   }
+
+  @Override
+  public int getReplicaId() {
+    return 0;
+  }
 }

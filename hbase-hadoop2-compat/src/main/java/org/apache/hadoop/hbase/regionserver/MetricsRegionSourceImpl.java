@@ -72,6 +72,7 @@ public class MetricsRegionSourceImpl implements MetricsRegionSource {
     regionNamePrefix = "Namespace_" + regionWrapper.getNamespace() +
         "_table_" + regionWrapper.getTableName() +
         "_region_" + regionWrapper.getRegionName()  +
+        "_replicaid_" + regionWrapper.getReplicaId() +
         "_metric_";
 
     String suffix = "Count";
