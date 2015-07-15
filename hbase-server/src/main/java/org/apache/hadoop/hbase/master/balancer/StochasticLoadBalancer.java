@@ -166,6 +166,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     regionReplicaRackCostFunction = new RegionReplicaRackCostFunction(conf);
 
     costFunctions = new CostFunction[]{
+      new PrimaryRegionCountSkewCostFunction(conf),
       new RegionCountSkewCostFunction(conf),
       new MoveCostFunction(conf),
       localityCost,
@@ -943,6 +944,42 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       }
 
       return costFromArray(stats);
+    }
+  }
+
+  /**
+   * Compute the cost of a potential cluster state from skew in number of
+   * primary regions on a cluster. 
+   */
+  static class PrimaryRegionCountSkewCostFunction extends CostFunction {
+    private static final String PRIMARY_REGION_COUNT_SKEW_COST_KEY =
+        "hbase.master.balancer.stochastic.PrimaryRegionCountCost";
+    private static final float DEFAULT_PRIMARY_REGION_COUNT_SKEW_COST = 1000;
+
+    private double[] numPrimariesOnServers = null;
+
+    PrimaryRegionCountSkewCostFunction(Configuration conf) {
+      super(conf);
+      this.setMultiplier(conf.getFloat(PRIMARY_REGION_COUNT_SKEW_COST_KEY, DEFAULT_PRIMARY_REGION_COUNT_SKEW_COST));
+    }
+
+    @Override
+    double cost() {
+      if (numPrimariesOnServers == null || numPrimariesOnServers.length != cluster.numServers) {
+        numPrimariesOnServers = new double[cluster.numServers];
+      }
+      
+      // get the number of primaries on each server
+      int serverIndex = 0;
+      for (List<HRegionInfo> regions : cluster.clusterState.values()){ 
+        int numPrimaries = 0;
+        for (HRegionInfo region : regions) {
+          if (region.getReplicaId() == 0) numPrimaries++;
+        }
+        numPrimariesOnServers[serverIndex++] = numPrimaries;
+      }
+
+      return costFromArray(numPrimariesOnServers);
     }
   }
 
