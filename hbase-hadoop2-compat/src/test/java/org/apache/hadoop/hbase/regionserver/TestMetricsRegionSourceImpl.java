@@ -128,10 +128,5 @@ public class TestMetricsRegionSourceImpl {
     public Map<String, DescriptiveStatistics> getCoprocessorExecutionStatistics() {
       return null;
     }
-
-    @Override
-    public int getReplicaId() {
-      return 0;
-    }
   }
 }

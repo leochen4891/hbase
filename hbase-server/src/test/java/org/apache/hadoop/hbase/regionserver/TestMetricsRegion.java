@@ -34,9 +34,9 @@ public class TestMetricsRegion {
     MetricsRegion mr = new MetricsRegion(new MetricsRegionWrapperStub());
     MetricsRegionAggregateSource agg = mr.getSource().getAggregateSource();
 
-    HELPER.assertGauge("namespace_TestNS_table_MetricsRegionWrapperStub_region_DEADBEEF001_replicaid_0_metric_storeCount", 101, agg);
-    HELPER.assertGauge("namespace_TestNS_table_MetricsRegionWrapperStub_region_DEADBEEF001_replicaid_0_metric_storeFileCount", 102, agg);
-    HELPER.assertGauge("namespace_TestNS_table_MetricsRegionWrapperStub_region_DEADBEEF001_replicaid_0_metric_memstoreSize", 103, agg);
+    HELPER.assertGauge("namespace_TestNS_table_MetricsRegionWrapperStub_region_DEADBEEF001_metric_storeCount", 101, agg);
+    HELPER.assertGauge("namespace_TestNS_table_MetricsRegionWrapperStub_region_DEADBEEF001_metric_storeFileCount", 102, agg);
+    HELPER.assertGauge("namespace_TestNS_table_MetricsRegionWrapperStub_region_DEADBEEF001_metric_memstoreSize", 103, agg);
     mr.close();
   }
 }
