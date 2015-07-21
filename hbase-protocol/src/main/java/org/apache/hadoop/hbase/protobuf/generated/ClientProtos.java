@@ -9,7 +9,7 @@ public final class ClientProtos {
       com.google.protobuf.ExtensionRegistry registry) {
   }
   /**
-   * Protobuf enum {@code Consistency}
+   * Protobuf enum {@code hbase.pb.Consistency}
    *
    * <pre>
    **
@@ -92,7 +92,7 @@ public final class ClientProtos {
       this.value = value;
     }
 
-    // @@protoc_insertion_point(enum_scope:Consistency)
+    // @@protoc_insertion_point(enum_scope:hbase.pb.Consistency)
   }
 
   public interface AuthorizationsOrBuilder
@@ -119,7 +119,7 @@ public final class ClientProtos {
         getLabelBytes(int index);
   }
   /**
-   * Protobuf type {@code Authorizations}
+   * Protobuf type {@code hbase.pb.Authorizations}
    *
    * <pre>
    **
@@ -199,12 +199,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Authorizations_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Authorizations_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Authorizations_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Authorizations_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Authorizations.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Authorizations.Builder.class);
     }
@@ -404,7 +404,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Authorizations}
+     * Protobuf type {@code hbase.pb.Authorizations}
      *
      * <pre>
      **
@@ -416,12 +416,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.AuthorizationsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Authorizations_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Authorizations_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Authorizations_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Authorizations_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Authorizations.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Authorizations.Builder.class);
       }
@@ -457,7 +457,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Authorizations_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Authorizations_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Authorizations getDefaultInstanceForType() {
@@ -626,7 +626,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Authorizations)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Authorizations)
     }
 
     static {
@@ -634,7 +634,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Authorizations)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Authorizations)
   }
 
   public interface CellVisibilityOrBuilder
@@ -656,7 +656,7 @@ public final class ClientProtos {
         getExpressionBytes();
   }
   /**
-   * Protobuf type {@code CellVisibility}
+   * Protobuf type {@code hbase.pb.CellVisibility}
    *
    * <pre>
    **
@@ -730,12 +730,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CellVisibility_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CellVisibility_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CellVisibility_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CellVisibility_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CellVisibility.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CellVisibility.Builder.class);
     }
@@ -951,7 +951,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code CellVisibility}
+     * Protobuf type {@code hbase.pb.CellVisibility}
      *
      * <pre>
      **
@@ -963,12 +963,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CellVisibilityOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CellVisibility_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CellVisibility_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CellVisibility_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CellVisibility_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CellVisibility.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CellVisibility.Builder.class);
       }
@@ -1004,7 +1004,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CellVisibility_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CellVisibility_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CellVisibility getDefaultInstanceForType() {
@@ -1153,7 +1153,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:CellVisibility)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.CellVisibility)
     }
 
     static {
@@ -1161,7 +1161,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:CellVisibility)
+    // @@protoc_insertion_point(class_scope:hbase.pb.CellVisibility)
   }
 
   public interface ColumnOrBuilder
@@ -1192,7 +1192,7 @@ public final class ClientProtos {
     com.google.protobuf.ByteString getQualifier(int index);
   }
   /**
-   * Protobuf type {@code Column}
+   * Protobuf type {@code hbase.pb.Column}
    *
    * <pre>
    **
@@ -1277,12 +1277,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Column_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Column_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Column_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Column_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder.class);
     }
@@ -1513,7 +1513,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Column}
+     * Protobuf type {@code hbase.pb.Column}
      *
      * <pre>
      **
@@ -1525,12 +1525,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Column_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Column_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Column_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Column_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder.class);
       }
@@ -1568,7 +1568,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Column_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Column_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getDefaultInstanceForType() {
@@ -1764,7 +1764,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Column)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Column)
     }
 
     static {
@@ -1772,7 +1772,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Column)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Column)
   }
 
   public interface GetOrBuilder
@@ -1788,81 +1788,81 @@ public final class ClientProtos {
      */
     com.google.protobuf.ByteString getRow();
 
-    // repeated .Column column = 2;
+    // repeated .hbase.pb.Column column = 2;
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> 
         getColumnList();
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getColumn(int index);
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     int getColumnCount();
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> 
         getColumnOrBuilderList();
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder getColumnOrBuilder(
         int index);
 
-    // repeated .NameBytesPair attribute = 3;
+    // repeated .hbase.pb.NameBytesPair attribute = 3;
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> 
         getAttributeList();
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index);
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     int getAttributeCount();
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
         getAttributeOrBuilderList();
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
         int index);
 
-    // optional .Filter filter = 4;
+    // optional .hbase.pb.Filter filter = 4;
     /**
-     * <code>optional .Filter filter = 4;</code>
+     * <code>optional .hbase.pb.Filter filter = 4;</code>
      */
     boolean hasFilter();
     /**
-     * <code>optional .Filter filter = 4;</code>
+     * <code>optional .hbase.pb.Filter filter = 4;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter getFilter();
     /**
-     * <code>optional .Filter filter = 4;</code>
+     * <code>optional .hbase.pb.Filter filter = 4;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder getFilterOrBuilder();
 
-    // optional .TimeRange time_range = 5;
+    // optional .hbase.pb.TimeRange time_range = 5;
     /**
-     * <code>optional .TimeRange time_range = 5;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
      */
     boolean hasTimeRange();
     /**
-     * <code>optional .TimeRange time_range = 5;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange();
     /**
-     * <code>optional .TimeRange time_range = 5;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder getTimeRangeOrBuilder();
 
@@ -1926,45 +1926,24 @@ public final class ClientProtos {
      */
     boolean getExistenceOnly();
 
-    // optional bool closest_row_before = 11 [default = false];
+    // optional .hbase.pb.Consistency consistency = 12 [default = STRONG];
     /**
-     * <code>optional bool closest_row_before = 11 [default = false];</code>
-     *
-     * <pre>
-     * If the row to get doesn't exist, return the
-     * closest row before.
-     * </pre>
-     */
-    boolean hasClosestRowBefore();
-    /**
-     * <code>optional bool closest_row_before = 11 [default = false];</code>
-     *
-     * <pre>
-     * If the row to get doesn't exist, return the
-     * closest row before.
-     * </pre>
-     */
-    boolean getClosestRowBefore();
-
-    // optional .Consistency consistency = 12 [default = STRONG];
-    /**
-     * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
      */
     boolean hasConsistency();
     /**
-     * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency getConsistency();
   }
   /**
-   * Protobuf type {@code Get}
+   * Protobuf type {@code hbase.pb.Get}
    *
    * <pre>
    **
    * The protocol buffer version of Get.
    * Unless existence_only is specified, return all the requested data
-   * for the row that matches exactly, or the one that immediately
-   * precedes it if closest_row_before is specified.
+   * for the row that matches exactly.
    * </pre>
    */
   public static final class Get extends
@@ -2087,18 +2066,13 @@ public final class ClientProtos {
               existenceOnly_ = input.readBool();
               break;
             }
-            case 88: {
-              bitField0_ |= 0x00000100;
-              closestRowBefore_ = input.readBool();
-              break;
-            }
             case 96: {
               int rawValue = input.readEnum();
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency value = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.valueOf(rawValue);
               if (value == null) {
                 unknownFields.mergeVarintField(12, rawValue);
               } else {
-                bitField0_ |= 0x00000200;
+                bitField0_ |= 0x00000100;
                 consistency_ = value;
               }
               break;
@@ -2123,12 +2097,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Get_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Get_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Get_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Get_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder.class);
     }
@@ -2165,117 +2139,117 @@ public final class ClientProtos {
       return row_;
     }
 
-    // repeated .Column column = 2;
+    // repeated .hbase.pb.Column column = 2;
     public static final int COLUMN_FIELD_NUMBER = 2;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> column_;
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> getColumnList() {
       return column_;
     }
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> 
         getColumnOrBuilderList() {
       return column_;
     }
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     public int getColumnCount() {
       return column_.size();
     }
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getColumn(int index) {
       return column_.get(index);
     }
     /**
-     * <code>repeated .Column column = 2;</code>
+     * <code>repeated .hbase.pb.Column column = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder getColumnOrBuilder(
         int index) {
       return column_.get(index);
     }
 
-    // repeated .NameBytesPair attribute = 3;
+    // repeated .hbase.pb.NameBytesPair attribute = 3;
     public static final int ATTRIBUTE_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> attribute_;
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> getAttributeList() {
       return attribute_;
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
         getAttributeOrBuilderList() {
       return attribute_;
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     public int getAttributeCount() {
       return attribute_.size();
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index) {
       return attribute_.get(index);
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 3;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
         int index) {
       return attribute_.get(index);
     }
 
-    // optional .Filter filter = 4;
+    // optional .hbase.pb.Filter filter = 4;
     public static final int FILTER_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter filter_;
     /**
-     * <code>optional .Filter filter = 4;</code>
+     * <code>optional .hbase.pb.Filter filter = 4;</code>
      */
     public boolean hasFilter() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .Filter filter = 4;</code>
+     * <code>optional .hbase.pb.Filter filter = 4;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter getFilter() {
       return filter_;
     }
     /**
-     * <code>optional .Filter filter = 4;</code>
+     * <code>optional .hbase.pb.Filter filter = 4;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder getFilterOrBuilder() {
       return filter_;
     }
 
-    // optional .TimeRange time_range = 5;
+    // optional .hbase.pb.TimeRange time_range = 5;
     public static final int TIME_RANGE_FIELD_NUMBER = 5;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange timeRange_;
     /**
-     * <code>optional .TimeRange time_range = 5;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
      */
     public boolean hasTimeRange() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .TimeRange time_range = 5;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange() {
       return timeRange_;
     }
     /**
-     * <code>optional .TimeRange time_range = 5;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder getTimeRangeOrBuilder() {
       return timeRange_;
@@ -2371,43 +2345,17 @@ public final class ClientProtos {
       return existenceOnly_;
     }
 
-    // optional bool closest_row_before = 11 [default = false];
-    public static final int CLOSEST_ROW_BEFORE_FIELD_NUMBER = 11;
-    private boolean closestRowBefore_;
-    /**
-     * <code>optional bool closest_row_before = 11 [default = false];</code>
-     *
-     * <pre>
-     * If the row to get doesn't exist, return the
-     * closest row before.
-     * </pre>
-     */
-    public boolean hasClosestRowBefore() {
-      return ((bitField0_ & 0x00000100) == 0x00000100);
-    }
-    /**
-     * <code>optional bool closest_row_before = 11 [default = false];</code>
-     *
-     * <pre>
-     * If the row to get doesn't exist, return the
-     * closest row before.
-     * </pre>
-     */
-    public boolean getClosestRowBefore() {
-      return closestRowBefore_;
-    }
-
-    // optional .Consistency consistency = 12 [default = STRONG];
+    // optional .hbase.pb.Consistency consistency = 12 [default = STRONG];
     public static final int CONSISTENCY_FIELD_NUMBER = 12;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency consistency_;
     /**
-     * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
      */
     public boolean hasConsistency() {
-      return ((bitField0_ & 0x00000200) == 0x00000200);
+      return ((bitField0_ & 0x00000100) == 0x00000100);
     }
     /**
-     * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency getConsistency() {
       return consistency_;
@@ -2424,7 +2372,6 @@ public final class ClientProtos {
       storeLimit_ = 0;
       storeOffset_ = 0;
       existenceOnly_ = false;
-      closestRowBefore_ = false;
       consistency_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.STRONG;
     }
     private byte memoizedIsInitialized = -1;
@@ -2492,9 +2439,6 @@ public final class ClientProtos {
         output.writeBool(10, existenceOnly_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        output.writeBool(11, closestRowBefore_);
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         output.writeEnum(12, consistency_.getNumber());
       }
       getUnknownFields().writeTo(output);
@@ -2547,10 +2491,6 @@ public final class ClientProtos {
           .computeBoolSize(10, existenceOnly_);
       }
       if (((bitField0_ & 0x00000100) == 0x00000100)) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeBoolSize(11, closestRowBefore_);
-      }
-      if (((bitField0_ & 0x00000200) == 0x00000200)) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(12, consistency_.getNumber());
       }
@@ -2621,11 +2561,6 @@ public final class ClientProtos {
         result = result && (getExistenceOnly()
             == other.getExistenceOnly());
       }
-      result = result && (hasClosestRowBefore() == other.hasClosestRowBefore());
-      if (hasClosestRowBefore()) {
-        result = result && (getClosestRowBefore()
-            == other.getClosestRowBefore());
-      }
       result = result && (hasConsistency() == other.hasConsistency());
       if (hasConsistency()) {
         result = result &&
@@ -2683,10 +2618,6 @@ public final class ClientProtos {
       if (hasExistenceOnly()) {
         hash = (37 * hash) + EXISTENCE_ONLY_FIELD_NUMBER;
         hash = (53 * hash) + hashBoolean(getExistenceOnly());
-      }
-      if (hasClosestRowBefore()) {
-        hash = (37 * hash) + CLOSEST_ROW_BEFORE_FIELD_NUMBER;
-        hash = (53 * hash) + hashBoolean(getClosestRowBefore());
       }
       if (hasConsistency()) {
         hash = (37 * hash) + CONSISTENCY_FIELD_NUMBER;
@@ -2764,14 +2695,13 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Get}
+     * Protobuf type {@code hbase.pb.Get}
      *
      * <pre>
      **
      * The protocol buffer version of Get.
      * Unless existence_only is specified, return all the requested data
-     * for the row that matches exactly, or the one that immediately
-     * precedes it if closest_row_before is specified.
+     * for the row that matches exactly.
      * </pre>
      */
     public static final class Builder extends
@@ -2779,12 +2709,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Get_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Get_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Get_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Get_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder.class);
       }
@@ -2849,10 +2779,8 @@ public final class ClientProtos {
         bitField0_ = (bitField0_ & ~0x00000100);
         existenceOnly_ = false;
         bitField0_ = (bitField0_ & ~0x00000200);
-        closestRowBefore_ = false;
-        bitField0_ = (bitField0_ & ~0x00000400);
         consistency_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.STRONG;
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         return this;
       }
 
@@ -2862,7 +2790,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Get_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Get_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getDefaultInstanceForType() {
@@ -2941,10 +2869,6 @@ public final class ClientProtos {
         result.existenceOnly_ = existenceOnly_;
         if (((from_bitField0_ & 0x00000400) == 0x00000400)) {
           to_bitField0_ |= 0x00000100;
-        }
-        result.closestRowBefore_ = closestRowBefore_;
-        if (((from_bitField0_ & 0x00000800) == 0x00000800)) {
-          to_bitField0_ |= 0x00000200;
         }
         result.consistency_ = consistency_;
         result.bitField0_ = to_bitField0_;
@@ -3039,9 +2963,6 @@ public final class ClientProtos {
         if (other.hasExistenceOnly()) {
           setExistenceOnly(other.getExistenceOnly());
         }
-        if (other.hasClosestRowBefore()) {
-          setClosestRowBefore(other.getClosestRowBefore());
-        }
         if (other.hasConsistency()) {
           setConsistency(other.getConsistency());
         }
@@ -3130,7 +3051,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // repeated .Column column = 2;
+      // repeated .hbase.pb.Column column = 2;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> column_ =
         java.util.Collections.emptyList();
       private void ensureColumnIsMutable() {
@@ -3144,7 +3065,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> columnBuilder_;
 
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> getColumnList() {
         if (columnBuilder_ == null) {
@@ -3154,7 +3075,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public int getColumnCount() {
         if (columnBuilder_ == null) {
@@ -3164,7 +3085,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getColumn(int index) {
         if (columnBuilder_ == null) {
@@ -3174,7 +3095,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder setColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column value) {
@@ -3191,7 +3112,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder setColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder builderForValue) {
@@ -3205,7 +3126,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder addColumn(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column value) {
         if (columnBuilder_ == null) {
@@ -3221,7 +3142,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder addColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column value) {
@@ -3238,7 +3159,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder addColumn(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder builderForValue) {
@@ -3252,7 +3173,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder addColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder builderForValue) {
@@ -3266,7 +3187,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder addAllColumn(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> values) {
@@ -3280,7 +3201,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder clearColumn() {
         if (columnBuilder_ == null) {
@@ -3293,7 +3214,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public Builder removeColumn(int index) {
         if (columnBuilder_ == null) {
@@ -3306,14 +3227,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder getColumnBuilder(
           int index) {
         return getColumnFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder getColumnOrBuilder(
           int index) {
@@ -3323,7 +3244,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> 
            getColumnOrBuilderList() {
@@ -3334,14 +3255,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder addColumnBuilder() {
         return getColumnFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.getDefaultInstance());
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder addColumnBuilder(
           int index) {
@@ -3349,7 +3270,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.getDefaultInstance());
       }
       /**
-       * <code>repeated .Column column = 2;</code>
+       * <code>repeated .hbase.pb.Column column = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder> 
            getColumnBuilderList() {
@@ -3370,7 +3291,7 @@ public final class ClientProtos {
         return columnBuilder_;
       }
 
-      // repeated .NameBytesPair attribute = 3;
+      // repeated .hbase.pb.NameBytesPair attribute = 3;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> attribute_ =
         java.util.Collections.emptyList();
       private void ensureAttributeIsMutable() {
@@ -3384,7 +3305,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> attributeBuilder_;
 
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> getAttributeList() {
         if (attributeBuilder_ == null) {
@@ -3394,7 +3315,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public int getAttributeCount() {
         if (attributeBuilder_ == null) {
@@ -3404,7 +3325,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index) {
         if (attributeBuilder_ == null) {
@@ -3414,7 +3335,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder setAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
@@ -3431,7 +3352,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder setAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -3445,7 +3366,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder addAttribute(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (attributeBuilder_ == null) {
@@ -3461,7 +3382,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder addAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
@@ -3478,7 +3399,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder addAttribute(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -3492,7 +3413,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder addAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -3506,7 +3427,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder addAllAttribute(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> values) {
@@ -3520,7 +3441,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder clearAttribute() {
         if (attributeBuilder_ == null) {
@@ -3533,7 +3454,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public Builder removeAttribute(int index) {
         if (attributeBuilder_ == null) {
@@ -3546,14 +3467,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder getAttributeBuilder(
           int index) {
         return getAttributeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
           int index) {
@@ -3563,7 +3484,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
            getAttributeOrBuilderList() {
@@ -3574,14 +3495,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder addAttributeBuilder() {
         return getAttributeFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder addAttributeBuilder(
           int index) {
@@ -3589,7 +3510,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 3;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 3;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder> 
            getAttributeBuilderList() {
@@ -3610,18 +3531,18 @@ public final class ClientProtos {
         return attributeBuilder_;
       }
 
-      // optional .Filter filter = 4;
+      // optional .hbase.pb.Filter filter = 4;
       private org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter filter_ = org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder> filterBuilder_;
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public boolean hasFilter() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter getFilter() {
         if (filterBuilder_ == null) {
@@ -3631,7 +3552,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public Builder setFilter(org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter value) {
         if (filterBuilder_ == null) {
@@ -3647,7 +3568,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public Builder setFilter(
           org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder builderForValue) {
@@ -3661,7 +3582,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public Builder mergeFilter(org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter value) {
         if (filterBuilder_ == null) {
@@ -3680,7 +3601,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public Builder clearFilter() {
         if (filterBuilder_ == null) {
@@ -3693,7 +3614,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder getFilterBuilder() {
         bitField0_ |= 0x00000008;
@@ -3701,7 +3622,7 @@ public final class ClientProtos {
         return getFilterFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder getFilterOrBuilder() {
         if (filterBuilder_ != null) {
@@ -3711,7 +3632,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Filter filter = 4;</code>
+       * <code>optional .hbase.pb.Filter filter = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder> 
@@ -3727,18 +3648,18 @@ public final class ClientProtos {
         return filterBuilder_;
       }
 
-      // optional .TimeRange time_range = 5;
+      // optional .hbase.pb.TimeRange time_range = 5;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange timeRange_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder> timeRangeBuilder_;
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public boolean hasTimeRange() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange() {
         if (timeRangeBuilder_ == null) {
@@ -3748,7 +3669,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public Builder setTimeRange(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange value) {
         if (timeRangeBuilder_ == null) {
@@ -3764,7 +3685,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public Builder setTimeRange(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder builderForValue) {
@@ -3778,7 +3699,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public Builder mergeTimeRange(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange value) {
         if (timeRangeBuilder_ == null) {
@@ -3797,7 +3718,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public Builder clearTimeRange() {
         if (timeRangeBuilder_ == null) {
@@ -3810,7 +3731,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder getTimeRangeBuilder() {
         bitField0_ |= 0x00000010;
@@ -3818,7 +3739,7 @@ public final class ClientProtos {
         return getTimeRangeFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder getTimeRangeOrBuilder() {
         if (timeRangeBuilder_ != null) {
@@ -3828,7 +3749,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .TimeRange time_range = 5;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder> 
@@ -4029,96 +3950,43 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional bool closest_row_before = 11 [default = false];
-      private boolean closestRowBefore_ ;
+      // optional .hbase.pb.Consistency consistency = 12 [default = STRONG];
+      private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency consistency_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.STRONG;
       /**
-       * <code>optional bool closest_row_before = 11 [default = false];</code>
-       *
-       * <pre>
-       * If the row to get doesn't exist, return the
-       * closest row before.
-       * </pre>
+       * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
        */
-      public boolean hasClosestRowBefore() {
+      public boolean hasConsistency() {
         return ((bitField0_ & 0x00000400) == 0x00000400);
       }
       /**
-       * <code>optional bool closest_row_before = 11 [default = false];</code>
-       *
-       * <pre>
-       * If the row to get doesn't exist, return the
-       * closest row before.
-       * </pre>
-       */
-      public boolean getClosestRowBefore() {
-        return closestRowBefore_;
-      }
-      /**
-       * <code>optional bool closest_row_before = 11 [default = false];</code>
-       *
-       * <pre>
-       * If the row to get doesn't exist, return the
-       * closest row before.
-       * </pre>
-       */
-      public Builder setClosestRowBefore(boolean value) {
-        bitField0_ |= 0x00000400;
-        closestRowBefore_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>optional bool closest_row_before = 11 [default = false];</code>
-       *
-       * <pre>
-       * If the row to get doesn't exist, return the
-       * closest row before.
-       * </pre>
-       */
-      public Builder clearClosestRowBefore() {
-        bitField0_ = (bitField0_ & ~0x00000400);
-        closestRowBefore_ = false;
-        onChanged();
-        return this;
-      }
-
-      // optional .Consistency consistency = 12 [default = STRONG];
-      private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency consistency_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.STRONG;
-      /**
-       * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
-       */
-      public boolean hasConsistency() {
-        return ((bitField0_ & 0x00000800) == 0x00000800);
-      }
-      /**
-       * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency getConsistency() {
         return consistency_;
       }
       /**
-       * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
        */
       public Builder setConsistency(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency value) {
         if (value == null) {
           throw new NullPointerException();
         }
-        bitField0_ |= 0x00000800;
+        bitField0_ |= 0x00000400;
         consistency_ = value;
         onChanged();
         return this;
       }
       /**
-       * <code>optional .Consistency consistency = 12 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 12 [default = STRONG];</code>
        */
       public Builder clearConsistency() {
-        bitField0_ = (bitField0_ & ~0x00000800);
+        bitField0_ = (bitField0_ & ~0x00000400);
         consistency_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.STRONG;
         onChanged();
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Get)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Get)
     }
 
     static {
@@ -4126,15 +3994,15 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Get)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Get)
   }
 
   public interface ResultOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // repeated .Cell cell = 1;
+    // repeated .hbase.pb.Cell cell = 1;
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4144,7 +4012,7 @@ public final class ClientProtos {
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell> 
         getCellList();
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4153,7 +4021,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell getCell(int index);
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4162,7 +4030,7 @@ public final class ClientProtos {
      */
     int getCellCount();
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4172,7 +4040,7 @@ public final class ClientProtos {
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.CellProtos.CellOrBuilder> 
         getCellOrBuilderList();
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4273,7 +4141,7 @@ public final class ClientProtos {
     boolean getPartial();
   }
   /**
-   * Protobuf type {@code Result}
+   * Protobuf type {@code hbase.pb.Result}
    */
   public static final class Result extends
       com.google.protobuf.GeneratedMessage
@@ -4368,12 +4236,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Result_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Result_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Result_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Result_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder.class);
     }
@@ -4394,11 +4262,11 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // repeated .Cell cell = 1;
+    // repeated .hbase.pb.Cell cell = 1;
     public static final int CELL_FIELD_NUMBER = 1;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell> cell_;
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4409,7 +4277,7 @@ public final class ClientProtos {
       return cell_;
     }
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4421,7 +4289,7 @@ public final class ClientProtos {
       return cell_;
     }
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4432,7 +4300,7 @@ public final class ClientProtos {
       return cell_.size();
     }
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4443,7 +4311,7 @@ public final class ClientProtos {
       return cell_.get(index);
     }
     /**
-     * <code>repeated .Cell cell = 1;</code>
+     * <code>repeated .hbase.pb.Cell cell = 1;</code>
      *
      * <pre>
      * Result includes the Cells or else it just has a count of Cells
@@ -4782,19 +4650,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Result}
+     * Protobuf type {@code hbase.pb.Result}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Result_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Result_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Result_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Result_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder.class);
       }
@@ -4843,7 +4711,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Result_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Result_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getDefaultInstanceForType() {
@@ -4968,7 +4836,7 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // repeated .Cell cell = 1;
+      // repeated .hbase.pb.Cell cell = 1;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell> cell_ =
         java.util.Collections.emptyList();
       private void ensureCellIsMutable() {
@@ -4982,7 +4850,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell, org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell.Builder, org.apache.hadoop.hbase.protobuf.generated.CellProtos.CellOrBuilder> cellBuilder_;
 
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -4997,7 +4865,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5012,7 +4880,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5027,7 +4895,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5049,7 +4917,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5068,7 +4936,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5089,7 +4957,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5111,7 +4979,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5130,7 +4998,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5149,7 +5017,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5168,7 +5036,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5186,7 +5054,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5204,7 +5072,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5216,7 +5084,7 @@ public final class ClientProtos {
         return getCellFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5231,7 +5099,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5247,7 +5115,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5259,7 +5127,7 @@ public final class ClientProtos {
             org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell.getDefaultInstance());
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5272,7 +5140,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.CellProtos.Cell.getDefaultInstance());
       }
       /**
-       * <code>repeated .Cell cell = 1;</code>
+       * <code>repeated .hbase.pb.Cell cell = 1;</code>
        *
        * <pre>
        * Result includes the Cells or else it just has a count of Cells
@@ -5530,7 +5398,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Result)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Result)
     }
 
     static {
@@ -5538,42 +5406,42 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Result)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Result)
   }
 
   public interface GetRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
-    // required .Get get = 2;
+    // required .hbase.pb.Get get = 2;
     /**
-     * <code>required .Get get = 2;</code>
+     * <code>required .hbase.pb.Get get = 2;</code>
      */
     boolean hasGet();
     /**
-     * <code>required .Get get = 2;</code>
+     * <code>required .hbase.pb.Get get = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getGet();
     /**
-     * <code>required .Get get = 2;</code>
+     * <code>required .hbase.pb.Get get = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder getGetOrBuilder();
   }
   /**
-   * Protobuf type {@code GetRequest}
+   * Protobuf type {@code hbase.pb.GetRequest}
    *
    * <pre>
    **
@@ -5668,12 +5536,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetRequest_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetRequest_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest.Builder.class);
     }
@@ -5694,45 +5562,45 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
     }
 
-    // required .Get get = 2;
+    // required .hbase.pb.Get get = 2;
     public static final int GET_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get get_;
     /**
-     * <code>required .Get get = 2;</code>
+     * <code>required .hbase.pb.Get get = 2;</code>
      */
     public boolean hasGet() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .Get get = 2;</code>
+     * <code>required .hbase.pb.Get get = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getGet() {
       return get_;
     }
     /**
-     * <code>required .Get get = 2;</code>
+     * <code>required .hbase.pb.Get get = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder getGetOrBuilder() {
       return get_;
@@ -5919,7 +5787,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code GetRequest}
+     * Protobuf type {@code hbase.pb.GetRequest}
      *
      * <pre>
      **
@@ -5931,12 +5799,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetRequest_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest.Builder.class);
       }
@@ -5984,7 +5852,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetRequest_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetRequest getDefaultInstanceForType() {
@@ -6084,18 +5952,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // required .RegionSpecifier region = 1;
+      // required .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -6105,7 +5973,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -6121,7 +5989,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -6135,7 +6003,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -6154,7 +6022,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -6167,7 +6035,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -6175,7 +6043,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -6185,7 +6053,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -6201,18 +6069,18 @@ public final class ClientProtos {
         return regionBuilder_;
       }
 
-      // required .Get get = 2;
+      // required .hbase.pb.Get get = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get get_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder> getBuilder_;
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public boolean hasGet() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getGet() {
         if (getBuilder_ == null) {
@@ -6222,7 +6090,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public Builder setGet(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get value) {
         if (getBuilder_ == null) {
@@ -6238,7 +6106,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public Builder setGet(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder builderForValue) {
@@ -6252,7 +6120,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public Builder mergeGet(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get value) {
         if (getBuilder_ == null) {
@@ -6271,7 +6139,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public Builder clearGet() {
         if (getBuilder_ == null) {
@@ -6284,7 +6152,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder getGetBuilder() {
         bitField0_ |= 0x00000002;
@@ -6292,7 +6160,7 @@ public final class ClientProtos {
         return getGetFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder getGetOrBuilder() {
         if (getBuilder_ != null) {
@@ -6302,7 +6170,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .Get get = 2;</code>
+       * <code>required .hbase.pb.Get get = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder> 
@@ -6318,7 +6186,7 @@ public final class ClientProtos {
         return getBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:GetRequest)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.GetRequest)
     }
 
     static {
@@ -6326,28 +6194,28 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:GetRequest)
+    // @@protoc_insertion_point(class_scope:hbase.pb.GetRequest)
   }
 
   public interface GetResponseOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional .Result result = 1;
+    // optional .hbase.pb.Result result = 1;
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     boolean hasResult();
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult();
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder();
   }
   /**
-   * Protobuf type {@code GetResponse}
+   * Protobuf type {@code hbase.pb.GetResponse}
    */
   public static final class GetResponse extends
       com.google.protobuf.GeneratedMessage
@@ -6424,12 +6292,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetResponse_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetResponse_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse.Builder.class);
     }
@@ -6450,23 +6318,23 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // optional .Result result = 1;
+    // optional .hbase.pb.Result result = 1;
     public static final int RESULT_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result result_;
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     public boolean hasResult() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult() {
       return result_;
     }
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder() {
       return result_;
@@ -6620,19 +6488,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code GetResponse}
+     * Protobuf type {@code hbase.pb.GetResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetResponse_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse.Builder.class);
       }
@@ -6673,7 +6541,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_GetResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_GetResponse_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse getDefaultInstanceForType() {
@@ -6746,18 +6614,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // optional .Result result = 1;
+      // optional .hbase.pb.Result result = 1;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result result_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> resultBuilder_;
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public boolean hasResult() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult() {
         if (resultBuilder_ == null) {
@@ -6767,7 +6635,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder setResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result value) {
         if (resultBuilder_ == null) {
@@ -6783,7 +6651,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder setResult(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder builderForValue) {
@@ -6797,7 +6665,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder mergeResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result value) {
         if (resultBuilder_ == null) {
@@ -6816,7 +6684,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder clearResult() {
         if (resultBuilder_ == null) {
@@ -6829,7 +6697,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder getResultBuilder() {
         bitField0_ |= 0x00000001;
@@ -6837,7 +6705,7 @@ public final class ClientProtos {
         return getResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder() {
         if (resultBuilder_ != null) {
@@ -6847,7 +6715,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> 
@@ -6863,7 +6731,7 @@ public final class ClientProtos {
         return resultBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:GetResponse)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.GetResponse)
     }
 
     static {
@@ -6871,7 +6739,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:GetResponse)
+    // @@protoc_insertion_point(class_scope:hbase.pb.GetResponse)
   }
 
   public interface ConditionOrBuilder
@@ -6907,32 +6775,32 @@ public final class ClientProtos {
      */
     com.google.protobuf.ByteString getQualifier();
 
-    // required .CompareType compare_type = 4;
+    // required .hbase.pb.CompareType compare_type = 4;
     /**
-     * <code>required .CompareType compare_type = 4;</code>
+     * <code>required .hbase.pb.CompareType compare_type = 4;</code>
      */
     boolean hasCompareType();
     /**
-     * <code>required .CompareType compare_type = 4;</code>
+     * <code>required .hbase.pb.CompareType compare_type = 4;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType getCompareType();
 
-    // required .Comparator comparator = 5;
+    // required .hbase.pb.Comparator comparator = 5;
     /**
-     * <code>required .Comparator comparator = 5;</code>
+     * <code>required .hbase.pb.Comparator comparator = 5;</code>
      */
     boolean hasComparator();
     /**
-     * <code>required .Comparator comparator = 5;</code>
+     * <code>required .hbase.pb.Comparator comparator = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator getComparator();
     /**
-     * <code>required .Comparator comparator = 5;</code>
+     * <code>required .hbase.pb.Comparator comparator = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ComparatorOrBuilder getComparatorOrBuilder();
   }
   /**
-   * Protobuf type {@code Condition}
+   * Protobuf type {@code hbase.pb.Condition}
    *
    * <pre>
    **
@@ -7043,12 +6911,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Condition_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Condition_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Condition_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Condition_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder.class);
     }
@@ -7117,39 +6985,39 @@ public final class ClientProtos {
       return qualifier_;
     }
 
-    // required .CompareType compare_type = 4;
+    // required .hbase.pb.CompareType compare_type = 4;
     public static final int COMPARE_TYPE_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType compareType_;
     /**
-     * <code>required .CompareType compare_type = 4;</code>
+     * <code>required .hbase.pb.CompareType compare_type = 4;</code>
      */
     public boolean hasCompareType() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>required .CompareType compare_type = 4;</code>
+     * <code>required .hbase.pb.CompareType compare_type = 4;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType getCompareType() {
       return compareType_;
     }
 
-    // required .Comparator comparator = 5;
+    // required .hbase.pb.Comparator comparator = 5;
     public static final int COMPARATOR_FIELD_NUMBER = 5;
     private org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator comparator_;
     /**
-     * <code>required .Comparator comparator = 5;</code>
+     * <code>required .hbase.pb.Comparator comparator = 5;</code>
      */
     public boolean hasComparator() {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>required .Comparator comparator = 5;</code>
+     * <code>required .hbase.pb.Comparator comparator = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator getComparator() {
       return comparator_;
     }
     /**
-     * <code>required .Comparator comparator = 5;</code>
+     * <code>required .hbase.pb.Comparator comparator = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ComparatorOrBuilder getComparatorOrBuilder() {
       return comparator_;
@@ -7395,7 +7263,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Condition}
+     * Protobuf type {@code hbase.pb.Condition}
      *
      * <pre>
      **
@@ -7410,12 +7278,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Condition_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Condition_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Condition_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Condition_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder.class);
       }
@@ -7464,7 +7332,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Condition_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Condition_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getDefaultInstanceForType() {
@@ -7697,22 +7565,22 @@ public final class ClientProtos {
         return this;
       }
 
-      // required .CompareType compare_type = 4;
+      // required .hbase.pb.CompareType compare_type = 4;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType compareType_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType.LESS;
       /**
-       * <code>required .CompareType compare_type = 4;</code>
+       * <code>required .hbase.pb.CompareType compare_type = 4;</code>
        */
       public boolean hasCompareType() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>required .CompareType compare_type = 4;</code>
+       * <code>required .hbase.pb.CompareType compare_type = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType getCompareType() {
         return compareType_;
       }
       /**
-       * <code>required .CompareType compare_type = 4;</code>
+       * <code>required .hbase.pb.CompareType compare_type = 4;</code>
        */
       public Builder setCompareType(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.CompareType value) {
         if (value == null) {
@@ -7724,7 +7592,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .CompareType compare_type = 4;</code>
+       * <code>required .hbase.pb.CompareType compare_type = 4;</code>
        */
       public Builder clearCompareType() {
         bitField0_ = (bitField0_ & ~0x00000008);
@@ -7733,18 +7601,18 @@ public final class ClientProtos {
         return this;
       }
 
-      // required .Comparator comparator = 5;
+      // required .hbase.pb.Comparator comparator = 5;
       private org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator comparator_ = org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator, org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator.Builder, org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ComparatorOrBuilder> comparatorBuilder_;
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public boolean hasComparator() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator getComparator() {
         if (comparatorBuilder_ == null) {
@@ -7754,7 +7622,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public Builder setComparator(org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator value) {
         if (comparatorBuilder_ == null) {
@@ -7770,7 +7638,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public Builder setComparator(
           org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator.Builder builderForValue) {
@@ -7784,7 +7652,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public Builder mergeComparator(org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator value) {
         if (comparatorBuilder_ == null) {
@@ -7803,7 +7671,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public Builder clearComparator() {
         if (comparatorBuilder_ == null) {
@@ -7816,7 +7684,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator.Builder getComparatorBuilder() {
         bitField0_ |= 0x00000010;
@@ -7824,7 +7692,7 @@ public final class ClientProtos {
         return getComparatorFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ComparatorOrBuilder getComparatorOrBuilder() {
         if (comparatorBuilder_ != null) {
@@ -7834,7 +7702,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .Comparator comparator = 5;</code>
+       * <code>required .hbase.pb.Comparator comparator = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator, org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.Comparator.Builder, org.apache.hadoop.hbase.protobuf.generated.ComparatorProtos.ComparatorOrBuilder> 
@@ -7850,7 +7718,7 @@ public final class ClientProtos {
         return comparatorBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:Condition)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Condition)
     }
 
     static {
@@ -7858,7 +7726,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Condition)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Condition)
   }
 
   public interface MutationProtoOrBuilder
@@ -7874,37 +7742,37 @@ public final class ClientProtos {
      */
     com.google.protobuf.ByteString getRow();
 
-    // optional .MutationProto.MutationType mutate_type = 2;
+    // optional .hbase.pb.MutationProto.MutationType mutate_type = 2;
     /**
-     * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+     * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
      */
     boolean hasMutateType();
     /**
-     * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+     * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType getMutateType();
 
-    // repeated .MutationProto.ColumnValue column_value = 3;
+    // repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue> 
         getColumnValueList();
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue getColumnValue(int index);
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     int getColumnValueCount();
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder> 
         getColumnValueOrBuilderList();
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder getColumnValueOrBuilder(
         int index);
@@ -7919,44 +7787,44 @@ public final class ClientProtos {
      */
     long getTimestamp();
 
-    // repeated .NameBytesPair attribute = 5;
+    // repeated .hbase.pb.NameBytesPair attribute = 5;
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> 
         getAttributeList();
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index);
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     int getAttributeCount();
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
         getAttributeOrBuilderList();
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
         int index);
 
-    // optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];
+    // optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];
     /**
-     * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+     * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
      */
     boolean hasDurability();
     /**
-     * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+     * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability getDurability();
 
-    // optional .TimeRange time_range = 7;
+    // optional .hbase.pb.TimeRange time_range = 7;
     /**
-     * <code>optional .TimeRange time_range = 7;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
      *
      * <pre>
      * For some mutations, a result may be returned, in which case,
@@ -7965,7 +7833,7 @@ public final class ClientProtos {
      */
     boolean hasTimeRange();
     /**
-     * <code>optional .TimeRange time_range = 7;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
      *
      * <pre>
      * For some mutations, a result may be returned, in which case,
@@ -7974,7 +7842,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange();
     /**
-     * <code>optional .TimeRange time_range = 7;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
      *
      * <pre>
      * For some mutations, a result may be returned, in which case,
@@ -8022,7 +7890,7 @@ public final class ClientProtos {
     long getNonce();
   }
   /**
-   * Protobuf type {@code MutationProto}
+   * Protobuf type {@code hbase.pb.MutationProto}
    *
    * <pre>
    **
@@ -8172,12 +8040,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder.class);
     }
@@ -8198,7 +8066,7 @@ public final class ClientProtos {
     }
 
     /**
-     * Protobuf enum {@code MutationProto.Durability}
+     * Protobuf enum {@code hbase.pb.MutationProto.Durability}
      */
     public enum Durability
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -8303,11 +8171,11 @@ public final class ClientProtos {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:MutationProto.Durability)
+      // @@protoc_insertion_point(enum_scope:hbase.pb.MutationProto.Durability)
     }
 
     /**
-     * Protobuf enum {@code MutationProto.MutationType}
+     * Protobuf enum {@code hbase.pb.MutationProto.MutationType}
      */
     public enum MutationType
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -8403,11 +8271,11 @@ public final class ClientProtos {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:MutationProto.MutationType)
+      // @@protoc_insertion_point(enum_scope:hbase.pb.MutationProto.MutationType)
     }
 
     /**
-     * Protobuf enum {@code MutationProto.DeleteType}
+     * Protobuf enum {@code hbase.pb.MutationProto.DeleteType}
      */
     public enum DeleteType
         implements com.google.protobuf.ProtocolMessageEnum {
@@ -8503,7 +8371,7 @@ public final class ClientProtos {
         this.value = value;
       }
 
-      // @@protoc_insertion_point(enum_scope:MutationProto.DeleteType)
+      // @@protoc_insertion_point(enum_scope:hbase.pb.MutationProto.DeleteType)
     }
 
     public interface ColumnValueOrBuilder
@@ -8519,33 +8387,33 @@ public final class ClientProtos {
        */
       com.google.protobuf.ByteString getFamily();
 
-      // repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;
+      // repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue> 
           getQualifierValueList();
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue getQualifierValue(int index);
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       int getQualifierValueCount();
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder> 
           getQualifierValueOrBuilderList();
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder getQualifierValueOrBuilder(
           int index);
     }
     /**
-     * Protobuf type {@code MutationProto.ColumnValue}
+     * Protobuf type {@code hbase.pb.MutationProto.ColumnValue}
      */
     public static final class ColumnValue extends
         com.google.protobuf.GeneratedMessage
@@ -8625,12 +8493,12 @@ public final class ClientProtos {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder.class);
       }
@@ -8683,13 +8551,13 @@ public final class ClientProtos {
          */
         long getTimestamp();
 
-        // optional .MutationProto.DeleteType delete_type = 4;
+        // optional .hbase.pb.MutationProto.DeleteType delete_type = 4;
         /**
-         * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+         * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
          */
         boolean hasDeleteType();
         /**
-         * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+         * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
          */
         org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType getDeleteType();
 
@@ -8704,7 +8572,7 @@ public final class ClientProtos {
         com.google.protobuf.ByteString getTags();
       }
       /**
-       * Protobuf type {@code MutationProto.ColumnValue.QualifierValue}
+       * Protobuf type {@code hbase.pb.MutationProto.ColumnValue.QualifierValue}
        */
       public static final class QualifierValue extends
           com.google.protobuf.GeneratedMessage
@@ -8799,12 +8667,12 @@ public final class ClientProtos {
         }
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_QualifierValue_descriptor;
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder.class);
         }
@@ -8873,17 +8741,17 @@ public final class ClientProtos {
           return timestamp_;
         }
 
-        // optional .MutationProto.DeleteType delete_type = 4;
+        // optional .hbase.pb.MutationProto.DeleteType delete_type = 4;
         public static final int DELETE_TYPE_FIELD_NUMBER = 4;
         private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType deleteType_;
         /**
-         * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+         * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
          */
         public boolean hasDeleteType() {
           return ((bitField0_ & 0x00000008) == 0x00000008);
         }
         /**
-         * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+         * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
          */
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType getDeleteType() {
           return deleteType_;
@@ -9121,19 +8989,19 @@ public final class ClientProtos {
           return builder;
         }
         /**
-         * Protobuf type {@code MutationProto.ColumnValue.QualifierValue}
+         * Protobuf type {@code hbase.pb.MutationProto.ColumnValue.QualifierValue}
          */
         public static final class Builder extends
             com.google.protobuf.GeneratedMessage.Builder<Builder>
            implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder {
           public static final com.google.protobuf.Descriptors.Descriptor
               getDescriptor() {
-            return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_QualifierValue_descriptor;
+            return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_descriptor;
           }
 
           protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
               internalGetFieldAccessorTable() {
-            return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable
+            return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable
                 .ensureFieldAccessorsInitialized(
                     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder.class);
           }
@@ -9177,7 +9045,7 @@ public final class ClientProtos {
 
           public com.google.protobuf.Descriptors.Descriptor
               getDescriptorForType() {
-            return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_QualifierValue_descriptor;
+            return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_descriptor;
           }
 
           public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue getDefaultInstanceForType() {
@@ -9379,22 +9247,22 @@ public final class ClientProtos {
             return this;
           }
 
-          // optional .MutationProto.DeleteType delete_type = 4;
+          // optional .hbase.pb.MutationProto.DeleteType delete_type = 4;
           private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType deleteType_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType.DELETE_ONE_VERSION;
           /**
-           * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+           * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
            */
           public boolean hasDeleteType() {
             return ((bitField0_ & 0x00000008) == 0x00000008);
           }
           /**
-           * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+           * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
            */
           public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType getDeleteType() {
             return deleteType_;
           }
           /**
-           * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+           * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
            */
           public Builder setDeleteType(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.DeleteType value) {
             if (value == null) {
@@ -9406,7 +9274,7 @@ public final class ClientProtos {
             return this;
           }
           /**
-           * <code>optional .MutationProto.DeleteType delete_type = 4;</code>
+           * <code>optional .hbase.pb.MutationProto.DeleteType delete_type = 4;</code>
            */
           public Builder clearDeleteType() {
             bitField0_ = (bitField0_ & ~0x00000008);
@@ -9451,7 +9319,7 @@ public final class ClientProtos {
             return this;
           }
 
-          // @@protoc_insertion_point(builder_scope:MutationProto.ColumnValue.QualifierValue)
+          // @@protoc_insertion_point(builder_scope:hbase.pb.MutationProto.ColumnValue.QualifierValue)
         }
 
         static {
@@ -9459,7 +9327,7 @@ public final class ClientProtos {
           defaultInstance.initFields();
         }
 
-        // @@protoc_insertion_point(class_scope:MutationProto.ColumnValue.QualifierValue)
+        // @@protoc_insertion_point(class_scope:hbase.pb.MutationProto.ColumnValue.QualifierValue)
       }
 
       private int bitField0_;
@@ -9479,36 +9347,36 @@ public final class ClientProtos {
         return family_;
       }
 
-      // repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;
+      // repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;
       public static final int QUALIFIER_VALUE_FIELD_NUMBER = 2;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue> qualifierValue_;
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue> getQualifierValueList() {
         return qualifierValue_;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder> 
           getQualifierValueOrBuilderList() {
         return qualifierValue_;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       public int getQualifierValueCount() {
         return qualifierValue_.size();
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue getQualifierValue(int index) {
         return qualifierValue_.get(index);
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder getQualifierValueOrBuilder(
           int index) {
@@ -9681,19 +9549,19 @@ public final class ClientProtos {
         return builder;
       }
       /**
-       * Protobuf type {@code MutationProto.ColumnValue}
+       * Protobuf type {@code hbase.pb.MutationProto.ColumnValue}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder>
          implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_descriptor;
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_fieldAccessorTable
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder.class);
         }
@@ -9736,7 +9604,7 @@ public final class ClientProtos {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_ColumnValue_descriptor;
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_ColumnValue_descriptor;
         }
 
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue getDefaultInstanceForType() {
@@ -9880,7 +9748,7 @@ public final class ClientProtos {
           return this;
         }
 
-        // repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;
+        // repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;
         private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue> qualifierValue_ =
           java.util.Collections.emptyList();
         private void ensureQualifierValueIsMutable() {
@@ -9894,7 +9762,7 @@ public final class ClientProtos {
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder> qualifierValueBuilder_;
 
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue> getQualifierValueList() {
           if (qualifierValueBuilder_ == null) {
@@ -9904,7 +9772,7 @@ public final class ClientProtos {
           }
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public int getQualifierValueCount() {
           if (qualifierValueBuilder_ == null) {
@@ -9914,7 +9782,7 @@ public final class ClientProtos {
           }
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue getQualifierValue(int index) {
           if (qualifierValueBuilder_ == null) {
@@ -9924,7 +9792,7 @@ public final class ClientProtos {
           }
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder setQualifierValue(
             int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue value) {
@@ -9941,7 +9809,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder setQualifierValue(
             int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder builderForValue) {
@@ -9955,7 +9823,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder addQualifierValue(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue value) {
           if (qualifierValueBuilder_ == null) {
@@ -9971,7 +9839,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder addQualifierValue(
             int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue value) {
@@ -9988,7 +9856,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder addQualifierValue(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder builderForValue) {
@@ -10002,7 +9870,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder addQualifierValue(
             int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder builderForValue) {
@@ -10016,7 +9884,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder addAllQualifierValue(
             java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue> values) {
@@ -10030,7 +9898,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder clearQualifierValue() {
           if (qualifierValueBuilder_ == null) {
@@ -10043,7 +9911,7 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public Builder removeQualifierValue(int index) {
           if (qualifierValueBuilder_ == null) {
@@ -10056,14 +9924,14 @@ public final class ClientProtos {
           return this;
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder getQualifierValueBuilder(
             int index) {
           return getQualifierValueFieldBuilder().getBuilder(index);
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder getQualifierValueOrBuilder(
             int index) {
@@ -10073,7 +9941,7 @@ public final class ClientProtos {
           }
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValueOrBuilder> 
              getQualifierValueOrBuilderList() {
@@ -10084,14 +9952,14 @@ public final class ClientProtos {
           }
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder addQualifierValueBuilder() {
           return getQualifierValueFieldBuilder().addBuilder(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.getDefaultInstance());
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder addQualifierValueBuilder(
             int index) {
@@ -10099,7 +9967,7 @@ public final class ClientProtos {
               index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.getDefaultInstance());
         }
         /**
-         * <code>repeated .MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
+         * <code>repeated .hbase.pb.MutationProto.ColumnValue.QualifierValue qualifier_value = 2;</code>
          */
         public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.QualifierValue.Builder> 
              getQualifierValueBuilderList() {
@@ -10120,7 +9988,7 @@ public final class ClientProtos {
           return qualifierValueBuilder_;
         }
 
-        // @@protoc_insertion_point(builder_scope:MutationProto.ColumnValue)
+        // @@protoc_insertion_point(builder_scope:hbase.pb.MutationProto.ColumnValue)
       }
 
       static {
@@ -10128,7 +9996,7 @@ public final class ClientProtos {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:MutationProto.ColumnValue)
+      // @@protoc_insertion_point(class_scope:hbase.pb.MutationProto.ColumnValue)
     }
 
     private int bitField0_;
@@ -10148,52 +10016,52 @@ public final class ClientProtos {
       return row_;
     }
 
-    // optional .MutationProto.MutationType mutate_type = 2;
+    // optional .hbase.pb.MutationProto.MutationType mutate_type = 2;
     public static final int MUTATE_TYPE_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType mutateType_;
     /**
-     * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+     * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
      */
     public boolean hasMutateType() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+     * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType getMutateType() {
       return mutateType_;
     }
 
-    // repeated .MutationProto.ColumnValue column_value = 3;
+    // repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;
     public static final int COLUMN_VALUE_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue> columnValue_;
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue> getColumnValueList() {
       return columnValue_;
     }
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder> 
         getColumnValueOrBuilderList() {
       return columnValue_;
     }
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     public int getColumnValueCount() {
       return columnValue_.size();
     }
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue getColumnValue(int index) {
       return columnValue_.get(index);
     }
     /**
-     * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+     * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder getColumnValueOrBuilder(
         int index) {
@@ -10216,63 +10084,63 @@ public final class ClientProtos {
       return timestamp_;
     }
 
-    // repeated .NameBytesPair attribute = 5;
+    // repeated .hbase.pb.NameBytesPair attribute = 5;
     public static final int ATTRIBUTE_FIELD_NUMBER = 5;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> attribute_;
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> getAttributeList() {
       return attribute_;
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
         getAttributeOrBuilderList() {
       return attribute_;
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     public int getAttributeCount() {
       return attribute_.size();
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index) {
       return attribute_.get(index);
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 5;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
         int index) {
       return attribute_.get(index);
     }
 
-    // optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];
+    // optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];
     public static final int DURABILITY_FIELD_NUMBER = 6;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability durability_;
     /**
-     * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+     * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
      */
     public boolean hasDurability() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+     * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability getDurability() {
       return durability_;
     }
 
-    // optional .TimeRange time_range = 7;
+    // optional .hbase.pb.TimeRange time_range = 7;
     public static final int TIME_RANGE_FIELD_NUMBER = 7;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange timeRange_;
     /**
-     * <code>optional .TimeRange time_range = 7;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
      *
      * <pre>
      * For some mutations, a result may be returned, in which case,
@@ -10283,7 +10151,7 @@ public final class ClientProtos {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional .TimeRange time_range = 7;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
      *
      * <pre>
      * For some mutations, a result may be returned, in which case,
@@ -10294,7 +10162,7 @@ public final class ClientProtos {
       return timeRange_;
     }
     /**
-     * <code>optional .TimeRange time_range = 7;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
      *
      * <pre>
      * For some mutations, a result may be returned, in which case,
@@ -10645,7 +10513,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code MutationProto}
+     * Protobuf type {@code hbase.pb.MutationProto}
      *
      * <pre>
      **
@@ -10661,12 +10529,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder.class);
       }
@@ -10733,7 +10601,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutationProto_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutationProto_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getDefaultInstanceForType() {
@@ -10966,22 +10834,22 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .MutationProto.MutationType mutate_type = 2;
+      // optional .hbase.pb.MutationProto.MutationType mutate_type = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType mutateType_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType.APPEND;
       /**
-       * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+       * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
        */
       public boolean hasMutateType() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+       * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType getMutateType() {
         return mutateType_;
       }
       /**
-       * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+       * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
        */
       public Builder setMutateType(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.MutationType value) {
         if (value == null) {
@@ -10993,7 +10861,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .MutationProto.MutationType mutate_type = 2;</code>
+       * <code>optional .hbase.pb.MutationProto.MutationType mutate_type = 2;</code>
        */
       public Builder clearMutateType() {
         bitField0_ = (bitField0_ & ~0x00000002);
@@ -11002,7 +10870,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // repeated .MutationProto.ColumnValue column_value = 3;
+      // repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue> columnValue_ =
         java.util.Collections.emptyList();
       private void ensureColumnValueIsMutable() {
@@ -11016,7 +10884,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder> columnValueBuilder_;
 
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue> getColumnValueList() {
         if (columnValueBuilder_ == null) {
@@ -11026,7 +10894,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public int getColumnValueCount() {
         if (columnValueBuilder_ == null) {
@@ -11036,7 +10904,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue getColumnValue(int index) {
         if (columnValueBuilder_ == null) {
@@ -11046,7 +10914,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder setColumnValue(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue value) {
@@ -11063,7 +10931,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder setColumnValue(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder builderForValue) {
@@ -11077,7 +10945,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder addColumnValue(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue value) {
         if (columnValueBuilder_ == null) {
@@ -11093,7 +10961,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder addColumnValue(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue value) {
@@ -11110,7 +10978,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder addColumnValue(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder builderForValue) {
@@ -11124,7 +10992,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder addColumnValue(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder builderForValue) {
@@ -11138,7 +11006,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder addAllColumnValue(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue> values) {
@@ -11152,7 +11020,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder clearColumnValue() {
         if (columnValueBuilder_ == null) {
@@ -11165,7 +11033,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public Builder removeColumnValue(int index) {
         if (columnValueBuilder_ == null) {
@@ -11178,14 +11046,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder getColumnValueBuilder(
           int index) {
         return getColumnValueFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder getColumnValueOrBuilder(
           int index) {
@@ -11195,7 +11063,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValueOrBuilder> 
            getColumnValueOrBuilderList() {
@@ -11206,14 +11074,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder addColumnValueBuilder() {
         return getColumnValueFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder addColumnValueBuilder(
           int index) {
@@ -11221,7 +11089,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.getDefaultInstance());
       }
       /**
-       * <code>repeated .MutationProto.ColumnValue column_value = 3;</code>
+       * <code>repeated .hbase.pb.MutationProto.ColumnValue column_value = 3;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.ColumnValue.Builder> 
            getColumnValueBuilderList() {
@@ -11275,7 +11143,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // repeated .NameBytesPair attribute = 5;
+      // repeated .hbase.pb.NameBytesPair attribute = 5;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> attribute_ =
         java.util.Collections.emptyList();
       private void ensureAttributeIsMutable() {
@@ -11289,7 +11157,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> attributeBuilder_;
 
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> getAttributeList() {
         if (attributeBuilder_ == null) {
@@ -11299,7 +11167,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public int getAttributeCount() {
         if (attributeBuilder_ == null) {
@@ -11309,7 +11177,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index) {
         if (attributeBuilder_ == null) {
@@ -11319,7 +11187,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder setAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
@@ -11336,7 +11204,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder setAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -11350,7 +11218,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder addAttribute(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (attributeBuilder_ == null) {
@@ -11366,7 +11234,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder addAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
@@ -11383,7 +11251,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder addAttribute(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -11397,7 +11265,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder addAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -11411,7 +11279,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder addAllAttribute(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> values) {
@@ -11425,7 +11293,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder clearAttribute() {
         if (attributeBuilder_ == null) {
@@ -11438,7 +11306,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public Builder removeAttribute(int index) {
         if (attributeBuilder_ == null) {
@@ -11451,14 +11319,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder getAttributeBuilder(
           int index) {
         return getAttributeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
           int index) {
@@ -11468,7 +11336,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
            getAttributeOrBuilderList() {
@@ -11479,14 +11347,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder addAttributeBuilder() {
         return getAttributeFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder addAttributeBuilder(
           int index) {
@@ -11494,7 +11362,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 5;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 5;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder> 
            getAttributeBuilderList() {
@@ -11515,22 +11383,22 @@ public final class ClientProtos {
         return attributeBuilder_;
       }
 
-      // optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];
+      // optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability durability_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability.USE_DEFAULT;
       /**
-       * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+       * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
        */
       public boolean hasDurability() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+       * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability getDurability() {
         return durability_;
       }
       /**
-       * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+       * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
        */
       public Builder setDurability(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Durability value) {
         if (value == null) {
@@ -11542,7 +11410,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
+       * <code>optional .hbase.pb.MutationProto.Durability durability = 6 [default = USE_DEFAULT];</code>
        */
       public Builder clearDurability() {
         bitField0_ = (bitField0_ & ~0x00000020);
@@ -11551,12 +11419,12 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .TimeRange time_range = 7;
+      // optional .hbase.pb.TimeRange time_range = 7;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange timeRange_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder> timeRangeBuilder_;
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11567,7 +11435,7 @@ public final class ClientProtos {
         return ((bitField0_ & 0x00000040) == 0x00000040);
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11582,7 +11450,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11603,7 +11471,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11622,7 +11490,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11646,7 +11514,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11664,7 +11532,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11677,7 +11545,7 @@ public final class ClientProtos {
         return getTimeRangeFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11692,7 +11560,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .TimeRange time_range = 7;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 7;</code>
        *
        * <pre>
        * For some mutations, a result may be returned, in which case,
@@ -11815,7 +11683,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:MutationProto)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.MutationProto)
     }
 
     static {
@@ -11823,51 +11691,51 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MutationProto)
+    // @@protoc_insertion_point(class_scope:hbase.pb.MutationProto)
   }
 
   public interface MutateRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
-    // required .MutationProto mutation = 2;
+    // required .hbase.pb.MutationProto mutation = 2;
     /**
-     * <code>required .MutationProto mutation = 2;</code>
+     * <code>required .hbase.pb.MutationProto mutation = 2;</code>
      */
     boolean hasMutation();
     /**
-     * <code>required .MutationProto mutation = 2;</code>
+     * <code>required .hbase.pb.MutationProto mutation = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getMutation();
     /**
-     * <code>required .MutationProto mutation = 2;</code>
+     * <code>required .hbase.pb.MutationProto mutation = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder getMutationOrBuilder();
 
-    // optional .Condition condition = 3;
+    // optional .hbase.pb.Condition condition = 3;
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     boolean hasCondition();
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getCondition();
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder getConditionOrBuilder();
 
@@ -11882,7 +11750,7 @@ public final class ClientProtos {
     long getNonceGroup();
   }
   /**
-   * Protobuf type {@code MutateRequest}
+   * Protobuf type {@code hbase.pb.MutateRequest}
    *
    * <pre>
    **
@@ -12001,12 +11869,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateRequest_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateRequest_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateRequest.Builder.class);
     }
@@ -12027,67 +11895,67 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
     }
 
-    // required .MutationProto mutation = 2;
+    // required .hbase.pb.MutationProto mutation = 2;
     public static final int MUTATION_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto mutation_;
     /**
-     * <code>required .MutationProto mutation = 2;</code>
+     * <code>required .hbase.pb.MutationProto mutation = 2;</code>
      */
     public boolean hasMutation() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .MutationProto mutation = 2;</code>
+     * <code>required .hbase.pb.MutationProto mutation = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getMutation() {
       return mutation_;
     }
     /**
-     * <code>required .MutationProto mutation = 2;</code>
+     * <code>required .hbase.pb.MutationProto mutation = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder getMutationOrBuilder() {
       return mutation_;
     }
 
-    // optional .Condition condition = 3;
+    // optional .hbase.pb.Condition condition = 3;
     public static final int CONDITION_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition condition_;
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     public boolean hasCondition() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getCondition() {
       return condition_;
     }
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder getConditionOrBuilder() {
       return condition_;
@@ -12330,7 +12198,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code MutateRequest}
+     * Protobuf type {@code hbase.pb.MutateRequest}
      *
      * <pre>
      **
@@ -12348,12 +12216,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateRequest_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateRequest.Builder.class);
       }
@@ -12410,7 +12278,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateRequest_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateRequest getDefaultInstanceForType() {
@@ -12534,18 +12402,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // required .RegionSpecifier region = 1;
+      // required .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -12555,7 +12423,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -12571,7 +12439,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -12585,7 +12453,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -12604,7 +12472,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -12617,7 +12485,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -12625,7 +12493,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -12635,7 +12503,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -12651,18 +12519,18 @@ public final class ClientProtos {
         return regionBuilder_;
       }
 
-      // required .MutationProto mutation = 2;
+      // required .hbase.pb.MutationProto mutation = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto mutation_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder> mutationBuilder_;
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public boolean hasMutation() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getMutation() {
         if (mutationBuilder_ == null) {
@@ -12672,7 +12540,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder setMutation(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto value) {
         if (mutationBuilder_ == null) {
@@ -12688,7 +12556,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder setMutation(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder builderForValue) {
@@ -12702,7 +12570,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder mergeMutation(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto value) {
         if (mutationBuilder_ == null) {
@@ -12721,7 +12589,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder clearMutation() {
         if (mutationBuilder_ == null) {
@@ -12734,7 +12602,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder getMutationBuilder() {
         bitField0_ |= 0x00000002;
@@ -12742,7 +12610,7 @@ public final class ClientProtos {
         return getMutationFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder getMutationOrBuilder() {
         if (mutationBuilder_ != null) {
@@ -12752,7 +12620,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .MutationProto mutation = 2;</code>
+       * <code>required .hbase.pb.MutationProto mutation = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder> 
@@ -12768,18 +12636,18 @@ public final class ClientProtos {
         return mutationBuilder_;
       }
 
-      // optional .Condition condition = 3;
+      // optional .hbase.pb.Condition condition = 3;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition condition_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder> conditionBuilder_;
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public boolean hasCondition() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getCondition() {
         if (conditionBuilder_ == null) {
@@ -12789,7 +12657,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder setCondition(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition value) {
         if (conditionBuilder_ == null) {
@@ -12805,7 +12673,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder setCondition(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder builderForValue) {
@@ -12819,7 +12687,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder mergeCondition(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition value) {
         if (conditionBuilder_ == null) {
@@ -12838,7 +12706,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder clearCondition() {
         if (conditionBuilder_ == null) {
@@ -12851,7 +12719,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder getConditionBuilder() {
         bitField0_ |= 0x00000004;
@@ -12859,7 +12727,7 @@ public final class ClientProtos {
         return getConditionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder getConditionOrBuilder() {
         if (conditionBuilder_ != null) {
@@ -12869,7 +12737,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder> 
@@ -12918,7 +12786,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:MutateRequest)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.MutateRequest)
     }
 
     static {
@@ -12926,23 +12794,23 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MutateRequest)
+    // @@protoc_insertion_point(class_scope:hbase.pb.MutateRequest)
   }
 
   public interface MutateResponseOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional .Result result = 1;
+    // optional .hbase.pb.Result result = 1;
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     boolean hasResult();
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult();
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder();
 
@@ -12965,7 +12833,7 @@ public final class ClientProtos {
     boolean getProcessed();
   }
   /**
-   * Protobuf type {@code MutateResponse}
+   * Protobuf type {@code hbase.pb.MutateResponse}
    */
   public static final class MutateResponse extends
       com.google.protobuf.GeneratedMessage
@@ -13047,12 +12915,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateResponse_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateResponse_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse.Builder.class);
     }
@@ -13073,23 +12941,23 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // optional .Result result = 1;
+    // optional .hbase.pb.Result result = 1;
     public static final int RESULT_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result result_;
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     public boolean hasResult() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult() {
       return result_;
     }
     /**
-     * <code>optional .Result result = 1;</code>
+     * <code>optional .hbase.pb.Result result = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder() {
       return result_;
@@ -13284,19 +13152,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code MutateResponse}
+     * Protobuf type {@code hbase.pb.MutateResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateResponse_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse.Builder.class);
       }
@@ -13339,7 +13207,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MutateResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MutateResponse_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse getDefaultInstanceForType() {
@@ -13419,18 +13287,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // optional .Result result = 1;
+      // optional .hbase.pb.Result result = 1;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result result_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> resultBuilder_;
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public boolean hasResult() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult() {
         if (resultBuilder_ == null) {
@@ -13440,7 +13308,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder setResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result value) {
         if (resultBuilder_ == null) {
@@ -13456,7 +13324,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder setResult(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder builderForValue) {
@@ -13470,7 +13338,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder mergeResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result value) {
         if (resultBuilder_ == null) {
@@ -13489,7 +13357,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public Builder clearResult() {
         if (resultBuilder_ == null) {
@@ -13502,7 +13370,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder getResultBuilder() {
         bitField0_ |= 0x00000001;
@@ -13510,7 +13378,7 @@ public final class ClientProtos {
         return getResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder() {
         if (resultBuilder_ != null) {
@@ -13520,7 +13388,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Result result = 1;</code>
+       * <code>optional .hbase.pb.Result result = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> 
@@ -13585,7 +13453,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:MutateResponse)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.MutateResponse)
     }
 
     static {
@@ -13593,58 +13461,58 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MutateResponse)
+    // @@protoc_insertion_point(class_scope:hbase.pb.MutateResponse)
   }
 
   public interface ScanOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // repeated .Column column = 1;
+    // repeated .hbase.pb.Column column = 1;
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> 
         getColumnList();
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getColumn(int index);
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     int getColumnCount();
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> 
         getColumnOrBuilderList();
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder getColumnOrBuilder(
         int index);
 
-    // repeated .NameBytesPair attribute = 2;
+    // repeated .hbase.pb.NameBytesPair attribute = 2;
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> 
         getAttributeList();
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index);
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     int getAttributeCount();
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
         getAttributeOrBuilderList();
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
         int index);
@@ -13669,31 +13537,31 @@ public final class ClientProtos {
      */
     com.google.protobuf.ByteString getStopRow();
 
-    // optional .Filter filter = 5;
+    // optional .hbase.pb.Filter filter = 5;
     /**
-     * <code>optional .Filter filter = 5;</code>
+     * <code>optional .hbase.pb.Filter filter = 5;</code>
      */
     boolean hasFilter();
     /**
-     * <code>optional .Filter filter = 5;</code>
+     * <code>optional .hbase.pb.Filter filter = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter getFilter();
     /**
-     * <code>optional .Filter filter = 5;</code>
+     * <code>optional .hbase.pb.Filter filter = 5;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder getFilterOrBuilder();
 
-    // optional .TimeRange time_range = 6;
+    // optional .hbase.pb.TimeRange time_range = 6;
     /**
-     * <code>optional .TimeRange time_range = 6;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
      */
     boolean hasTimeRange();
     /**
-     * <code>optional .TimeRange time_range = 6;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange();
     /**
-     * <code>optional .TimeRange time_range = 6;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder getTimeRangeOrBuilder();
 
@@ -13795,13 +13663,13 @@ public final class ClientProtos {
      */
     boolean getReversed();
 
-    // optional .Consistency consistency = 16 [default = STRONG];
+    // optional .hbase.pb.Consistency consistency = 16 [default = STRONG];
     /**
-     * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
      */
     boolean hasConsistency();
     /**
-     * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency getConsistency();
 
@@ -13816,7 +13684,7 @@ public final class ClientProtos {
     int getCaching();
   }
   /**
-   * Protobuf type {@code Scan}
+   * Protobuf type {@code hbase.pb.Scan}
    *
    * <pre>
    **
@@ -14010,12 +13878,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Scan_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Scan_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Scan_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Scan_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.Builder.class);
     }
@@ -14036,72 +13904,72 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // repeated .Column column = 1;
+    // repeated .hbase.pb.Column column = 1;
     public static final int COLUMN_FIELD_NUMBER = 1;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> column_;
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> getColumnList() {
       return column_;
     }
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> 
         getColumnOrBuilderList() {
       return column_;
     }
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     public int getColumnCount() {
       return column_.size();
     }
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getColumn(int index) {
       return column_.get(index);
     }
     /**
-     * <code>repeated .Column column = 1;</code>
+     * <code>repeated .hbase.pb.Column column = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder getColumnOrBuilder(
         int index) {
       return column_.get(index);
     }
 
-    // repeated .NameBytesPair attribute = 2;
+    // repeated .hbase.pb.NameBytesPair attribute = 2;
     public static final int ATTRIBUTE_FIELD_NUMBER = 2;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> attribute_;
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> getAttributeList() {
       return attribute_;
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
         getAttributeOrBuilderList() {
       return attribute_;
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     public int getAttributeCount() {
       return attribute_.size();
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index) {
       return attribute_.get(index);
     }
     /**
-     * <code>repeated .NameBytesPair attribute = 2;</code>
+     * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
         int index) {
@@ -14140,45 +14008,45 @@ public final class ClientProtos {
       return stopRow_;
     }
 
-    // optional .Filter filter = 5;
+    // optional .hbase.pb.Filter filter = 5;
     public static final int FILTER_FIELD_NUMBER = 5;
     private org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter filter_;
     /**
-     * <code>optional .Filter filter = 5;</code>
+     * <code>optional .hbase.pb.Filter filter = 5;</code>
      */
     public boolean hasFilter() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Filter filter = 5;</code>
+     * <code>optional .hbase.pb.Filter filter = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter getFilter() {
       return filter_;
     }
     /**
-     * <code>optional .Filter filter = 5;</code>
+     * <code>optional .hbase.pb.Filter filter = 5;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder getFilterOrBuilder() {
       return filter_;
     }
 
-    // optional .TimeRange time_range = 6;
+    // optional .hbase.pb.TimeRange time_range = 6;
     public static final int TIME_RANGE_FIELD_NUMBER = 6;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange timeRange_;
     /**
-     * <code>optional .TimeRange time_range = 6;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
      */
     public boolean hasTimeRange() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .TimeRange time_range = 6;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange() {
       return timeRange_;
     }
     /**
-     * <code>optional .TimeRange time_range = 6;</code>
+     * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder getTimeRangeOrBuilder() {
       return timeRange_;
@@ -14336,17 +14204,17 @@ public final class ClientProtos {
       return reversed_;
     }
 
-    // optional .Consistency consistency = 16 [default = STRONG];
+    // optional .hbase.pb.Consistency consistency = 16 [default = STRONG];
     public static final int CONSISTENCY_FIELD_NUMBER = 16;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency consistency_;
     /**
-     * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
      */
     public boolean hasConsistency() {
       return ((bitField0_ & 0x00002000) == 0x00002000);
     }
     /**
-     * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+     * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency getConsistency() {
       return consistency_;
@@ -14800,7 +14668,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Scan}
+     * Protobuf type {@code hbase.pb.Scan}
      *
      * <pre>
      **
@@ -14818,12 +14686,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Scan_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Scan_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Scan_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Scan_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.Builder.class);
       }
@@ -14911,7 +14779,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Scan_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Scan_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan getDefaultInstanceForType() {
@@ -15174,7 +15042,7 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // repeated .Column column = 1;
+      // repeated .hbase.pb.Column column = 1;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> column_ =
         java.util.Collections.emptyList();
       private void ensureColumnIsMutable() {
@@ -15188,7 +15056,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> columnBuilder_;
 
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> getColumnList() {
         if (columnBuilder_ == null) {
@@ -15198,7 +15066,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public int getColumnCount() {
         if (columnBuilder_ == null) {
@@ -15208,7 +15076,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column getColumn(int index) {
         if (columnBuilder_ == null) {
@@ -15218,7 +15086,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder setColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column value) {
@@ -15235,7 +15103,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder setColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder builderForValue) {
@@ -15249,7 +15117,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder addColumn(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column value) {
         if (columnBuilder_ == null) {
@@ -15265,7 +15133,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder addColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column value) {
@@ -15282,7 +15150,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder addColumn(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder builderForValue) {
@@ -15296,7 +15164,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder addColumn(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder builderForValue) {
@@ -15310,7 +15178,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder addAllColumn(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column> values) {
@@ -15324,7 +15192,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder clearColumn() {
         if (columnBuilder_ == null) {
@@ -15337,7 +15205,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public Builder removeColumn(int index) {
         if (columnBuilder_ == null) {
@@ -15350,14 +15218,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder getColumnBuilder(
           int index) {
         return getColumnFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder getColumnOrBuilder(
           int index) {
@@ -15367,7 +15235,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ColumnOrBuilder> 
            getColumnOrBuilderList() {
@@ -15378,14 +15246,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder addColumnBuilder() {
         return getColumnFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.getDefaultInstance());
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder addColumnBuilder(
           int index) {
@@ -15393,7 +15261,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.getDefaultInstance());
       }
       /**
-       * <code>repeated .Column column = 1;</code>
+       * <code>repeated .hbase.pb.Column column = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Column.Builder> 
            getColumnBuilderList() {
@@ -15414,7 +15282,7 @@ public final class ClientProtos {
         return columnBuilder_;
       }
 
-      // repeated .NameBytesPair attribute = 2;
+      // repeated .hbase.pb.NameBytesPair attribute = 2;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> attribute_ =
         java.util.Collections.emptyList();
       private void ensureAttributeIsMutable() {
@@ -15428,7 +15296,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> attributeBuilder_;
 
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> getAttributeList() {
         if (attributeBuilder_ == null) {
@@ -15438,7 +15306,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public int getAttributeCount() {
         if (attributeBuilder_ == null) {
@@ -15448,7 +15316,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getAttribute(int index) {
         if (attributeBuilder_ == null) {
@@ -15458,7 +15326,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder setAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
@@ -15475,7 +15343,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder setAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -15489,7 +15357,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder addAttribute(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (attributeBuilder_ == null) {
@@ -15505,7 +15373,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder addAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
@@ -15522,7 +15390,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder addAttribute(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -15536,7 +15404,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder addAttribute(
           int index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -15550,7 +15418,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder addAllAttribute(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair> values) {
@@ -15564,7 +15432,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder clearAttribute() {
         if (attributeBuilder_ == null) {
@@ -15577,7 +15445,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public Builder removeAttribute(int index) {
         if (attributeBuilder_ == null) {
@@ -15590,14 +15458,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder getAttributeBuilder(
           int index) {
         return getAttributeFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getAttributeOrBuilder(
           int index) {
@@ -15607,7 +15475,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
            getAttributeOrBuilderList() {
@@ -15618,14 +15486,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder addAttributeBuilder() {
         return getAttributeFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder addAttributeBuilder(
           int index) {
@@ -15633,7 +15501,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance());
       }
       /**
-       * <code>repeated .NameBytesPair attribute = 2;</code>
+       * <code>repeated .hbase.pb.NameBytesPair attribute = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder> 
            getAttributeBuilderList() {
@@ -15726,18 +15594,18 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .Filter filter = 5;
+      // optional .hbase.pb.Filter filter = 5;
       private org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter filter_ = org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder> filterBuilder_;
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public boolean hasFilter() {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter getFilter() {
         if (filterBuilder_ == null) {
@@ -15747,7 +15615,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public Builder setFilter(org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter value) {
         if (filterBuilder_ == null) {
@@ -15763,7 +15631,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public Builder setFilter(
           org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder builderForValue) {
@@ -15777,7 +15645,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public Builder mergeFilter(org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter value) {
         if (filterBuilder_ == null) {
@@ -15796,7 +15664,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public Builder clearFilter() {
         if (filterBuilder_ == null) {
@@ -15809,7 +15677,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder getFilterBuilder() {
         bitField0_ |= 0x00000010;
@@ -15817,7 +15685,7 @@ public final class ClientProtos {
         return getFilterFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder getFilterOrBuilder() {
         if (filterBuilder_ != null) {
@@ -15827,7 +15695,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Filter filter = 5;</code>
+       * <code>optional .hbase.pb.Filter filter = 5;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.Filter.Builder, org.apache.hadoop.hbase.protobuf.generated.FilterProtos.FilterOrBuilder> 
@@ -15843,18 +15711,18 @@ public final class ClientProtos {
         return filterBuilder_;
       }
 
-      // optional .TimeRange time_range = 6;
+      // optional .hbase.pb.TimeRange time_range = 6;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange timeRange_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder> timeRangeBuilder_;
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public boolean hasTimeRange() {
         return ((bitField0_ & 0x00000020) == 0x00000020);
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange getTimeRange() {
         if (timeRangeBuilder_ == null) {
@@ -15864,7 +15732,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public Builder setTimeRange(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange value) {
         if (timeRangeBuilder_ == null) {
@@ -15880,7 +15748,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public Builder setTimeRange(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder builderForValue) {
@@ -15894,7 +15762,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public Builder mergeTimeRange(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange value) {
         if (timeRangeBuilder_ == null) {
@@ -15913,7 +15781,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public Builder clearTimeRange() {
         if (timeRangeBuilder_ == null) {
@@ -15926,7 +15794,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder getTimeRangeBuilder() {
         bitField0_ |= 0x00000020;
@@ -15934,7 +15802,7 @@ public final class ClientProtos {
         return getTimeRangeFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder getTimeRangeOrBuilder() {
         if (timeRangeBuilder_ != null) {
@@ -15944,7 +15812,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .TimeRange time_range = 6;</code>
+       * <code>optional .hbase.pb.TimeRange time_range = 6;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRange.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.TimeRangeOrBuilder> 
@@ -16273,22 +16141,22 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .Consistency consistency = 16 [default = STRONG];
+      // optional .hbase.pb.Consistency consistency = 16 [default = STRONG];
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency consistency_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency.STRONG;
       /**
-       * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
        */
       public boolean hasConsistency() {
         return ((bitField0_ & 0x00008000) == 0x00008000);
       }
       /**
-       * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency getConsistency() {
         return consistency_;
       }
       /**
-       * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
        */
       public Builder setConsistency(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Consistency value) {
         if (value == null) {
@@ -16300,7 +16168,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Consistency consistency = 16 [default = STRONG];</code>
+       * <code>optional .hbase.pb.Consistency consistency = 16 [default = STRONG];</code>
        */
       public Builder clearConsistency() {
         bitField0_ = (bitField0_ & ~0x00008000);
@@ -16342,7 +16210,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:Scan)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Scan)
     }
 
     static {
@@ -16350,37 +16218,37 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Scan)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Scan)
   }
 
   public interface ScanRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional .RegionSpecifier region = 1;
+    // optional .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>optional .RegionSpecifier region = 1;</code>
+     * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>optional .RegionSpecifier region = 1;</code>
+     * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>optional .RegionSpecifier region = 1;</code>
+     * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
-    // optional .Scan scan = 2;
+    // optional .hbase.pb.Scan scan = 2;
     /**
-     * <code>optional .Scan scan = 2;</code>
+     * <code>optional .hbase.pb.Scan scan = 2;</code>
      */
     boolean hasScan();
     /**
-     * <code>optional .Scan scan = 2;</code>
+     * <code>optional .hbase.pb.Scan scan = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan getScan();
     /**
-     * <code>optional .Scan scan = 2;</code>
+     * <code>optional .hbase.pb.Scan scan = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanOrBuilder getScanOrBuilder();
 
@@ -16455,7 +16323,7 @@ public final class ClientProtos {
     boolean getTrackScanMetrics();
   }
   /**
-   * Protobuf type {@code ScanRequest}
+   * Protobuf type {@code hbase.pb.ScanRequest}
    *
    * <pre>
    **
@@ -16593,12 +16461,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanRequest_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanRequest_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest.Builder.class);
     }
@@ -16619,45 +16487,45 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // optional .RegionSpecifier region = 1;
+    // optional .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>optional .RegionSpecifier region = 1;</code>
+     * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .RegionSpecifier region = 1;</code>
+     * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>optional .RegionSpecifier region = 1;</code>
+     * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
     }
 
-    // optional .Scan scan = 2;
+    // optional .hbase.pb.Scan scan = 2;
     public static final int SCAN_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan scan_;
     /**
-     * <code>optional .Scan scan = 2;</code>
+     * <code>optional .hbase.pb.Scan scan = 2;</code>
      */
     public boolean hasScan() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .Scan scan = 2;</code>
+     * <code>optional .hbase.pb.Scan scan = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan getScan() {
       return scan_;
     }
     /**
-     * <code>optional .Scan scan = 2;</code>
+     * <code>optional .hbase.pb.Scan scan = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanOrBuilder getScanOrBuilder() {
       return scan_;
@@ -17071,7 +16939,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code ScanRequest}
+     * Protobuf type {@code hbase.pb.ScanRequest}
      *
      * <pre>
      **
@@ -17091,12 +16959,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanRequest_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest.Builder.class);
       }
@@ -17158,7 +17026,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanRequest_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanRequest getDefaultInstanceForType() {
@@ -17303,18 +17171,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // optional .RegionSpecifier region = 1;
+      // optional .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -17324,7 +17192,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -17340,7 +17208,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -17354,7 +17222,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -17373,7 +17241,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -17386,7 +17254,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -17394,7 +17262,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -17404,7 +17272,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .RegionSpecifier region = 1;</code>
+       * <code>optional .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -17420,18 +17288,18 @@ public final class ClientProtos {
         return regionBuilder_;
       }
 
-      // optional .Scan scan = 2;
+      // optional .hbase.pb.Scan scan = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan scan_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanOrBuilder> scanBuilder_;
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public boolean hasScan() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan getScan() {
         if (scanBuilder_ == null) {
@@ -17441,7 +17309,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public Builder setScan(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan value) {
         if (scanBuilder_ == null) {
@@ -17457,7 +17325,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public Builder setScan(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.Builder builderForValue) {
@@ -17471,7 +17339,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public Builder mergeScan(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan value) {
         if (scanBuilder_ == null) {
@@ -17490,7 +17358,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public Builder clearScan() {
         if (scanBuilder_ == null) {
@@ -17503,7 +17371,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.Builder getScanBuilder() {
         bitField0_ |= 0x00000002;
@@ -17511,7 +17379,7 @@ public final class ClientProtos {
         return getScanFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanOrBuilder getScanOrBuilder() {
         if (scanBuilder_ != null) {
@@ -17521,7 +17389,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Scan scan = 2;</code>
+       * <code>optional .hbase.pb.Scan scan = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Scan.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanOrBuilder> 
@@ -17768,7 +17636,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:ScanRequest)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.ScanRequest)
     }
 
     static {
@@ -17776,7 +17644,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:ScanRequest)
+    // @@protoc_insertion_point(class_scope:hbase.pb.ScanRequest)
   }
 
   public interface ScanResponseOrBuilder
@@ -17856,9 +17724,9 @@ public final class ClientProtos {
      */
     int getTtl();
 
-    // repeated .Result results = 5;
+    // repeated .hbase.pb.Result results = 5;
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -17869,7 +17737,7 @@ public final class ClientProtos {
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result> 
         getResultsList();
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -17879,7 +17747,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResults(int index);
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -17889,7 +17757,7 @@ public final class ClientProtos {
      */
     int getResultsCount();
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -17900,7 +17768,7 @@ public final class ClientProtos {
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> 
         getResultsOrBuilderList();
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -18011,9 +17879,9 @@ public final class ClientProtos {
      */
     boolean getHeartbeatMessage();
 
-    // optional .ScanMetrics scan_metrics = 10;
+    // optional .hbase.pb.ScanMetrics scan_metrics = 10;
     /**
-     * <code>optional .ScanMetrics scan_metrics = 10;</code>
+     * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
      *
      * <pre>
      * This field is filled in if the client has requested that scan metrics be tracked.
@@ -18023,7 +17891,7 @@ public final class ClientProtos {
      */
     boolean hasScanMetrics();
     /**
-     * <code>optional .ScanMetrics scan_metrics = 10;</code>
+     * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
      *
      * <pre>
      * This field is filled in if the client has requested that scan metrics be tracked.
@@ -18033,7 +17901,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetrics getScanMetrics();
     /**
-     * <code>optional .ScanMetrics scan_metrics = 10;</code>
+     * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
      *
      * <pre>
      * This field is filled in if the client has requested that scan metrics be tracked.
@@ -18044,7 +17912,7 @@ public final class ClientProtos {
     org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetricsOrBuilder getScanMetricsOrBuilder();
   }
   /**
-   * Protobuf type {@code ScanResponse}
+   * Protobuf type {@code hbase.pb.ScanResponse}
    *
    * <pre>
    **
@@ -18216,12 +18084,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanResponse_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanResponse_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse.Builder.class);
     }
@@ -18343,11 +18211,11 @@ public final class ClientProtos {
       return ttl_;
     }
 
-    // repeated .Result results = 5;
+    // repeated .hbase.pb.Result results = 5;
     public static final int RESULTS_FIELD_NUMBER = 5;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result> results_;
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -18359,7 +18227,7 @@ public final class ClientProtos {
       return results_;
     }
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -18372,7 +18240,7 @@ public final class ClientProtos {
       return results_;
     }
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -18384,7 +18252,7 @@ public final class ClientProtos {
       return results_.size();
     }
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -18396,7 +18264,7 @@ public final class ClientProtos {
       return results_.get(index);
     }
     /**
-     * <code>repeated .Result results = 5;</code>
+     * <code>repeated .hbase.pb.Result results = 5;</code>
      *
      * <pre>
      * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -18536,11 +18404,11 @@ public final class ClientProtos {
       return heartbeatMessage_;
     }
 
-    // optional .ScanMetrics scan_metrics = 10;
+    // optional .hbase.pb.ScanMetrics scan_metrics = 10;
     public static final int SCAN_METRICS_FIELD_NUMBER = 10;
     private org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetrics scanMetrics_;
     /**
-     * <code>optional .ScanMetrics scan_metrics = 10;</code>
+     * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
      *
      * <pre>
      * This field is filled in if the client has requested that scan metrics be tracked.
@@ -18552,7 +18420,7 @@ public final class ClientProtos {
       return ((bitField0_ & 0x00000040) == 0x00000040);
     }
     /**
-     * <code>optional .ScanMetrics scan_metrics = 10;</code>
+     * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
      *
      * <pre>
      * This field is filled in if the client has requested that scan metrics be tracked.
@@ -18564,7 +18432,7 @@ public final class ClientProtos {
       return scanMetrics_;
     }
     /**
-     * <code>optional .ScanMetrics scan_metrics = 10;</code>
+     * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
      *
      * <pre>
      * This field is filled in if the client has requested that scan metrics be tracked.
@@ -18875,7 +18743,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code ScanResponse}
+     * Protobuf type {@code hbase.pb.ScanResponse}
      *
      * <pre>
      **
@@ -18888,12 +18756,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanResponse_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse.Builder.class);
       }
@@ -18957,7 +18825,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ScanResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ScanResponse_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse getDefaultInstanceForType() {
@@ -19372,7 +19240,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // repeated .Result results = 5;
+      // repeated .hbase.pb.Result results = 5;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result> results_ =
         java.util.Collections.emptyList();
       private void ensureResultsIsMutable() {
@@ -19386,7 +19254,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> resultsBuilder_;
 
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19402,7 +19270,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19418,7 +19286,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19434,7 +19302,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19457,7 +19325,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19477,7 +19345,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19499,7 +19367,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19522,7 +19390,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19542,7 +19410,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19562,7 +19430,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19582,7 +19450,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19601,7 +19469,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19620,7 +19488,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19633,7 +19501,7 @@ public final class ClientProtos {
         return getResultsFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19649,7 +19517,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19666,7 +19534,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19679,7 +19547,7 @@ public final class ClientProtos {
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.getDefaultInstance());
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -19693,7 +19561,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.getDefaultInstance());
       }
       /**
-       * <code>repeated .Result results = 5;</code>
+       * <code>repeated .hbase.pb.Result results = 5;</code>
        *
        * <pre>
        * If cells are not carried in an accompanying cellblock, then they are pb'd here.
@@ -20007,12 +19875,12 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .ScanMetrics scan_metrics = 10;
+      // optional .hbase.pb.ScanMetrics scan_metrics = 10;
       private org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetrics scanMetrics_ = org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetrics.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetrics, org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetrics.Builder, org.apache.hadoop.hbase.protobuf.generated.MapReduceProtos.ScanMetricsOrBuilder> scanMetricsBuilder_;
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20024,7 +19892,7 @@ public final class ClientProtos {
         return ((bitField0_ & 0x00000200) == 0x00000200);
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20040,7 +19908,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20062,7 +19930,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20082,7 +19950,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20107,7 +19975,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20126,7 +19994,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20140,7 +20008,7 @@ public final class ClientProtos {
         return getScanMetricsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20156,7 +20024,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .ScanMetrics scan_metrics = 10;</code>
+       * <code>optional .hbase.pb.ScanMetrics scan_metrics = 10;</code>
        *
        * <pre>
        * This field is filled in if the client has requested that scan metrics be tracked.
@@ -20178,7 +20046,7 @@ public final class ClientProtos {
         return scanMetricsBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:ScanResponse)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.ScanResponse)
     }
 
     static {
@@ -20186,47 +20054,47 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:ScanResponse)
+    // @@protoc_insertion_point(class_scope:hbase.pb.ScanResponse)
   }
 
   public interface BulkLoadHFileRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
-    // repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;
+    // repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath> 
         getFamilyPathList();
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath getFamilyPath(int index);
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     int getFamilyPathCount();
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder> 
         getFamilyPathOrBuilderList();
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder getFamilyPathOrBuilder(
         int index);
@@ -20242,7 +20110,7 @@ public final class ClientProtos {
     boolean getAssignSeqNum();
   }
   /**
-   * Protobuf type {@code BulkLoadHFileRequest}
+   * Protobuf type {@code hbase.pb.BulkLoadHFileRequest}
    *
    * <pre>
    **
@@ -20341,12 +20209,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.Builder.class);
     }
@@ -20395,7 +20263,7 @@ public final class ClientProtos {
           getPathBytes();
     }
     /**
-     * Protobuf type {@code BulkLoadHFileRequest.FamilyPath}
+     * Protobuf type {@code hbase.pb.BulkLoadHFileRequest.FamilyPath}
      */
     public static final class FamilyPath extends
         com.google.protobuf.GeneratedMessage
@@ -20469,12 +20337,12 @@ public final class ClientProtos {
       }
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_FamilyPath_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder.class);
       }
@@ -20727,19 +20595,19 @@ public final class ClientProtos {
         return builder;
       }
       /**
-       * Protobuf type {@code BulkLoadHFileRequest.FamilyPath}
+       * Protobuf type {@code hbase.pb.BulkLoadHFileRequest.FamilyPath}
        */
       public static final class Builder extends
           com.google.protobuf.GeneratedMessage.Builder<Builder>
          implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder {
         public static final com.google.protobuf.Descriptors.Descriptor
             getDescriptor() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_FamilyPath_descriptor;
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_descriptor;
         }
 
         protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
             internalGetFieldAccessorTable() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable
               .ensureFieldAccessorsInitialized(
                   org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder.class);
         }
@@ -20777,7 +20645,7 @@ public final class ClientProtos {
 
         public com.google.protobuf.Descriptors.Descriptor
             getDescriptorForType() {
-          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_FamilyPath_descriptor;
+          return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_descriptor;
         }
 
         public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath getDefaultInstanceForType() {
@@ -20973,7 +20841,7 @@ public final class ClientProtos {
           return this;
         }
 
-        // @@protoc_insertion_point(builder_scope:BulkLoadHFileRequest.FamilyPath)
+        // @@protoc_insertion_point(builder_scope:hbase.pb.BulkLoadHFileRequest.FamilyPath)
       }
 
       static {
@@ -20981,62 +20849,62 @@ public final class ClientProtos {
         defaultInstance.initFields();
       }
 
-      // @@protoc_insertion_point(class_scope:BulkLoadHFileRequest.FamilyPath)
+      // @@protoc_insertion_point(class_scope:hbase.pb.BulkLoadHFileRequest.FamilyPath)
     }
 
     private int bitField0_;
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
     }
 
-    // repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;
+    // repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;
     public static final int FAMILY_PATH_FIELD_NUMBER = 2;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath> familyPath_;
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath> getFamilyPathList() {
       return familyPath_;
     }
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder> 
         getFamilyPathOrBuilderList() {
       return familyPath_;
     }
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     public int getFamilyPathCount() {
       return familyPath_.size();
     }
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath getFamilyPath(int index) {
       return familyPath_.get(index);
     }
     /**
-     * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+     * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder getFamilyPathOrBuilder(
         int index) {
@@ -21252,7 +21120,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code BulkLoadHFileRequest}
+     * Protobuf type {@code hbase.pb.BulkLoadHFileRequest}
      *
      * <pre>
      **
@@ -21265,12 +21133,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.Builder.class);
       }
@@ -21320,7 +21188,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileRequest_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest getDefaultInstanceForType() {
@@ -21449,18 +21317,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // required .RegionSpecifier region = 1;
+      // required .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -21470,7 +21338,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -21486,7 +21354,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -21500,7 +21368,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -21519,7 +21387,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -21532,7 +21400,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -21540,7 +21408,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -21550,7 +21418,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -21566,7 +21434,7 @@ public final class ClientProtos {
         return regionBuilder_;
       }
 
-      // repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;
+      // repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath> familyPath_ =
         java.util.Collections.emptyList();
       private void ensureFamilyPathIsMutable() {
@@ -21580,7 +21448,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder> familyPathBuilder_;
 
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath> getFamilyPathList() {
         if (familyPathBuilder_ == null) {
@@ -21590,7 +21458,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public int getFamilyPathCount() {
         if (familyPathBuilder_ == null) {
@@ -21600,7 +21468,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath getFamilyPath(int index) {
         if (familyPathBuilder_ == null) {
@@ -21610,7 +21478,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder setFamilyPath(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath value) {
@@ -21627,7 +21495,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder setFamilyPath(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder builderForValue) {
@@ -21641,7 +21509,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder addFamilyPath(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath value) {
         if (familyPathBuilder_ == null) {
@@ -21657,7 +21525,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder addFamilyPath(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath value) {
@@ -21674,7 +21542,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder addFamilyPath(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder builderForValue) {
@@ -21688,7 +21556,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder addFamilyPath(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder builderForValue) {
@@ -21702,7 +21570,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder addAllFamilyPath(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath> values) {
@@ -21716,7 +21584,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder clearFamilyPath() {
         if (familyPathBuilder_ == null) {
@@ -21729,7 +21597,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public Builder removeFamilyPath(int index) {
         if (familyPathBuilder_ == null) {
@@ -21742,14 +21610,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder getFamilyPathBuilder(
           int index) {
         return getFamilyPathFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder getFamilyPathOrBuilder(
           int index) {
@@ -21759,7 +21627,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPathOrBuilder> 
            getFamilyPathOrBuilderList() {
@@ -21770,14 +21638,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder addFamilyPathBuilder() {
         return getFamilyPathFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.getDefaultInstance());
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder addFamilyPathBuilder(
           int index) {
@@ -21785,7 +21653,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.getDefaultInstance());
       }
       /**
-       * <code>repeated .BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
+       * <code>repeated .hbase.pb.BulkLoadHFileRequest.FamilyPath family_path = 2;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileRequest.FamilyPath.Builder> 
            getFamilyPathBuilderList() {
@@ -21839,7 +21707,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:BulkLoadHFileRequest)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.BulkLoadHFileRequest)
     }
 
     static {
@@ -21847,7 +21715,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:BulkLoadHFileRequest)
+    // @@protoc_insertion_point(class_scope:hbase.pb.BulkLoadHFileRequest)
   }
 
   public interface BulkLoadHFileResponseOrBuilder
@@ -21864,7 +21732,7 @@ public final class ClientProtos {
     boolean getLoaded();
   }
   /**
-   * Protobuf type {@code BulkLoadHFileResponse}
+   * Protobuf type {@code hbase.pb.BulkLoadHFileResponse}
    */
   public static final class BulkLoadHFileResponse extends
       com.google.protobuf.GeneratedMessage
@@ -21933,12 +21801,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileResponse_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileResponse_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse.Builder.class);
     }
@@ -22127,19 +21995,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code BulkLoadHFileResponse}
+     * Protobuf type {@code hbase.pb.BulkLoadHFileResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileResponse_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse.Builder.class);
       }
@@ -22175,7 +22043,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_BulkLoadHFileResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_BulkLoadHFileResponse_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse getDefaultInstanceForType() {
@@ -22281,7 +22149,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:BulkLoadHFileResponse)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.BulkLoadHFileResponse)
     }
 
     static {
@@ -22289,7 +22157,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:BulkLoadHFileResponse)
+    // @@protoc_insertion_point(class_scope:hbase.pb.BulkLoadHFileResponse)
   }
 
   public interface CoprocessorServiceCallOrBuilder
@@ -22346,7 +22214,7 @@ public final class ClientProtos {
     com.google.protobuf.ByteString getRequest();
   }
   /**
-   * Protobuf type {@code CoprocessorServiceCall}
+   * Protobuf type {@code hbase.pb.CoprocessorServiceCall}
    */
   public static final class CoprocessorServiceCall extends
       com.google.protobuf.GeneratedMessage
@@ -22430,12 +22298,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceCall_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceCall_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceCall_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceCall_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder.class);
     }
@@ -22789,19 +22657,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code CoprocessorServiceCall}
+     * Protobuf type {@code hbase.pb.CoprocessorServiceCall}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceCall_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceCall_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceCall_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceCall_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder.class);
       }
@@ -22843,7 +22711,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceCall_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceCall_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getDefaultInstanceForType() {
@@ -23173,7 +23041,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:CoprocessorServiceCall)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.CoprocessorServiceCall)
     }
 
     static {
@@ -23181,28 +23049,28 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:CoprocessorServiceCall)
+    // @@protoc_insertion_point(class_scope:hbase.pb.CoprocessorServiceCall)
   }
 
   public interface CoprocessorServiceResultOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // optional .NameBytesPair value = 1;
+    // optional .hbase.pb.NameBytesPair value = 1;
     /**
-     * <code>optional .NameBytesPair value = 1;</code>
+     * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
      */
     boolean hasValue();
     /**
-     * <code>optional .NameBytesPair value = 1;</code>
+     * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getValue();
     /**
-     * <code>optional .NameBytesPair value = 1;</code>
+     * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getValueOrBuilder();
   }
   /**
-   * Protobuf type {@code CoprocessorServiceResult}
+   * Protobuf type {@code hbase.pb.CoprocessorServiceResult}
    */
   public static final class CoprocessorServiceResult extends
       com.google.protobuf.GeneratedMessage
@@ -23279,12 +23147,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResult_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResult_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResult_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult.Builder.class);
     }
@@ -23305,23 +23173,23 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // optional .NameBytesPair value = 1;
+    // optional .hbase.pb.NameBytesPair value = 1;
     public static final int VALUE_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value_;
     /**
-     * <code>optional .NameBytesPair value = 1;</code>
+     * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
      */
     public boolean hasValue() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .NameBytesPair value = 1;</code>
+     * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getValue() {
       return value_;
     }
     /**
-     * <code>optional .NameBytesPair value = 1;</code>
+     * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getValueOrBuilder() {
       return value_;
@@ -23481,19 +23349,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code CoprocessorServiceResult}
+     * Protobuf type {@code hbase.pb.CoprocessorServiceResult}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResult_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResult_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResult_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult.Builder.class);
       }
@@ -23534,7 +23402,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResult_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResult_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult getDefaultInstanceForType() {
@@ -23613,18 +23481,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // optional .NameBytesPair value = 1;
+      // optional .hbase.pb.NameBytesPair value = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> valueBuilder_;
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public boolean hasValue() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getValue() {
         if (valueBuilder_ == null) {
@@ -23634,7 +23502,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public Builder setValue(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (valueBuilder_ == null) {
@@ -23650,7 +23518,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public Builder setValue(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -23664,7 +23532,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public Builder mergeValue(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (valueBuilder_ == null) {
@@ -23683,7 +23551,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public Builder clearValue() {
         if (valueBuilder_ == null) {
@@ -23696,7 +23564,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder getValueBuilder() {
         bitField0_ |= 0x00000001;
@@ -23704,7 +23572,7 @@ public final class ClientProtos {
         return getValueFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getValueOrBuilder() {
         if (valueBuilder_ != null) {
@@ -23714,7 +23582,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .NameBytesPair value = 1;</code>
+       * <code>optional .hbase.pb.NameBytesPair value = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
@@ -23730,7 +23598,7 @@ public final class ClientProtos {
         return valueBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:CoprocessorServiceResult)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.CoprocessorServiceResult)
     }
 
     static {
@@ -23738,42 +23606,42 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:CoprocessorServiceResult)
+    // @@protoc_insertion_point(class_scope:hbase.pb.CoprocessorServiceResult)
   }
 
   public interface CoprocessorServiceRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
-    // required .CoprocessorServiceCall call = 2;
+    // required .hbase.pb.CoprocessorServiceCall call = 2;
     /**
-     * <code>required .CoprocessorServiceCall call = 2;</code>
+     * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
      */
     boolean hasCall();
     /**
-     * <code>required .CoprocessorServiceCall call = 2;</code>
+     * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getCall();
     /**
-     * <code>required .CoprocessorServiceCall call = 2;</code>
+     * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder getCallOrBuilder();
   }
   /**
-   * Protobuf type {@code CoprocessorServiceRequest}
+   * Protobuf type {@code hbase.pb.CoprocessorServiceRequest}
    */
   public static final class CoprocessorServiceRequest extends
       com.google.protobuf.GeneratedMessage
@@ -23863,12 +23731,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceRequest_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceRequest_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceRequest.Builder.class);
     }
@@ -23889,45 +23757,45 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
     }
 
-    // required .CoprocessorServiceCall call = 2;
+    // required .hbase.pb.CoprocessorServiceCall call = 2;
     public static final int CALL_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall call_;
     /**
-     * <code>required .CoprocessorServiceCall call = 2;</code>
+     * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
      */
     public boolean hasCall() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .CoprocessorServiceCall call = 2;</code>
+     * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getCall() {
       return call_;
     }
     /**
-     * <code>required .CoprocessorServiceCall call = 2;</code>
+     * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder getCallOrBuilder() {
       return call_;
@@ -24114,19 +23982,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code CoprocessorServiceRequest}
+     * Protobuf type {@code hbase.pb.CoprocessorServiceRequest}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceRequest_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceRequest.Builder.class);
       }
@@ -24174,7 +24042,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceRequest_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceRequest getDefaultInstanceForType() {
@@ -24274,18 +24142,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // required .RegionSpecifier region = 1;
+      // required .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -24295,7 +24163,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -24311,7 +24179,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -24325,7 +24193,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -24344,7 +24212,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -24357,7 +24225,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -24365,7 +24233,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -24375,7 +24243,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -24391,18 +24259,18 @@ public final class ClientProtos {
         return regionBuilder_;
       }
 
-      // required .CoprocessorServiceCall call = 2;
+      // required .hbase.pb.CoprocessorServiceCall call = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall call_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder> callBuilder_;
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public boolean hasCall() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getCall() {
         if (callBuilder_ == null) {
@@ -24412,7 +24280,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public Builder setCall(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall value) {
         if (callBuilder_ == null) {
@@ -24428,7 +24296,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public Builder setCall(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder builderForValue) {
@@ -24442,7 +24310,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public Builder mergeCall(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall value) {
         if (callBuilder_ == null) {
@@ -24461,7 +24329,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public Builder clearCall() {
         if (callBuilder_ == null) {
@@ -24474,7 +24342,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder getCallBuilder() {
         bitField0_ |= 0x00000002;
@@ -24482,7 +24350,7 @@ public final class ClientProtos {
         return getCallFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder getCallOrBuilder() {
         if (callBuilder_ != null) {
@@ -24492,7 +24360,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .CoprocessorServiceCall call = 2;</code>
+       * <code>required .hbase.pb.CoprocessorServiceCall call = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder> 
@@ -24508,7 +24376,7 @@ public final class ClientProtos {
         return callBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:CoprocessorServiceRequest)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.CoprocessorServiceRequest)
     }
 
     static {
@@ -24516,42 +24384,42 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:CoprocessorServiceRequest)
+    // @@protoc_insertion_point(class_scope:hbase.pb.CoprocessorServiceRequest)
   }
 
   public interface CoprocessorServiceResponseOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
-    // required .NameBytesPair value = 2;
+    // required .hbase.pb.NameBytesPair value = 2;
     /**
-     * <code>required .NameBytesPair value = 2;</code>
+     * <code>required .hbase.pb.NameBytesPair value = 2;</code>
      */
     boolean hasValue();
     /**
-     * <code>required .NameBytesPair value = 2;</code>
+     * <code>required .hbase.pb.NameBytesPair value = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getValue();
     /**
-     * <code>required .NameBytesPair value = 2;</code>
+     * <code>required .hbase.pb.NameBytesPair value = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getValueOrBuilder();
   }
   /**
-   * Protobuf type {@code CoprocessorServiceResponse}
+   * Protobuf type {@code hbase.pb.CoprocessorServiceResponse}
    */
   public static final class CoprocessorServiceResponse extends
       com.google.protobuf.GeneratedMessage
@@ -24641,12 +24509,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResponse_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResponse_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse.Builder.class);
     }
@@ -24667,45 +24535,45 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
     }
 
-    // required .NameBytesPair value = 2;
+    // required .hbase.pb.NameBytesPair value = 2;
     public static final int VALUE_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value_;
     /**
-     * <code>required .NameBytesPair value = 2;</code>
+     * <code>required .hbase.pb.NameBytesPair value = 2;</code>
      */
     public boolean hasValue() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>required .NameBytesPair value = 2;</code>
+     * <code>required .hbase.pb.NameBytesPair value = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getValue() {
       return value_;
     }
     /**
-     * <code>required .NameBytesPair value = 2;</code>
+     * <code>required .hbase.pb.NameBytesPair value = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getValueOrBuilder() {
       return value_;
@@ -24892,19 +24760,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code CoprocessorServiceResponse}
+     * Protobuf type {@code hbase.pb.CoprocessorServiceResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResponse_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse.Builder.class);
       }
@@ -24952,7 +24820,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_CoprocessorServiceResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_CoprocessorServiceResponse_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse getDefaultInstanceForType() {
@@ -25052,18 +24920,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // required .RegionSpecifier region = 1;
+      // required .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -25073,7 +24941,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -25089,7 +24957,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -25103,7 +24971,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -25122,7 +24990,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -25135,7 +25003,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -25143,7 +25011,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -25153,7 +25021,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -25169,18 +25037,18 @@ public final class ClientProtos {
         return regionBuilder_;
       }
 
-      // required .NameBytesPair value = 2;
+      // required .hbase.pb.NameBytesPair value = 2;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> valueBuilder_;
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public boolean hasValue() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getValue() {
         if (valueBuilder_ == null) {
@@ -25190,7 +25058,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public Builder setValue(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (valueBuilder_ == null) {
@@ -25206,7 +25074,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public Builder setValue(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -25220,7 +25088,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public Builder mergeValue(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (valueBuilder_ == null) {
@@ -25239,7 +25107,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public Builder clearValue() {
         if (valueBuilder_ == null) {
@@ -25252,7 +25120,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder getValueBuilder() {
         bitField0_ |= 0x00000002;
@@ -25260,7 +25128,7 @@ public final class ClientProtos {
         return getValueFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getValueOrBuilder() {
         if (valueBuilder_ != null) {
@@ -25270,7 +25138,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .NameBytesPair value = 2;</code>
+       * <code>required .hbase.pb.NameBytesPair value = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
@@ -25286,7 +25154,7 @@ public final class ClientProtos {
         return valueBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:CoprocessorServiceResponse)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.CoprocessorServiceResponse)
     }
 
     static {
@@ -25294,7 +25162,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:CoprocessorServiceResponse)
+    // @@protoc_insertion_point(class_scope:hbase.pb.CoprocessorServiceResponse)
   }
 
   public interface ActionOrBuilder
@@ -25320,50 +25188,50 @@ public final class ClientProtos {
      */
     int getIndex();
 
-    // optional .MutationProto mutation = 2;
+    // optional .hbase.pb.MutationProto mutation = 2;
     /**
-     * <code>optional .MutationProto mutation = 2;</code>
+     * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
      */
     boolean hasMutation();
     /**
-     * <code>optional .MutationProto mutation = 2;</code>
+     * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getMutation();
     /**
-     * <code>optional .MutationProto mutation = 2;</code>
+     * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder getMutationOrBuilder();
 
-    // optional .Get get = 3;
+    // optional .hbase.pb.Get get = 3;
     /**
-     * <code>optional .Get get = 3;</code>
+     * <code>optional .hbase.pb.Get get = 3;</code>
      */
     boolean hasGet();
     /**
-     * <code>optional .Get get = 3;</code>
+     * <code>optional .hbase.pb.Get get = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getGet();
     /**
-     * <code>optional .Get get = 3;</code>
+     * <code>optional .hbase.pb.Get get = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder getGetOrBuilder();
 
-    // optional .CoprocessorServiceCall service_call = 4;
+    // optional .hbase.pb.CoprocessorServiceCall service_call = 4;
     /**
-     * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
      */
     boolean hasServiceCall();
     /**
-     * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getServiceCall();
     /**
-     * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder getServiceCallOrBuilder();
   }
   /**
-   * Protobuf type {@code Action}
+   * Protobuf type {@code hbase.pb.Action}
    *
    * <pre>
    * Either a Get or a Mutation
@@ -25475,12 +25343,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Action_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Action_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Action_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Action_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder.class);
     }
@@ -25527,67 +25395,67 @@ public final class ClientProtos {
       return index_;
     }
 
-    // optional .MutationProto mutation = 2;
+    // optional .hbase.pb.MutationProto mutation = 2;
     public static final int MUTATION_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto mutation_;
     /**
-     * <code>optional .MutationProto mutation = 2;</code>
+     * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
      */
     public boolean hasMutation() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .MutationProto mutation = 2;</code>
+     * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getMutation() {
       return mutation_;
     }
     /**
-     * <code>optional .MutationProto mutation = 2;</code>
+     * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder getMutationOrBuilder() {
       return mutation_;
     }
 
-    // optional .Get get = 3;
+    // optional .hbase.pb.Get get = 3;
     public static final int GET_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get get_;
     /**
-     * <code>optional .Get get = 3;</code>
+     * <code>optional .hbase.pb.Get get = 3;</code>
      */
     public boolean hasGet() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .Get get = 3;</code>
+     * <code>optional .hbase.pb.Get get = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getGet() {
       return get_;
     }
     /**
-     * <code>optional .Get get = 3;</code>
+     * <code>optional .hbase.pb.Get get = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder getGetOrBuilder() {
       return get_;
     }
 
-    // optional .CoprocessorServiceCall service_call = 4;
+    // optional .hbase.pb.CoprocessorServiceCall service_call = 4;
     public static final int SERVICE_CALL_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall serviceCall_;
     /**
-     * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
      */
     public boolean hasServiceCall() {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getServiceCall() {
       return serviceCall_;
     }
     /**
-     * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder getServiceCallOrBuilder() {
       return serviceCall_;
@@ -25810,7 +25678,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code Action}
+     * Protobuf type {@code hbase.pb.Action}
      *
      * <pre>
      * Either a Get or a Mutation
@@ -25821,12 +25689,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Action_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Action_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Action_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Action_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder.class);
       }
@@ -25883,7 +25751,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_Action_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_Action_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action getDefaultInstanceForType() {
@@ -26056,18 +25924,18 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .MutationProto mutation = 2;
+      // optional .hbase.pb.MutationProto mutation = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto mutation_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder> mutationBuilder_;
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public boolean hasMutation() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto getMutation() {
         if (mutationBuilder_ == null) {
@@ -26077,7 +25945,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder setMutation(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto value) {
         if (mutationBuilder_ == null) {
@@ -26093,7 +25961,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder setMutation(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder builderForValue) {
@@ -26107,7 +25975,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder mergeMutation(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto value) {
         if (mutationBuilder_ == null) {
@@ -26126,7 +25994,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public Builder clearMutation() {
         if (mutationBuilder_ == null) {
@@ -26139,7 +26007,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder getMutationBuilder() {
         bitField0_ |= 0x00000002;
@@ -26147,7 +26015,7 @@ public final class ClientProtos {
         return getMutationFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder getMutationOrBuilder() {
         if (mutationBuilder_ != null) {
@@ -26157,7 +26025,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .MutationProto mutation = 2;</code>
+       * <code>optional .hbase.pb.MutationProto mutation = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProto.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutationProtoOrBuilder> 
@@ -26173,18 +26041,18 @@ public final class ClientProtos {
         return mutationBuilder_;
       }
 
-      // optional .Get get = 3;
+      // optional .hbase.pb.Get get = 3;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get get_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder> getBuilder_;
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public boolean hasGet() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get getGet() {
         if (getBuilder_ == null) {
@@ -26194,7 +26062,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public Builder setGet(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get value) {
         if (getBuilder_ == null) {
@@ -26210,7 +26078,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public Builder setGet(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder builderForValue) {
@@ -26224,7 +26092,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public Builder mergeGet(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get value) {
         if (getBuilder_ == null) {
@@ -26243,7 +26111,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public Builder clearGet() {
         if (getBuilder_ == null) {
@@ -26256,7 +26124,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder getGetBuilder() {
         bitField0_ |= 0x00000004;
@@ -26264,7 +26132,7 @@ public final class ClientProtos {
         return getGetFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder getGetOrBuilder() {
         if (getBuilder_ != null) {
@@ -26274,7 +26142,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Get get = 3;</code>
+       * <code>optional .hbase.pb.Get get = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Get.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetOrBuilder> 
@@ -26290,18 +26158,18 @@ public final class ClientProtos {
         return getBuilder_;
       }
 
-      // optional .CoprocessorServiceCall service_call = 4;
+      // optional .hbase.pb.CoprocessorServiceCall service_call = 4;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall serviceCall_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder> serviceCallBuilder_;
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public boolean hasServiceCall() {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall getServiceCall() {
         if (serviceCallBuilder_ == null) {
@@ -26311,7 +26179,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public Builder setServiceCall(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall value) {
         if (serviceCallBuilder_ == null) {
@@ -26327,7 +26195,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public Builder setServiceCall(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder builderForValue) {
@@ -26341,7 +26209,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public Builder mergeServiceCall(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall value) {
         if (serviceCallBuilder_ == null) {
@@ -26360,7 +26228,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public Builder clearServiceCall() {
         if (serviceCallBuilder_ == null) {
@@ -26373,7 +26241,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder getServiceCallBuilder() {
         bitField0_ |= 0x00000008;
@@ -26381,7 +26249,7 @@ public final class ClientProtos {
         return getServiceCallFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder getServiceCallOrBuilder() {
         if (serviceCallBuilder_ != null) {
@@ -26391,7 +26259,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .CoprocessorServiceCall service_call = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceCall service_call = 4;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCall.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceCallOrBuilder> 
@@ -26407,7 +26275,7 @@ public final class ClientProtos {
         return serviceCallBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:Action)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.Action)
     }
 
     static {
@@ -26415,23 +26283,23 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:Action)
+    // @@protoc_insertion_point(class_scope:hbase.pb.Action)
   }
 
   public interface RegionActionOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     boolean hasRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion();
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder();
 
@@ -26453,33 +26321,33 @@ public final class ClientProtos {
      */
     boolean getAtomic();
 
-    // repeated .Action action = 3;
+    // repeated .hbase.pb.Action action = 3;
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action> 
         getActionList();
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action getAction(int index);
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     int getActionCount();
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder> 
         getActionOrBuilderList();
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder getActionOrBuilder(
         int index);
   }
   /**
-   * Protobuf type {@code RegionAction}
+   * Protobuf type {@code hbase.pb.RegionAction}
    *
    * <pre>
    **
@@ -26577,12 +26445,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionAction_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionAction_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionAction_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionAction_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder.class);
     }
@@ -26603,23 +26471,23 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // required .RegionSpecifier region = 1;
+    // required .hbase.pb.RegionSpecifier region = 1;
     public static final int REGION_FIELD_NUMBER = 1;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_;
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public boolean hasRegion() {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
       return region_;
     }
     /**
-     * <code>required .RegionSpecifier region = 1;</code>
+     * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
       return region_;
@@ -26649,36 +26517,36 @@ public final class ClientProtos {
       return atomic_;
     }
 
-    // repeated .Action action = 3;
+    // repeated .hbase.pb.Action action = 3;
     public static final int ACTION_FIELD_NUMBER = 3;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action> action_;
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action> getActionList() {
       return action_;
     }
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder> 
         getActionOrBuilderList() {
       return action_;
     }
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     public int getActionCount() {
       return action_.size();
     }
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action getAction(int index) {
       return action_.get(index);
     }
     /**
-     * <code>repeated .Action action = 3;</code>
+     * <code>repeated .hbase.pb.Action action = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder getActionOrBuilder(
         int index) {
@@ -26878,7 +26746,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code RegionAction}
+     * Protobuf type {@code hbase.pb.RegionAction}
      *
      * <pre>
      **
@@ -26890,12 +26758,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionAction_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionAction_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionAction_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionAction_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder.class);
       }
@@ -26945,7 +26813,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionAction_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionAction_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction getDefaultInstanceForType() {
@@ -27074,18 +26942,18 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // required .RegionSpecifier region = 1;
+      // required .hbase.pb.RegionSpecifier region = 1;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier region_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> regionBuilder_;
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public boolean hasRegion() {
         return ((bitField0_ & 0x00000001) == 0x00000001);
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier getRegion() {
         if (regionBuilder_ == null) {
@@ -27095,7 +26963,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -27111,7 +26979,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder setRegion(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder builderForValue) {
@@ -27125,7 +26993,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder mergeRegion(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier value) {
         if (regionBuilder_ == null) {
@@ -27144,7 +27012,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public Builder clearRegion() {
         if (regionBuilder_ == null) {
@@ -27157,7 +27025,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder getRegionBuilder() {
         bitField0_ |= 0x00000001;
@@ -27165,7 +27033,7 @@ public final class ClientProtos {
         return getRegionFieldBuilder().getBuilder();
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder getRegionOrBuilder() {
         if (regionBuilder_ != null) {
@@ -27175,7 +27043,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>required .RegionSpecifier region = 1;</code>
+       * <code>required .hbase.pb.RegionSpecifier region = 1;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifier.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.RegionSpecifierOrBuilder> 
@@ -27240,7 +27108,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // repeated .Action action = 3;
+      // repeated .hbase.pb.Action action = 3;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action> action_ =
         java.util.Collections.emptyList();
       private void ensureActionIsMutable() {
@@ -27254,7 +27122,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder> actionBuilder_;
 
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action> getActionList() {
         if (actionBuilder_ == null) {
@@ -27264,7 +27132,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public int getActionCount() {
         if (actionBuilder_ == null) {
@@ -27274,7 +27142,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action getAction(int index) {
         if (actionBuilder_ == null) {
@@ -27284,7 +27152,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder setAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action value) {
@@ -27301,7 +27169,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder setAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder builderForValue) {
@@ -27315,7 +27183,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder addAction(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action value) {
         if (actionBuilder_ == null) {
@@ -27331,7 +27199,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder addAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action value) {
@@ -27348,7 +27216,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder addAction(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder builderForValue) {
@@ -27362,7 +27230,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder addAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder builderForValue) {
@@ -27376,7 +27244,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder addAllAction(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action> values) {
@@ -27390,7 +27258,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder clearAction() {
         if (actionBuilder_ == null) {
@@ -27403,7 +27271,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public Builder removeAction(int index) {
         if (actionBuilder_ == null) {
@@ -27416,14 +27284,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder getActionBuilder(
           int index) {
         return getActionFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder getActionOrBuilder(
           int index) {
@@ -27433,7 +27301,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ActionOrBuilder> 
            getActionOrBuilderList() {
@@ -27444,14 +27312,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder addActionBuilder() {
         return getActionFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.getDefaultInstance());
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder addActionBuilder(
           int index) {
@@ -27459,7 +27327,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.getDefaultInstance());
       }
       /**
-       * <code>repeated .Action action = 3;</code>
+       * <code>repeated .hbase.pb.Action action = 3;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Action.Builder> 
            getActionBuilderList() {
@@ -27480,7 +27348,7 @@ public final class ClientProtos {
         return actionBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:RegionAction)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.RegionAction)
     }
 
     static {
@@ -27488,7 +27356,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:RegionAction)
+    // @@protoc_insertion_point(class_scope:hbase.pb.RegionAction)
   }
 
   public interface RegionLoadStatsOrBuilder
@@ -27533,7 +27401,7 @@ public final class ClientProtos {
     int getHeapOccupancy();
   }
   /**
-   * Protobuf type {@code RegionLoadStats}
+   * Protobuf type {@code hbase.pb.RegionLoadStats}
    *
    * <pre>
    *
@@ -27612,12 +27480,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionLoadStats_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionLoadStats_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionLoadStats_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionLoadStats_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats.Builder.class);
     }
@@ -27853,7 +27721,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code RegionLoadStats}
+     * Protobuf type {@code hbase.pb.RegionLoadStats}
      *
      * <pre>
      *
@@ -27865,12 +27733,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStatsOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionLoadStats_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionLoadStats_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionLoadStats_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionLoadStats_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats.Builder.class);
       }
@@ -27908,7 +27776,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionLoadStats_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionLoadStats_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats getDefaultInstanceForType() {
@@ -28086,7 +27954,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:RegionLoadStats)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.RegionLoadStats)
     }
 
     static {
@@ -28094,7 +27962,7 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:RegionLoadStats)
+    // @@protoc_insertion_point(class_scope:hbase.pb.RegionLoadStats)
   }
 
   public interface ResultOrExceptionOrBuilder
@@ -28120,37 +27988,37 @@ public final class ClientProtos {
      */
     int getIndex();
 
-    // optional .Result result = 2;
+    // optional .hbase.pb.Result result = 2;
     /**
-     * <code>optional .Result result = 2;</code>
+     * <code>optional .hbase.pb.Result result = 2;</code>
      */
     boolean hasResult();
     /**
-     * <code>optional .Result result = 2;</code>
+     * <code>optional .hbase.pb.Result result = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult();
     /**
-     * <code>optional .Result result = 2;</code>
+     * <code>optional .hbase.pb.Result result = 2;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder();
 
-    // optional .NameBytesPair exception = 3;
+    // optional .hbase.pb.NameBytesPair exception = 3;
     /**
-     * <code>optional .NameBytesPair exception = 3;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
      */
     boolean hasException();
     /**
-     * <code>optional .NameBytesPair exception = 3;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getException();
     /**
-     * <code>optional .NameBytesPair exception = 3;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getExceptionOrBuilder();
 
-    // optional .CoprocessorServiceResult service_result = 4;
+    // optional .hbase.pb.CoprocessorServiceResult service_result = 4;
     /**
-     * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
      *
      * <pre>
      * result if this was a coprocessor service call
@@ -28158,7 +28026,7 @@ public final class ClientProtos {
      */
     boolean hasServiceResult();
     /**
-     * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
      *
      * <pre>
      * result if this was a coprocessor service call
@@ -28166,7 +28034,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult getServiceResult();
     /**
-     * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
      *
      * <pre>
      * result if this was a coprocessor service call
@@ -28174,9 +28042,9 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResultOrBuilder getServiceResultOrBuilder();
 
-    // optional .RegionLoadStats loadStats = 5;
+    // optional .hbase.pb.RegionLoadStats loadStats = 5;
     /**
-     * <code>optional .RegionLoadStats loadStats = 5;</code>
+     * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
      *
      * <pre>
      * current load on the region
@@ -28184,7 +28052,7 @@ public final class ClientProtos {
      */
     boolean hasLoadStats();
     /**
-     * <code>optional .RegionLoadStats loadStats = 5;</code>
+     * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
      *
      * <pre>
      * current load on the region
@@ -28192,7 +28060,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats getLoadStats();
     /**
-     * <code>optional .RegionLoadStats loadStats = 5;</code>
+     * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
      *
      * <pre>
      * current load on the region
@@ -28201,7 +28069,7 @@ public final class ClientProtos {
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStatsOrBuilder getLoadStatsOrBuilder();
   }
   /**
-   * Protobuf type {@code ResultOrException}
+   * Protobuf type {@code hbase.pb.ResultOrException}
    *
    * <pre>
    **
@@ -28329,12 +28197,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ResultOrException_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ResultOrException_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ResultOrException_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ResultOrException_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder.class);
     }
@@ -28381,55 +28249,55 @@ public final class ClientProtos {
       return index_;
     }
 
-    // optional .Result result = 2;
+    // optional .hbase.pb.Result result = 2;
     public static final int RESULT_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result result_;
     /**
-     * <code>optional .Result result = 2;</code>
+     * <code>optional .hbase.pb.Result result = 2;</code>
      */
     public boolean hasResult() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .Result result = 2;</code>
+     * <code>optional .hbase.pb.Result result = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult() {
       return result_;
     }
     /**
-     * <code>optional .Result result = 2;</code>
+     * <code>optional .hbase.pb.Result result = 2;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder() {
       return result_;
     }
 
-    // optional .NameBytesPair exception = 3;
+    // optional .hbase.pb.NameBytesPair exception = 3;
     public static final int EXCEPTION_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair exception_;
     /**
-     * <code>optional .NameBytesPair exception = 3;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
      */
     public boolean hasException() {
       return ((bitField0_ & 0x00000004) == 0x00000004);
     }
     /**
-     * <code>optional .NameBytesPair exception = 3;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getException() {
       return exception_;
     }
     /**
-     * <code>optional .NameBytesPair exception = 3;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getExceptionOrBuilder() {
       return exception_;
     }
 
-    // optional .CoprocessorServiceResult service_result = 4;
+    // optional .hbase.pb.CoprocessorServiceResult service_result = 4;
     public static final int SERVICE_RESULT_FIELD_NUMBER = 4;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult serviceResult_;
     /**
-     * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
      *
      * <pre>
      * result if this was a coprocessor service call
@@ -28439,7 +28307,7 @@ public final class ClientProtos {
       return ((bitField0_ & 0x00000008) == 0x00000008);
     }
     /**
-     * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
      *
      * <pre>
      * result if this was a coprocessor service call
@@ -28449,7 +28317,7 @@ public final class ClientProtos {
       return serviceResult_;
     }
     /**
-     * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+     * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
      *
      * <pre>
      * result if this was a coprocessor service call
@@ -28459,11 +28327,11 @@ public final class ClientProtos {
       return serviceResult_;
     }
 
-    // optional .RegionLoadStats loadStats = 5;
+    // optional .hbase.pb.RegionLoadStats loadStats = 5;
     public static final int LOADSTATS_FIELD_NUMBER = 5;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats loadStats_;
     /**
-     * <code>optional .RegionLoadStats loadStats = 5;</code>
+     * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
      *
      * <pre>
      * current load on the region
@@ -28473,7 +28341,7 @@ public final class ClientProtos {
       return ((bitField0_ & 0x00000010) == 0x00000010);
     }
     /**
-     * <code>optional .RegionLoadStats loadStats = 5;</code>
+     * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
      *
      * <pre>
      * current load on the region
@@ -28483,7 +28351,7 @@ public final class ClientProtos {
       return loadStats_;
     }
     /**
-     * <code>optional .RegionLoadStats loadStats = 5;</code>
+     * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
      *
      * <pre>
      * current load on the region
@@ -28721,7 +28589,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code ResultOrException}
+     * Protobuf type {@code hbase.pb.ResultOrException}
      *
      * <pre>
      **
@@ -28735,12 +28603,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ResultOrException_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ResultOrException_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ResultOrException_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ResultOrException_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder.class);
       }
@@ -28804,7 +28672,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_ResultOrException_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_ResultOrException_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException getDefaultInstanceForType() {
@@ -28982,18 +28850,18 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .Result result = 2;
+      // optional .hbase.pb.Result result = 2;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result result_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> resultBuilder_;
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public boolean hasResult() {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result getResult() {
         if (resultBuilder_ == null) {
@@ -29003,7 +28871,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public Builder setResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result value) {
         if (resultBuilder_ == null) {
@@ -29019,7 +28887,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public Builder setResult(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder builderForValue) {
@@ -29033,7 +28901,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public Builder mergeResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result value) {
         if (resultBuilder_ == null) {
@@ -29052,7 +28920,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public Builder clearResult() {
         if (resultBuilder_ == null) {
@@ -29065,7 +28933,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder getResultBuilder() {
         bitField0_ |= 0x00000002;
@@ -29073,7 +28941,7 @@ public final class ClientProtos {
         return getResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder getResultOrBuilder() {
         if (resultBuilder_ != null) {
@@ -29083,7 +28951,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Result result = 2;</code>
+       * <code>optional .hbase.pb.Result result = 2;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Result.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrBuilder> 
@@ -29099,18 +28967,18 @@ public final class ClientProtos {
         return resultBuilder_;
       }
 
-      // optional .NameBytesPair exception = 3;
+      // optional .hbase.pb.NameBytesPair exception = 3;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair exception_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> exceptionBuilder_;
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public boolean hasException() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getException() {
         if (exceptionBuilder_ == null) {
@@ -29120,7 +28988,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public Builder setException(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (exceptionBuilder_ == null) {
@@ -29136,7 +29004,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public Builder setException(
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder builderForValue) {
@@ -29150,7 +29018,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public Builder mergeException(org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair value) {
         if (exceptionBuilder_ == null) {
@@ -29169,7 +29037,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public Builder clearException() {
         if (exceptionBuilder_ == null) {
@@ -29182,7 +29050,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder getExceptionBuilder() {
         bitField0_ |= 0x00000004;
@@ -29190,7 +29058,7 @@ public final class ClientProtos {
         return getExceptionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getExceptionOrBuilder() {
         if (exceptionBuilder_ != null) {
@@ -29200,7 +29068,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .NameBytesPair exception = 3;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> 
@@ -29216,12 +29084,12 @@ public final class ClientProtos {
         return exceptionBuilder_;
       }
 
-      // optional .CoprocessorServiceResult service_result = 4;
+      // optional .hbase.pb.CoprocessorServiceResult service_result = 4;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult serviceResult_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResult.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResultOrBuilder> serviceResultBuilder_;
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29231,7 +29099,7 @@ public final class ClientProtos {
         return ((bitField0_ & 0x00000008) == 0x00000008);
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29245,7 +29113,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29265,7 +29133,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29283,7 +29151,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29306,7 +29174,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29323,7 +29191,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29335,7 +29203,7 @@ public final class ClientProtos {
         return getServiceResultFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29349,7 +29217,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .CoprocessorServiceResult service_result = 4;</code>
+       * <code>optional .hbase.pb.CoprocessorServiceResult service_result = 4;</code>
        *
        * <pre>
        * result if this was a coprocessor service call
@@ -29369,12 +29237,12 @@ public final class ClientProtos {
         return serviceResultBuilder_;
       }
 
-      // optional .RegionLoadStats loadStats = 5;
+      // optional .hbase.pb.RegionLoadStats loadStats = 5;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats loadStats_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStats.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionLoadStatsOrBuilder> loadStatsBuilder_;
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29384,7 +29252,7 @@ public final class ClientProtos {
         return ((bitField0_ & 0x00000010) == 0x00000010);
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29398,7 +29266,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29418,7 +29286,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29436,7 +29304,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29459,7 +29327,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29476,7 +29344,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29488,7 +29356,7 @@ public final class ClientProtos {
         return getLoadStatsFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29502,7 +29370,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .RegionLoadStats loadStats = 5;</code>
+       * <code>optional .hbase.pb.RegionLoadStats loadStats = 5;</code>
        *
        * <pre>
        * current load on the region
@@ -29522,7 +29390,7 @@ public final class ClientProtos {
         return loadStatsBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:ResultOrException)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.ResultOrException)
     }
 
     static {
@@ -29530,40 +29398,40 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:ResultOrException)
+    // @@protoc_insertion_point(class_scope:hbase.pb.ResultOrException)
   }
 
   public interface RegionActionResultOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // repeated .ResultOrException resultOrException = 1;
+    // repeated .hbase.pb.ResultOrException resultOrException = 1;
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException> 
         getResultOrExceptionList();
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException getResultOrException(int index);
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     int getResultOrExceptionCount();
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder> 
         getResultOrExceptionOrBuilderList();
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder getResultOrExceptionOrBuilder(
         int index);
 
-    // optional .NameBytesPair exception = 2;
+    // optional .hbase.pb.NameBytesPair exception = 2;
     /**
-     * <code>optional .NameBytesPair exception = 2;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
      *
      * <pre>
      * If the operation failed globally for this region, this exception is set
@@ -29571,7 +29439,7 @@ public final class ClientProtos {
      */
     boolean hasException();
     /**
-     * <code>optional .NameBytesPair exception = 2;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
      *
      * <pre>
      * If the operation failed globally for this region, this exception is set
@@ -29579,7 +29447,7 @@ public final class ClientProtos {
      */
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair getException();
     /**
-     * <code>optional .NameBytesPair exception = 2;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
      *
      * <pre>
      * If the operation failed globally for this region, this exception is set
@@ -29588,7 +29456,7 @@ public final class ClientProtos {
     org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder getExceptionOrBuilder();
   }
   /**
-   * Protobuf type {@code RegionActionResult}
+   * Protobuf type {@code hbase.pb.RegionActionResult}
    *
    * <pre>
    **
@@ -29681,12 +29549,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionActionResult_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionActionResult_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionActionResult_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionActionResult_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder.class);
     }
@@ -29707,47 +29575,47 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // repeated .ResultOrException resultOrException = 1;
+    // repeated .hbase.pb.ResultOrException resultOrException = 1;
     public static final int RESULTOREXCEPTION_FIELD_NUMBER = 1;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException> resultOrException_;
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException> getResultOrExceptionList() {
       return resultOrException_;
     }
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder> 
         getResultOrExceptionOrBuilderList() {
       return resultOrException_;
     }
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     public int getResultOrExceptionCount() {
       return resultOrException_.size();
     }
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException getResultOrException(int index) {
       return resultOrException_.get(index);
     }
     /**
-     * <code>repeated .ResultOrException resultOrException = 1;</code>
+     * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder getResultOrExceptionOrBuilder(
         int index) {
       return resultOrException_.get(index);
     }
 
-    // optional .NameBytesPair exception = 2;
+    // optional .hbase.pb.NameBytesPair exception = 2;
     public static final int EXCEPTION_FIELD_NUMBER = 2;
     private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair exception_;
     /**
-     * <code>optional .NameBytesPair exception = 2;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
      *
      * <pre>
      * If the operation failed globally for this region, this exception is set
@@ -29757,7 +29625,7 @@ public final class ClientProtos {
       return ((bitField0_ & 0x00000001) == 0x00000001);
     }
     /**
-     * <code>optional .NameBytesPair exception = 2;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
      *
      * <pre>
      * If the operation failed globally for this region, this exception is set
@@ -29767,7 +29635,7 @@ public final class ClientProtos {
       return exception_;
     }
     /**
-     * <code>optional .NameBytesPair exception = 2;</code>
+     * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
      *
      * <pre>
      * If the operation failed globally for this region, this exception is set
@@ -29951,7 +29819,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code RegionActionResult}
+     * Protobuf type {@code hbase.pb.RegionActionResult}
      *
      * <pre>
      **
@@ -29963,12 +29831,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionActionResult_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionActionResult_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionActionResult_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionActionResult_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder.class);
       }
@@ -30016,7 +29884,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_RegionActionResult_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_RegionActionResult_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult getDefaultInstanceForType() {
@@ -30136,7 +30004,7 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // repeated .ResultOrException resultOrException = 1;
+      // repeated .hbase.pb.ResultOrException resultOrException = 1;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException> resultOrException_ =
         java.util.Collections.emptyList();
       private void ensureResultOrExceptionIsMutable() {
@@ -30150,7 +30018,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder> resultOrExceptionBuilder_;
 
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException> getResultOrExceptionList() {
         if (resultOrExceptionBuilder_ == null) {
@@ -30160,7 +30028,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public int getResultOrExceptionCount() {
         if (resultOrExceptionBuilder_ == null) {
@@ -30170,7 +30038,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException getResultOrException(int index) {
         if (resultOrExceptionBuilder_ == null) {
@@ -30180,7 +30048,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder setResultOrException(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException value) {
@@ -30197,7 +30065,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder setResultOrException(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder builderForValue) {
@@ -30211,7 +30079,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder addResultOrException(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException value) {
         if (resultOrExceptionBuilder_ == null) {
@@ -30227,7 +30095,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder addResultOrException(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException value) {
@@ -30244,7 +30112,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder addResultOrException(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder builderForValue) {
@@ -30258,7 +30126,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder addResultOrException(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder builderForValue) {
@@ -30272,7 +30140,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder addAllResultOrException(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException> values) {
@@ -30286,7 +30154,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder clearResultOrException() {
         if (resultOrExceptionBuilder_ == null) {
@@ -30299,7 +30167,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public Builder removeResultOrException(int index) {
         if (resultOrExceptionBuilder_ == null) {
@@ -30312,14 +30180,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder getResultOrExceptionBuilder(
           int index) {
         return getResultOrExceptionFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder getResultOrExceptionOrBuilder(
           int index) {
@@ -30329,7 +30197,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrExceptionOrBuilder> 
            getResultOrExceptionOrBuilderList() {
@@ -30340,14 +30208,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder addResultOrExceptionBuilder() {
         return getResultOrExceptionFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.getDefaultInstance());
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder addResultOrExceptionBuilder(
           int index) {
@@ -30355,7 +30223,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.getDefaultInstance());
       }
       /**
-       * <code>repeated .ResultOrException resultOrException = 1;</code>
+       * <code>repeated .hbase.pb.ResultOrException resultOrException = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ResultOrException.Builder> 
            getResultOrExceptionBuilderList() {
@@ -30376,12 +30244,12 @@ public final class ClientProtos {
         return resultOrExceptionBuilder_;
       }
 
-      // optional .NameBytesPair exception = 2;
+      // optional .hbase.pb.NameBytesPair exception = 2;
       private org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair exception_ = org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPair.Builder, org.apache.hadoop.hbase.protobuf.generated.HBaseProtos.NameBytesPairOrBuilder> exceptionBuilder_;
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30391,7 +30259,7 @@ public final class ClientProtos {
         return ((bitField0_ & 0x00000002) == 0x00000002);
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30405,7 +30273,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30425,7 +30293,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30443,7 +30311,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30466,7 +30334,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30483,7 +30351,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30495,7 +30363,7 @@ public final class ClientProtos {
         return getExceptionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30509,7 +30377,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .NameBytesPair exception = 2;</code>
+       * <code>optional .hbase.pb.NameBytesPair exception = 2;</code>
        *
        * <pre>
        * If the operation failed globally for this region, this exception is set
@@ -30529,7 +30397,7 @@ public final class ClientProtos {
         return exceptionBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:RegionActionResult)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.RegionActionResult)
     }
 
     static {
@@ -30537,33 +30405,33 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:RegionActionResult)
+    // @@protoc_insertion_point(class_scope:hbase.pb.RegionActionResult)
   }
 
   public interface MultiRequestOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // repeated .RegionAction regionAction = 1;
+    // repeated .hbase.pb.RegionAction regionAction = 1;
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction> 
         getRegionActionList();
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction getRegionAction(int index);
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     int getRegionActionCount();
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder> 
         getRegionActionOrBuilderList();
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder getRegionActionOrBuilder(
         int index);
@@ -30578,22 +30446,22 @@ public final class ClientProtos {
      */
     long getNonceGroup();
 
-    // optional .Condition condition = 3;
+    // optional .hbase.pb.Condition condition = 3;
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     boolean hasCondition();
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getCondition();
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder getConditionOrBuilder();
   }
   /**
-   * Protobuf type {@code MultiRequest}
+   * Protobuf type {@code hbase.pb.MultiRequest}
    *
    * <pre>
    **
@@ -30695,12 +30563,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiRequest_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiRequest_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiRequest_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiRequest_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest.Builder.class);
     }
@@ -30721,36 +30589,36 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // repeated .RegionAction regionAction = 1;
+    // repeated .hbase.pb.RegionAction regionAction = 1;
     public static final int REGIONACTION_FIELD_NUMBER = 1;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction> regionAction_;
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction> getRegionActionList() {
       return regionAction_;
     }
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder> 
         getRegionActionOrBuilderList() {
       return regionAction_;
     }
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     public int getRegionActionCount() {
       return regionAction_.size();
     }
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction getRegionAction(int index) {
       return regionAction_.get(index);
     }
     /**
-     * <code>repeated .RegionAction regionAction = 1;</code>
+     * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder getRegionActionOrBuilder(
         int index) {
@@ -30773,23 +30641,23 @@ public final class ClientProtos {
       return nonceGroup_;
     }
 
-    // optional .Condition condition = 3;
+    // optional .hbase.pb.Condition condition = 3;
     public static final int CONDITION_FIELD_NUMBER = 3;
     private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition condition_;
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     public boolean hasCondition() {
       return ((bitField0_ & 0x00000002) == 0x00000002);
     }
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getCondition() {
       return condition_;
     }
     /**
-     * <code>optional .Condition condition = 3;</code>
+     * <code>optional .hbase.pb.Condition condition = 3;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder getConditionOrBuilder() {
       return condition_;
@@ -30986,7 +30854,7 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code MultiRequest}
+     * Protobuf type {@code hbase.pb.MultiRequest}
      *
      * <pre>
      **
@@ -31002,12 +30870,12 @@ public final class ClientProtos {
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequestOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiRequest_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiRequest_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiRequest_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest.Builder.class);
       }
@@ -31057,7 +30925,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiRequest_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiRequest_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiRequest getDefaultInstanceForType() {
@@ -31184,7 +31052,7 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // repeated .RegionAction regionAction = 1;
+      // repeated .hbase.pb.RegionAction regionAction = 1;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction> regionAction_ =
         java.util.Collections.emptyList();
       private void ensureRegionActionIsMutable() {
@@ -31198,7 +31066,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder> regionActionBuilder_;
 
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction> getRegionActionList() {
         if (regionActionBuilder_ == null) {
@@ -31208,7 +31076,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public int getRegionActionCount() {
         if (regionActionBuilder_ == null) {
@@ -31218,7 +31086,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction getRegionAction(int index) {
         if (regionActionBuilder_ == null) {
@@ -31228,7 +31096,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder setRegionAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction value) {
@@ -31245,7 +31113,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder setRegionAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder builderForValue) {
@@ -31259,7 +31127,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder addRegionAction(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction value) {
         if (regionActionBuilder_ == null) {
@@ -31275,7 +31143,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder addRegionAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction value) {
@@ -31292,7 +31160,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder addRegionAction(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder builderForValue) {
@@ -31306,7 +31174,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder addRegionAction(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder builderForValue) {
@@ -31320,7 +31188,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder addAllRegionAction(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction> values) {
@@ -31334,7 +31202,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder clearRegionAction() {
         if (regionActionBuilder_ == null) {
@@ -31347,7 +31215,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public Builder removeRegionAction(int index) {
         if (regionActionBuilder_ == null) {
@@ -31360,14 +31228,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder getRegionActionBuilder(
           int index) {
         return getRegionActionFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder getRegionActionOrBuilder(
           int index) {
@@ -31377,7 +31245,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionOrBuilder> 
            getRegionActionOrBuilderList() {
@@ -31388,14 +31256,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder addRegionActionBuilder() {
         return getRegionActionFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.getDefaultInstance());
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder addRegionActionBuilder(
           int index) {
@@ -31403,7 +31271,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.getDefaultInstance());
       }
       /**
-       * <code>repeated .RegionAction regionAction = 1;</code>
+       * <code>repeated .hbase.pb.RegionAction regionAction = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionAction.Builder> 
            getRegionActionBuilderList() {
@@ -31457,18 +31325,18 @@ public final class ClientProtos {
         return this;
       }
 
-      // optional .Condition condition = 3;
+      // optional .hbase.pb.Condition condition = 3;
       private org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition condition_ = org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.getDefaultInstance();
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder> conditionBuilder_;
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public boolean hasCondition() {
         return ((bitField0_ & 0x00000004) == 0x00000004);
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition getCondition() {
         if (conditionBuilder_ == null) {
@@ -31478,7 +31346,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder setCondition(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition value) {
         if (conditionBuilder_ == null) {
@@ -31494,7 +31362,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder setCondition(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder builderForValue) {
@@ -31508,7 +31376,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder mergeCondition(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition value) {
         if (conditionBuilder_ == null) {
@@ -31527,7 +31395,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public Builder clearCondition() {
         if (conditionBuilder_ == null) {
@@ -31540,7 +31408,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder getConditionBuilder() {
         bitField0_ |= 0x00000004;
@@ -31548,7 +31416,7 @@ public final class ClientProtos {
         return getConditionFieldBuilder().getBuilder();
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder getConditionOrBuilder() {
         if (conditionBuilder_ != null) {
@@ -31558,7 +31426,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>optional .Condition condition = 3;</code>
+       * <code>optional .hbase.pb.Condition condition = 3;</code>
        */
       private com.google.protobuf.SingleFieldBuilder<
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.Condition.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ConditionOrBuilder> 
@@ -31574,7 +31442,7 @@ public final class ClientProtos {
         return conditionBuilder_;
       }
 
-      // @@protoc_insertion_point(builder_scope:MultiRequest)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.MultiRequest)
     }
 
     static {
@@ -31582,33 +31450,33 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MultiRequest)
+    // @@protoc_insertion_point(class_scope:hbase.pb.MultiRequest)
   }
 
   public interface MultiResponseOrBuilder
       extends com.google.protobuf.MessageOrBuilder {
 
-    // repeated .RegionActionResult regionActionResult = 1;
+    // repeated .hbase.pb.RegionActionResult regionActionResult = 1;
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult> 
         getRegionActionResultList();
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult getRegionActionResult(int index);
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     int getRegionActionResultCount();
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder> 
         getRegionActionResultOrBuilderList();
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder getRegionActionResultOrBuilder(
         int index);
@@ -31632,7 +31500,7 @@ public final class ClientProtos {
     boolean getProcessed();
   }
   /**
-   * Protobuf type {@code MultiResponse}
+   * Protobuf type {@code hbase.pb.MultiResponse}
    */
   public static final class MultiResponse extends
       com.google.protobuf.GeneratedMessage
@@ -31712,12 +31580,12 @@ public final class ClientProtos {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiResponse_descriptor;
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiResponse_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiResponse_fieldAccessorTable
+      return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiResponse_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse.Builder.class);
     }
@@ -31738,36 +31606,36 @@ public final class ClientProtos {
     }
 
     private int bitField0_;
-    // repeated .RegionActionResult regionActionResult = 1;
+    // repeated .hbase.pb.RegionActionResult regionActionResult = 1;
     public static final int REGIONACTIONRESULT_FIELD_NUMBER = 1;
     private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult> regionActionResult_;
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult> getRegionActionResultList() {
       return regionActionResult_;
     }
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder> 
         getRegionActionResultOrBuilderList() {
       return regionActionResult_;
     }
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     public int getRegionActionResultCount() {
       return regionActionResult_.size();
     }
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult getRegionActionResult(int index) {
       return regionActionResult_.get(index);
     }
     /**
-     * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+     * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
      */
     public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder getRegionActionResultOrBuilder(
         int index) {
@@ -31966,19 +31834,19 @@ public final class ClientProtos {
       return builder;
     }
     /**
-     * Protobuf type {@code MultiResponse}
+     * Protobuf type {@code hbase.pb.MultiResponse}
      */
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder>
        implements org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponseOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiResponse_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiResponse_fieldAccessorTable
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiResponse_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
                 org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse.class, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse.Builder.class);
       }
@@ -32021,7 +31889,7 @@ public final class ClientProtos {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_MultiResponse_descriptor;
+        return org.apache.hadoop.hbase.protobuf.generated.ClientProtos.internal_static_hbase_pb_MultiResponse_descriptor;
       }
 
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MultiResponse getDefaultInstanceForType() {
@@ -32131,7 +31999,7 @@ public final class ClientProtos {
       }
       private int bitField0_;
 
-      // repeated .RegionActionResult regionActionResult = 1;
+      // repeated .hbase.pb.RegionActionResult regionActionResult = 1;
       private java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult> regionActionResult_ =
         java.util.Collections.emptyList();
       private void ensureRegionActionResultIsMutable() {
@@ -32145,7 +32013,7 @@ public final class ClientProtos {
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder> regionActionResultBuilder_;
 
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult> getRegionActionResultList() {
         if (regionActionResultBuilder_ == null) {
@@ -32155,7 +32023,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public int getRegionActionResultCount() {
         if (regionActionResultBuilder_ == null) {
@@ -32165,7 +32033,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult getRegionActionResult(int index) {
         if (regionActionResultBuilder_ == null) {
@@ -32175,7 +32043,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder setRegionActionResult(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult value) {
@@ -32192,7 +32060,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder setRegionActionResult(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder builderForValue) {
@@ -32206,7 +32074,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder addRegionActionResult(org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult value) {
         if (regionActionResultBuilder_ == null) {
@@ -32222,7 +32090,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder addRegionActionResult(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult value) {
@@ -32239,7 +32107,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder addRegionActionResult(
           org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder builderForValue) {
@@ -32253,7 +32121,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder addRegionActionResult(
           int index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder builderForValue) {
@@ -32267,7 +32135,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder addAllRegionActionResult(
           java.lang.Iterable<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult> values) {
@@ -32281,7 +32149,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder clearRegionActionResult() {
         if (regionActionResultBuilder_ == null) {
@@ -32294,7 +32162,7 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public Builder removeRegionActionResult(int index) {
         if (regionActionResultBuilder_ == null) {
@@ -32307,14 +32175,14 @@ public final class ClientProtos {
         return this;
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder getRegionActionResultBuilder(
           int index) {
         return getRegionActionResultFieldBuilder().getBuilder(index);
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder getRegionActionResultOrBuilder(
           int index) {
@@ -32324,7 +32192,7 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public java.util.List<? extends org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResultOrBuilder> 
            getRegionActionResultOrBuilderList() {
@@ -32335,14 +32203,14 @@ public final class ClientProtos {
         }
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder addRegionActionResultBuilder() {
         return getRegionActionResultFieldBuilder().addBuilder(
             org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.getDefaultInstance());
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder addRegionActionResultBuilder(
           int index) {
@@ -32350,7 +32218,7 @@ public final class ClientProtos {
             index, org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.getDefaultInstance());
       }
       /**
-       * <code>repeated .RegionActionResult regionActionResult = 1;</code>
+       * <code>repeated .hbase.pb.RegionActionResult regionActionResult = 1;</code>
        */
       public java.util.List<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.RegionActionResult.Builder> 
            getRegionActionResultBuilderList() {
@@ -32420,7 +32288,7 @@ public final class ClientProtos {
         return this;
       }
 
-      // @@protoc_insertion_point(builder_scope:MultiResponse)
+      // @@protoc_insertion_point(builder_scope:hbase.pb.MultiResponse)
     }
 
     static {
@@ -32428,11 +32296,11 @@ public final class ClientProtos {
       defaultInstance.initFields();
     }
 
-    // @@protoc_insertion_point(class_scope:MultiResponse)
+    // @@protoc_insertion_point(class_scope:hbase.pb.MultiResponse)
   }
 
   /**
-   * Protobuf service {@code ClientService}
+   * Protobuf service {@code hbase.pb.ClientService}
    */
   public static abstract class ClientService
       implements com.google.protobuf.Service {
@@ -32440,7 +32308,7 @@ public final class ClientProtos {
 
     public interface Interface {
       /**
-       * <code>rpc Get(.GetRequest) returns (.GetResponse);</code>
+       * <code>rpc Get(.hbase.pb.GetRequest) returns (.hbase.pb.GetResponse);</code>
        */
       public abstract void get(
           com.google.protobuf.RpcController controller,
@@ -32448,7 +32316,7 @@ public final class ClientProtos {
           com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse> done);
 
       /**
-       * <code>rpc Mutate(.MutateRequest) returns (.MutateResponse);</code>
+       * <code>rpc Mutate(.hbase.pb.MutateRequest) returns (.hbase.pb.MutateResponse);</code>
        */
       public abstract void mutate(
           com.google.protobuf.RpcController controller,
@@ -32456,7 +32324,7 @@ public final class ClientProtos {
           com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse> done);
 
       /**
-       * <code>rpc Scan(.ScanRequest) returns (.ScanResponse);</code>
+       * <code>rpc Scan(.hbase.pb.ScanRequest) returns (.hbase.pb.ScanResponse);</code>
        */
       public abstract void scan(
           com.google.protobuf.RpcController controller,
@@ -32464,7 +32332,7 @@ public final class ClientProtos {
           com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse> done);
 
       /**
-       * <code>rpc BulkLoadHFile(.BulkLoadHFileRequest) returns (.BulkLoadHFileResponse);</code>
+       * <code>rpc BulkLoadHFile(.hbase.pb.BulkLoadHFileRequest) returns (.hbase.pb.BulkLoadHFileResponse);</code>
        */
       public abstract void bulkLoadHFile(
           com.google.protobuf.RpcController controller,
@@ -32472,7 +32340,7 @@ public final class ClientProtos {
           com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse> done);
 
       /**
-       * <code>rpc ExecService(.CoprocessorServiceRequest) returns (.CoprocessorServiceResponse);</code>
+       * <code>rpc ExecService(.hbase.pb.CoprocessorServiceRequest) returns (.hbase.pb.CoprocessorServiceResponse);</code>
        */
       public abstract void execService(
           com.google.protobuf.RpcController controller,
@@ -32480,7 +32348,7 @@ public final class ClientProtos {
           com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse> done);
 
       /**
-       * <code>rpc ExecRegionServerService(.CoprocessorServiceRequest) returns (.CoprocessorServiceResponse);</code>
+       * <code>rpc ExecRegionServerService(.hbase.pb.CoprocessorServiceRequest) returns (.hbase.pb.CoprocessorServiceResponse);</code>
        */
       public abstract void execRegionServerService(
           com.google.protobuf.RpcController controller,
@@ -32488,7 +32356,7 @@ public final class ClientProtos {
           com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse> done);
 
       /**
-       * <code>rpc Multi(.MultiRequest) returns (.MultiResponse);</code>
+       * <code>rpc Multi(.hbase.pb.MultiRequest) returns (.hbase.pb.MultiResponse);</code>
        */
       public abstract void multi(
           com.google.protobuf.RpcController controller,
@@ -32657,7 +32525,7 @@ public final class ClientProtos {
     }
 
     /**
-     * <code>rpc Get(.GetRequest) returns (.GetResponse);</code>
+     * <code>rpc Get(.hbase.pb.GetRequest) returns (.hbase.pb.GetResponse);</code>
      */
     public abstract void get(
         com.google.protobuf.RpcController controller,
@@ -32665,7 +32533,7 @@ public final class ClientProtos {
         com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.GetResponse> done);
 
     /**
-     * <code>rpc Mutate(.MutateRequest) returns (.MutateResponse);</code>
+     * <code>rpc Mutate(.hbase.pb.MutateRequest) returns (.hbase.pb.MutateResponse);</code>
      */
     public abstract void mutate(
         com.google.protobuf.RpcController controller,
@@ -32673,7 +32541,7 @@ public final class ClientProtos {
         com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.MutateResponse> done);
 
     /**
-     * <code>rpc Scan(.ScanRequest) returns (.ScanResponse);</code>
+     * <code>rpc Scan(.hbase.pb.ScanRequest) returns (.hbase.pb.ScanResponse);</code>
      */
     public abstract void scan(
         com.google.protobuf.RpcController controller,
@@ -32681,7 +32549,7 @@ public final class ClientProtos {
         com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.ScanResponse> done);
 
     /**
-     * <code>rpc BulkLoadHFile(.BulkLoadHFileRequest) returns (.BulkLoadHFileResponse);</code>
+     * <code>rpc BulkLoadHFile(.hbase.pb.BulkLoadHFileRequest) returns (.hbase.pb.BulkLoadHFileResponse);</code>
      */
     public abstract void bulkLoadHFile(
         com.google.protobuf.RpcController controller,
@@ -32689,7 +32557,7 @@ public final class ClientProtos {
         com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.BulkLoadHFileResponse> done);
 
     /**
-     * <code>rpc ExecService(.CoprocessorServiceRequest) returns (.CoprocessorServiceResponse);</code>
+     * <code>rpc ExecService(.hbase.pb.CoprocessorServiceRequest) returns (.hbase.pb.CoprocessorServiceResponse);</code>
      */
     public abstract void execService(
         com.google.protobuf.RpcController controller,
@@ -32697,7 +32565,7 @@ public final class ClientProtos {
         com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse> done);
 
     /**
-     * <code>rpc ExecRegionServerService(.CoprocessorServiceRequest) returns (.CoprocessorServiceResponse);</code>
+     * <code>rpc ExecRegionServerService(.hbase.pb.CoprocessorServiceRequest) returns (.hbase.pb.CoprocessorServiceResponse);</code>
      */
     public abstract void execRegionServerService(
         com.google.protobuf.RpcController controller,
@@ -32705,7 +32573,7 @@ public final class ClientProtos {
         com.google.protobuf.RpcCallback<org.apache.hadoop.hbase.protobuf.generated.ClientProtos.CoprocessorServiceResponse> done);
 
     /**
-     * <code>rpc Multi(.MultiRequest) returns (.MultiResponse);</code>
+     * <code>rpc Multi(.hbase.pb.MultiRequest) returns (.hbase.pb.MultiResponse);</code>
      */
     public abstract void multi(
         com.google.protobuf.RpcController controller,
@@ -33086,159 +32954,159 @@ public final class ClientProtos {
 
     }
 
-    // @@protoc_insertion_point(class_scope:ClientService)
+    // @@protoc_insertion_point(class_scope:hbase.pb.ClientService)
   }
 
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Authorizations_descriptor;
+    internal_static_hbase_pb_Authorizations_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Authorizations_fieldAccessorTable;
+      internal_static_hbase_pb_Authorizations_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_CellVisibility_descriptor;
+    internal_static_hbase_pb_CellVisibility_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CellVisibility_fieldAccessorTable;
+      internal_static_hbase_pb_CellVisibility_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Column_descriptor;
+    internal_static_hbase_pb_Column_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Column_fieldAccessorTable;
+      internal_static_hbase_pb_Column_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Get_descriptor;
+    internal_static_hbase_pb_Get_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Get_fieldAccessorTable;
+      internal_static_hbase_pb_Get_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Result_descriptor;
+    internal_static_hbase_pb_Result_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Result_fieldAccessorTable;
+      internal_static_hbase_pb_Result_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_GetRequest_descriptor;
+    internal_static_hbase_pb_GetRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_GetRequest_fieldAccessorTable;
+      internal_static_hbase_pb_GetRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_GetResponse_descriptor;
+    internal_static_hbase_pb_GetResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_GetResponse_fieldAccessorTable;
+      internal_static_hbase_pb_GetResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Condition_descriptor;
+    internal_static_hbase_pb_Condition_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Condition_fieldAccessorTable;
+      internal_static_hbase_pb_Condition_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MutationProto_descriptor;
+    internal_static_hbase_pb_MutationProto_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MutationProto_fieldAccessorTable;
+      internal_static_hbase_pb_MutationProto_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MutationProto_ColumnValue_descriptor;
+    internal_static_hbase_pb_MutationProto_ColumnValue_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MutationProto_ColumnValue_fieldAccessorTable;
+      internal_static_hbase_pb_MutationProto_ColumnValue_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MutationProto_ColumnValue_QualifierValue_descriptor;
+    internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable;
+      internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MutateRequest_descriptor;
+    internal_static_hbase_pb_MutateRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MutateRequest_fieldAccessorTable;
+      internal_static_hbase_pb_MutateRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MutateResponse_descriptor;
+    internal_static_hbase_pb_MutateResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MutateResponse_fieldAccessorTable;
+      internal_static_hbase_pb_MutateResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Scan_descriptor;
+    internal_static_hbase_pb_Scan_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Scan_fieldAccessorTable;
+      internal_static_hbase_pb_Scan_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_ScanRequest_descriptor;
+    internal_static_hbase_pb_ScanRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ScanRequest_fieldAccessorTable;
+      internal_static_hbase_pb_ScanRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_ScanResponse_descriptor;
+    internal_static_hbase_pb_ScanResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ScanResponse_fieldAccessorTable;
+      internal_static_hbase_pb_ScanResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_BulkLoadHFileRequest_descriptor;
+    internal_static_hbase_pb_BulkLoadHFileRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_BulkLoadHFileRequest_fieldAccessorTable;
+      internal_static_hbase_pb_BulkLoadHFileRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_BulkLoadHFileRequest_FamilyPath_descriptor;
+    internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable;
+      internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_BulkLoadHFileResponse_descriptor;
+    internal_static_hbase_pb_BulkLoadHFileResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_BulkLoadHFileResponse_fieldAccessorTable;
+      internal_static_hbase_pb_BulkLoadHFileResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_CoprocessorServiceCall_descriptor;
+    internal_static_hbase_pb_CoprocessorServiceCall_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CoprocessorServiceCall_fieldAccessorTable;
+      internal_static_hbase_pb_CoprocessorServiceCall_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_CoprocessorServiceResult_descriptor;
+    internal_static_hbase_pb_CoprocessorServiceResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CoprocessorServiceResult_fieldAccessorTable;
+      internal_static_hbase_pb_CoprocessorServiceResult_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_CoprocessorServiceRequest_descriptor;
+    internal_static_hbase_pb_CoprocessorServiceRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CoprocessorServiceRequest_fieldAccessorTable;
+      internal_static_hbase_pb_CoprocessorServiceRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_CoprocessorServiceResponse_descriptor;
+    internal_static_hbase_pb_CoprocessorServiceResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_CoprocessorServiceResponse_fieldAccessorTable;
+      internal_static_hbase_pb_CoprocessorServiceResponse_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_Action_descriptor;
+    internal_static_hbase_pb_Action_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_Action_fieldAccessorTable;
+      internal_static_hbase_pb_Action_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_RegionAction_descriptor;
+    internal_static_hbase_pb_RegionAction_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_RegionAction_fieldAccessorTable;
+      internal_static_hbase_pb_RegionAction_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_RegionLoadStats_descriptor;
+    internal_static_hbase_pb_RegionLoadStats_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_RegionLoadStats_fieldAccessorTable;
+      internal_static_hbase_pb_RegionLoadStats_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_ResultOrException_descriptor;
+    internal_static_hbase_pb_ResultOrException_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_ResultOrException_fieldAccessorTable;
+      internal_static_hbase_pb_ResultOrException_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_RegionActionResult_descriptor;
+    internal_static_hbase_pb_RegionActionResult_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_RegionActionResult_fieldAccessorTable;
+      internal_static_hbase_pb_RegionActionResult_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MultiRequest_descriptor;
+    internal_static_hbase_pb_MultiRequest_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MultiRequest_fieldAccessorTable;
+      internal_static_hbase_pb_MultiRequest_fieldAccessorTable;
   private static com.google.protobuf.Descriptors.Descriptor
-    internal_static_MultiResponse_descriptor;
+    internal_static_hbase_pb_MultiResponse_descriptor;
   private static
     com.google.protobuf.GeneratedMessage.FieldAccessorTable
-      internal_static_MultiResponse_fieldAccessorTable;
+      internal_static_hbase_pb_MultiResponse_fieldAccessorTable;
 
   public static com.google.protobuf.Descriptors.FileDescriptor
       getDescriptor() {
@@ -33248,310 +33116,324 @@ public final class ClientProtos {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\014Client.proto\032\013HBase.proto\032\014Filter.prot" +
-      "o\032\nCell.proto\032\020Comparator.proto\032\017MapRedu" +
-      "ce.proto\"\037\n\016Authorizations\022\r\n\005label\030\001 \003(" +
-      "\t\"$\n\016CellVisibility\022\022\n\nexpression\030\001 \002(\t\"" +
-      "+\n\006Column\022\016\n\006family\030\001 \002(\014\022\021\n\tqualifier\030\002" +
-      " \003(\014\"\324\002\n\003Get\022\013\n\003row\030\001 \002(\014\022\027\n\006column\030\002 \003(" +
-      "\0132\007.Column\022!\n\tattribute\030\003 \003(\0132\016.NameByte" +
-      "sPair\022\027\n\006filter\030\004 \001(\0132\007.Filter\022\036\n\ntime_r" +
-      "ange\030\005 \001(\0132\n.TimeRange\022\027\n\014max_versions\030\006" +
-      " \001(\r:\0011\022\032\n\014cache_blocks\030\007 \001(\010:\004true\022\023\n\013s",
-      "tore_limit\030\010 \001(\r\022\024\n\014store_offset\030\t \001(\r\022\035" +
-      "\n\016existence_only\030\n \001(\010:\005false\022!\n\022closest" +
-      "_row_before\030\013 \001(\010:\005false\022)\n\013consistency\030" +
-      "\014 \001(\0162\014.Consistency:\006STRONG\"z\n\006Result\022\023\n" +
-      "\004cell\030\001 \003(\0132\005.Cell\022\035\n\025associated_cell_co" +
-      "unt\030\002 \001(\005\022\016\n\006exists\030\003 \001(\010\022\024\n\005stale\030\004 \001(\010" +
-      ":\005false\022\026\n\007partial\030\005 \001(\010:\005false\"A\n\nGetRe" +
-      "quest\022 \n\006region\030\001 \002(\0132\020.RegionSpecifier\022" +
-      "\021\n\003get\030\002 \002(\0132\004.Get\"&\n\013GetResponse\022\027\n\006res" +
-      "ult\030\001 \001(\0132\007.Result\"\200\001\n\tCondition\022\013\n\003row\030",
-      "\001 \002(\014\022\016\n\006family\030\002 \002(\014\022\021\n\tqualifier\030\003 \002(\014" +
-      "\022\"\n\014compare_type\030\004 \002(\0162\014.CompareType\022\037\n\n" +
-      "comparator\030\005 \002(\0132\013.Comparator\"\265\006\n\rMutati" +
-      "onProto\022\013\n\003row\030\001 \001(\014\0220\n\013mutate_type\030\002 \001(" +
-      "\0162\033.MutationProto.MutationType\0220\n\014column" +
-      "_value\030\003 \003(\0132\032.MutationProto.ColumnValue" +
-      "\022\021\n\ttimestamp\030\004 \001(\004\022!\n\tattribute\030\005 \003(\0132\016" +
-      ".NameBytesPair\022:\n\ndurability\030\006 \001(\0162\031.Mut" +
-      "ationProto.Durability:\013USE_DEFAULT\022\036\n\nti" +
-      "me_range\030\007 \001(\0132\n.TimeRange\022\035\n\025associated",
-      "_cell_count\030\010 \001(\005\022\r\n\005nonce\030\t \001(\004\032\347\001\n\013Col" +
-      "umnValue\022\016\n\006family\030\001 \002(\014\022B\n\017qualifier_va" +
-      "lue\030\002 \003(\0132).MutationProto.ColumnValue.Qu" +
-      "alifierValue\032\203\001\n\016QualifierValue\022\021\n\tquali" +
-      "fier\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\022\021\n\ttimestamp\030\003" +
-      " \001(\004\022.\n\013delete_type\030\004 \001(\0162\031.MutationProt" +
-      "o.DeleteType\022\014\n\004tags\030\005 \001(\014\"W\n\nDurability" +
-      "\022\017\n\013USE_DEFAULT\020\000\022\014\n\010SKIP_WAL\020\001\022\r\n\tASYNC" +
-      "_WAL\020\002\022\014\n\010SYNC_WAL\020\003\022\r\n\tFSYNC_WAL\020\004\">\n\014M" +
-      "utationType\022\n\n\006APPEND\020\000\022\r\n\tINCREMENT\020\001\022\007",
-      "\n\003PUT\020\002\022\n\n\006DELETE\020\003\"p\n\nDeleteType\022\026\n\022DEL" +
-      "ETE_ONE_VERSION\020\000\022\034\n\030DELETE_MULTIPLE_VER" +
-      "SIONS\020\001\022\021\n\rDELETE_FAMILY\020\002\022\031\n\025DELETE_FAM" +
-      "ILY_VERSION\020\003\"\207\001\n\rMutateRequest\022 \n\006regio" +
-      "n\030\001 \002(\0132\020.RegionSpecifier\022 \n\010mutation\030\002 " +
-      "\002(\0132\016.MutationProto\022\035\n\tcondition\030\003 \001(\0132\n" +
-      ".Condition\022\023\n\013nonce_group\030\004 \001(\004\"<\n\016Mutat" +
-      "eResponse\022\027\n\006result\030\001 \001(\0132\007.Result\022\021\n\tpr" +
-      "ocessed\030\002 \001(\010\"\271\003\n\004Scan\022\027\n\006column\030\001 \003(\0132\007" +
-      ".Column\022!\n\tattribute\030\002 \003(\0132\016.NameBytesPa",
-      "ir\022\021\n\tstart_row\030\003 \001(\014\022\020\n\010stop_row\030\004 \001(\014\022" +
-      "\027\n\006filter\030\005 \001(\0132\007.Filter\022\036\n\ntime_range\030\006" +
-      " \001(\0132\n.TimeRange\022\027\n\014max_versions\030\007 \001(\r:\001" +
-      "1\022\032\n\014cache_blocks\030\010 \001(\010:\004true\022\022\n\nbatch_s" +
-      "ize\030\t \001(\r\022\027\n\017max_result_size\030\n \001(\004\022\023\n\013st" +
-      "ore_limit\030\013 \001(\r\022\024\n\014store_offset\030\014 \001(\r\022&\n" +
-      "\036load_column_families_on_demand\030\r \001(\010\022\r\n" +
-      "\005small\030\016 \001(\010\022\027\n\010reversed\030\017 \001(\010:\005false\022)\n" +
-      "\013consistency\030\020 \001(\0162\014.Consistency:\006STRONG" +
-      "\022\017\n\007caching\030\021 \001(\r\"\376\001\n\013ScanRequest\022 \n\006reg",
-      "ion\030\001 \001(\0132\020.RegionSpecifier\022\023\n\004scan\030\002 \001(" +
-      "\0132\005.Scan\022\022\n\nscanner_id\030\003 \001(\004\022\026\n\016number_o" +
-      "f_rows\030\004 \001(\r\022\025\n\rclose_scanner\030\005 \001(\010\022\025\n\rn" +
-      "ext_call_seq\030\006 \001(\004\022\037\n\027client_handles_par" +
-      "tials\030\007 \001(\010\022!\n\031client_handles_heartbeats" +
-      "\030\010 \001(\010\022\032\n\022track_scan_metrics\030\t \001(\010\"\210\002\n\014S" +
-      "canResponse\022\030\n\020cells_per_result\030\001 \003(\r\022\022\n" +
-      "\nscanner_id\030\002 \001(\004\022\024\n\014more_results\030\003 \001(\010\022" +
-      "\013\n\003ttl\030\004 \001(\r\022\030\n\007results\030\005 \003(\0132\007.Result\022\r" +
-      "\n\005stale\030\006 \001(\010\022\037\n\027partial_flag_per_result",
-      "\030\007 \003(\010\022\036\n\026more_results_in_region\030\010 \001(\010\022\031" +
-      "\n\021heartbeat_message\030\t \001(\010\022\"\n\014scan_metric" +
-      "s\030\n \001(\0132\014.ScanMetrics\"\263\001\n\024BulkLoadHFileR" +
-      "equest\022 \n\006region\030\001 \002(\0132\020.RegionSpecifier" +
-      "\0225\n\013family_path\030\002 \003(\0132 .BulkLoadHFileReq" +
-      "uest.FamilyPath\022\026\n\016assign_seq_num\030\003 \001(\010\032" +
-      "*\n\nFamilyPath\022\016\n\006family\030\001 \002(\014\022\014\n\004path\030\002 " +
-      "\002(\t\"\'\n\025BulkLoadHFileResponse\022\016\n\006loaded\030\001" +
-      " \002(\010\"a\n\026CoprocessorServiceCall\022\013\n\003row\030\001 " +
-      "\002(\014\022\024\n\014service_name\030\002 \002(\t\022\023\n\013method_name",
-      "\030\003 \002(\t\022\017\n\007request\030\004 \002(\014\"9\n\030CoprocessorSe" +
-      "rviceResult\022\035\n\005value\030\001 \001(\0132\016.NameBytesPa" +
-      "ir\"d\n\031CoprocessorServiceRequest\022 \n\006regio" +
-      "n\030\001 \002(\0132\020.RegionSpecifier\022%\n\004call\030\002 \002(\0132" +
-      "\027.CoprocessorServiceCall\"]\n\032CoprocessorS" +
-      "erviceResponse\022 \n\006region\030\001 \002(\0132\020.RegionS" +
-      "pecifier\022\035\n\005value\030\002 \002(\0132\016.NameBytesPair\"" +
-      "{\n\006Action\022\r\n\005index\030\001 \001(\r\022 \n\010mutation\030\002 \001" +
-      "(\0132\016.MutationProto\022\021\n\003get\030\003 \001(\0132\004.Get\022-\n" +
-      "\014service_call\030\004 \001(\0132\027.CoprocessorService",
-      "Call\"Y\n\014RegionAction\022 \n\006region\030\001 \002(\0132\020.R" +
-      "egionSpecifier\022\016\n\006atomic\030\002 \001(\010\022\027\n\006action" +
-      "\030\003 \003(\0132\007.Action\"D\n\017RegionLoadStats\022\027\n\014me" +
-      "mstoreLoad\030\001 \001(\005:\0010\022\030\n\rheapOccupancy\030\002 \001" +
-      "(\005:\0010\"\266\001\n\021ResultOrException\022\r\n\005index\030\001 \001" +
-      "(\r\022\027\n\006result\030\002 \001(\0132\007.Result\022!\n\texception" +
-      "\030\003 \001(\0132\016.NameBytesPair\0221\n\016service_result" +
-      "\030\004 \001(\0132\031.CoprocessorServiceResult\022#\n\tloa" +
-      "dStats\030\005 \001(\0132\020.RegionLoadStats\"f\n\022Region" +
-      "ActionResult\022-\n\021resultOrException\030\001 \003(\0132",
-      "\022.ResultOrException\022!\n\texception\030\002 \001(\0132\016" +
-      ".NameBytesPair\"f\n\014MultiRequest\022#\n\014region" +
-      "Action\030\001 \003(\0132\r.RegionAction\022\022\n\nnonceGrou" +
-      "p\030\002 \001(\004\022\035\n\tcondition\030\003 \001(\0132\n.Condition\"S" +
-      "\n\rMultiResponse\022/\n\022regionActionResult\030\001 " +
-      "\003(\0132\023.RegionActionResult\022\021\n\tprocessed\030\002 " +
-      "\001(\010*\'\n\013Consistency\022\n\n\006STRONG\020\000\022\014\n\010TIMELI" +
-      "NE\020\0012\205\003\n\rClientService\022 \n\003Get\022\013.GetReque" +
-      "st\032\014.GetResponse\022)\n\006Mutate\022\016.MutateReque" +
-      "st\032\017.MutateResponse\022#\n\004Scan\022\014.ScanReques",
-      "t\032\r.ScanResponse\022>\n\rBulkLoadHFile\022\025.Bulk" +
-      "LoadHFileRequest\032\026.BulkLoadHFileResponse" +
-      "\022F\n\013ExecService\022\032.CoprocessorServiceRequ" +
-      "est\032\033.CoprocessorServiceResponse\022R\n\027Exec" +
-      "RegionServerService\022\032.CoprocessorService" +
-      "Request\032\033.CoprocessorServiceResponse\022&\n\005" +
-      "Multi\022\r.MultiRequest\032\016.MultiResponseBB\n*" +
-      "org.apache.hadoop.hbase.protobuf.generat" +
-      "edB\014ClientProtosH\001\210\001\001\240\001\001"
+      "\n\014Client.proto\022\010hbase.pb\032\013HBase.proto\032\014F" +
+      "ilter.proto\032\nCell.proto\032\020Comparator.prot" +
+      "o\032\017MapReduce.proto\"\037\n\016Authorizations\022\r\n\005" +
+      "label\030\001 \003(\t\"$\n\016CellVisibility\022\022\n\nexpress" +
+      "ion\030\001 \002(\t\"+\n\006Column\022\016\n\006family\030\001 \002(\014\022\021\n\tq" +
+      "ualifier\030\002 \003(\014\"\336\002\n\003Get\022\013\n\003row\030\001 \002(\014\022 \n\006c" +
+      "olumn\030\002 \003(\0132\020.hbase.pb.Column\022*\n\tattribu" +
+      "te\030\003 \003(\0132\027.hbase.pb.NameBytesPair\022 \n\006fil" +
+      "ter\030\004 \001(\0132\020.hbase.pb.Filter\022\'\n\ntime_rang" +
+      "e\030\005 \001(\0132\023.hbase.pb.TimeRange\022\027\n\014max_vers",
+      "ions\030\006 \001(\r:\0011\022\032\n\014cache_blocks\030\007 \001(\010:\004tru" +
+      "e\022\023\n\013store_limit\030\010 \001(\r\022\024\n\014store_offset\030\t" +
+      " \001(\r\022\035\n\016existence_only\030\n \001(\010:\005false\0222\n\013c" +
+      "onsistency\030\014 \001(\0162\025.hbase.pb.Consistency:" +
+      "\006STRONG\"\203\001\n\006Result\022\034\n\004cell\030\001 \003(\0132\016.hbase" +
+      ".pb.Cell\022\035\n\025associated_cell_count\030\002 \001(\005\022" +
+      "\016\n\006exists\030\003 \001(\010\022\024\n\005stale\030\004 \001(\010:\005false\022\026\n" +
+      "\007partial\030\005 \001(\010:\005false\"S\n\nGetRequest\022)\n\006r" +
+      "egion\030\001 \002(\0132\031.hbase.pb.RegionSpecifier\022\032" +
+      "\n\003get\030\002 \002(\0132\r.hbase.pb.Get\"/\n\013GetRespons",
+      "e\022 \n\006result\030\001 \001(\0132\020.hbase.pb.Result\"\222\001\n\t" +
+      "Condition\022\013\n\003row\030\001 \002(\014\022\016\n\006family\030\002 \002(\014\022\021" +
+      "\n\tqualifier\030\003 \002(\014\022+\n\014compare_type\030\004 \002(\0162" +
+      "\025.hbase.pb.CompareType\022(\n\ncomparator\030\005 \002" +
+      "(\0132\024.hbase.pb.Comparator\"\364\006\n\rMutationPro" +
+      "to\022\013\n\003row\030\001 \001(\014\0229\n\013mutate_type\030\002 \001(\0162$.h" +
+      "base.pb.MutationProto.MutationType\0229\n\014co" +
+      "lumn_value\030\003 \003(\0132#.hbase.pb.MutationProt" +
+      "o.ColumnValue\022\021\n\ttimestamp\030\004 \001(\004\022*\n\tattr" +
+      "ibute\030\005 \003(\0132\027.hbase.pb.NameBytesPair\022C\n\n",
+      "durability\030\006 \001(\0162\".hbase.pb.MutationProt" +
+      "o.Durability:\013USE_DEFAULT\022\'\n\ntime_range\030" +
+      "\007 \001(\0132\023.hbase.pb.TimeRange\022\035\n\025associated" +
+      "_cell_count\030\010 \001(\005\022\r\n\005nonce\030\t \001(\004\032\371\001\n\013Col" +
+      "umnValue\022\016\n\006family\030\001 \002(\014\022K\n\017qualifier_va" +
+      "lue\030\002 \003(\01322.hbase.pb.MutationProto.Colum" +
+      "nValue.QualifierValue\032\214\001\n\016QualifierValue" +
+      "\022\021\n\tqualifier\030\001 \001(\014\022\r\n\005value\030\002 \001(\014\022\021\n\tti" +
+      "mestamp\030\003 \001(\004\0227\n\013delete_type\030\004 \001(\0162\".hba" +
+      "se.pb.MutationProto.DeleteType\022\014\n\004tags\030\005",
+      " \001(\014\"W\n\nDurability\022\017\n\013USE_DEFAULT\020\000\022\014\n\010S" +
+      "KIP_WAL\020\001\022\r\n\tASYNC_WAL\020\002\022\014\n\010SYNC_WAL\020\003\022\r" +
+      "\n\tFSYNC_WAL\020\004\">\n\014MutationType\022\n\n\006APPEND\020" +
+      "\000\022\r\n\tINCREMENT\020\001\022\007\n\003PUT\020\002\022\n\n\006DELETE\020\003\"p\n" +
+      "\nDeleteType\022\026\n\022DELETE_ONE_VERSION\020\000\022\034\n\030D" +
+      "ELETE_MULTIPLE_VERSIONS\020\001\022\021\n\rDELETE_FAMI" +
+      "LY\020\002\022\031\n\025DELETE_FAMILY_VERSION\020\003\"\242\001\n\rMuta" +
+      "teRequest\022)\n\006region\030\001 \002(\0132\031.hbase.pb.Reg" +
+      "ionSpecifier\022)\n\010mutation\030\002 \002(\0132\027.hbase.p" +
+      "b.MutationProto\022&\n\tcondition\030\003 \001(\0132\023.hba",
+      "se.pb.Condition\022\023\n\013nonce_group\030\004 \001(\004\"E\n\016" +
+      "MutateResponse\022 \n\006result\030\001 \001(\0132\020.hbase.p" +
+      "b.Result\022\021\n\tprocessed\030\002 \001(\010\"\346\003\n\004Scan\022 \n\006" +
+      "column\030\001 \003(\0132\020.hbase.pb.Column\022*\n\tattrib" +
+      "ute\030\002 \003(\0132\027.hbase.pb.NameBytesPair\022\021\n\tst" +
+      "art_row\030\003 \001(\014\022\020\n\010stop_row\030\004 \001(\014\022 \n\006filte" +
+      "r\030\005 \001(\0132\020.hbase.pb.Filter\022\'\n\ntime_range\030" +
+      "\006 \001(\0132\023.hbase.pb.TimeRange\022\027\n\014max_versio" +
+      "ns\030\007 \001(\r:\0011\022\032\n\014cache_blocks\030\010 \001(\010:\004true\022" +
+      "\022\n\nbatch_size\030\t \001(\r\022\027\n\017max_result_size\030\n",
+      " \001(\004\022\023\n\013store_limit\030\013 \001(\r\022\024\n\014store_offse" +
+      "t\030\014 \001(\r\022&\n\036load_column_families_on_deman" +
+      "d\030\r \001(\010\022\r\n\005small\030\016 \001(\010\022\027\n\010reversed\030\017 \001(\010" +
+      ":\005false\0222\n\013consistency\030\020 \001(\0162\025.hbase.pb." +
+      "Consistency:\006STRONG\022\017\n\007caching\030\021 \001(\r\"\220\002\n" +
+      "\013ScanRequest\022)\n\006region\030\001 \001(\0132\031.hbase.pb." +
+      "RegionSpecifier\022\034\n\004scan\030\002 \001(\0132\016.hbase.pb" +
+      ".Scan\022\022\n\nscanner_id\030\003 \001(\004\022\026\n\016number_of_r" +
+      "ows\030\004 \001(\r\022\025\n\rclose_scanner\030\005 \001(\010\022\025\n\rnext" +
+      "_call_seq\030\006 \001(\004\022\037\n\027client_handles_partia",
+      "ls\030\007 \001(\010\022!\n\031client_handles_heartbeats\030\010 " +
+      "\001(\010\022\032\n\022track_scan_metrics\030\t \001(\010\"\232\002\n\014Scan" +
+      "Response\022\030\n\020cells_per_result\030\001 \003(\r\022\022\n\nsc" +
+      "anner_id\030\002 \001(\004\022\024\n\014more_results\030\003 \001(\010\022\013\n\003" +
+      "ttl\030\004 \001(\r\022!\n\007results\030\005 \003(\0132\020.hbase.pb.Re" +
+      "sult\022\r\n\005stale\030\006 \001(\010\022\037\n\027partial_flag_per_" +
+      "result\030\007 \003(\010\022\036\n\026more_results_in_region\030\010" +
+      " \001(\010\022\031\n\021heartbeat_message\030\t \001(\010\022+\n\014scan_" +
+      "metrics\030\n \001(\0132\025.hbase.pb.ScanMetrics\"\305\001\n" +
+      "\024BulkLoadHFileRequest\022)\n\006region\030\001 \002(\0132\031.",
+      "hbase.pb.RegionSpecifier\022>\n\013family_path\030" +
+      "\002 \003(\0132).hbase.pb.BulkLoadHFileRequest.Fa" +
+      "milyPath\022\026\n\016assign_seq_num\030\003 \001(\010\032*\n\nFami" +
+      "lyPath\022\016\n\006family\030\001 \002(\014\022\014\n\004path\030\002 \002(\t\"\'\n\025" +
+      "BulkLoadHFileResponse\022\016\n\006loaded\030\001 \002(\010\"a\n" +
+      "\026CoprocessorServiceCall\022\013\n\003row\030\001 \002(\014\022\024\n\014" +
+      "service_name\030\002 \002(\t\022\023\n\013method_name\030\003 \002(\t\022" +
+      "\017\n\007request\030\004 \002(\014\"B\n\030CoprocessorServiceRe" +
+      "sult\022&\n\005value\030\001 \001(\0132\027.hbase.pb.NameBytes" +
+      "Pair\"v\n\031CoprocessorServiceRequest\022)\n\006reg",
+      "ion\030\001 \002(\0132\031.hbase.pb.RegionSpecifier\022.\n\004" +
+      "call\030\002 \002(\0132 .hbase.pb.CoprocessorService" +
+      "Call\"o\n\032CoprocessorServiceResponse\022)\n\006re" +
+      "gion\030\001 \002(\0132\031.hbase.pb.RegionSpecifier\022&\n" +
+      "\005value\030\002 \002(\0132\027.hbase.pb.NameBytesPair\"\226\001" +
+      "\n\006Action\022\r\n\005index\030\001 \001(\r\022)\n\010mutation\030\002 \001(" +
+      "\0132\027.hbase.pb.MutationProto\022\032\n\003get\030\003 \001(\0132" +
+      "\r.hbase.pb.Get\0226\n\014service_call\030\004 \001(\0132 .h" +
+      "base.pb.CoprocessorServiceCall\"k\n\014Region" +
+      "Action\022)\n\006region\030\001 \002(\0132\031.hbase.pb.Region",
+      "Specifier\022\016\n\006atomic\030\002 \001(\010\022 \n\006action\030\003 \003(" +
+      "\0132\020.hbase.pb.Action\"D\n\017RegionLoadStats\022\027" +
+      "\n\014memstoreLoad\030\001 \001(\005:\0010\022\030\n\rheapOccupancy" +
+      "\030\002 \001(\005:\0010\"\332\001\n\021ResultOrException\022\r\n\005index" +
+      "\030\001 \001(\r\022 \n\006result\030\002 \001(\0132\020.hbase.pb.Result" +
+      "\022*\n\texception\030\003 \001(\0132\027.hbase.pb.NameBytes" +
+      "Pair\022:\n\016service_result\030\004 \001(\0132\".hbase.pb." +
+      "CoprocessorServiceResult\022,\n\tloadStats\030\005 " +
+      "\001(\0132\031.hbase.pb.RegionLoadStats\"x\n\022Region" +
+      "ActionResult\0226\n\021resultOrException\030\001 \003(\0132",
+      "\033.hbase.pb.ResultOrException\022*\n\texceptio" +
+      "n\030\002 \001(\0132\027.hbase.pb.NameBytesPair\"x\n\014Mult" +
+      "iRequest\022,\n\014regionAction\030\001 \003(\0132\026.hbase.p" +
+      "b.RegionAction\022\022\n\nnonceGroup\030\002 \001(\004\022&\n\tco" +
+      "ndition\030\003 \001(\0132\023.hbase.pb.Condition\"\\\n\rMu" +
+      "ltiResponse\0228\n\022regionActionResult\030\001 \003(\0132" +
+      "\034.hbase.pb.RegionActionResult\022\021\n\tprocess" +
+      "ed\030\002 \001(\010*\'\n\013Consistency\022\n\n\006STRONG\020\000\022\014\n\010T" +
+      "IMELINE\020\0012\203\004\n\rClientService\0222\n\003Get\022\024.hba" +
+      "se.pb.GetRequest\032\025.hbase.pb.GetResponse\022",
+      ";\n\006Mutate\022\027.hbase.pb.MutateRequest\032\030.hba" +
+      "se.pb.MutateResponse\0225\n\004Scan\022\025.hbase.pb." +
+      "ScanRequest\032\026.hbase.pb.ScanResponse\022P\n\rB" +
+      "ulkLoadHFile\022\036.hbase.pb.BulkLoadHFileReq" +
+      "uest\032\037.hbase.pb.BulkLoadHFileResponse\022X\n" +
+      "\013ExecService\022#.hbase.pb.CoprocessorServi" +
+      "ceRequest\032$.hbase.pb.CoprocessorServiceR" +
+      "esponse\022d\n\027ExecRegionServerService\022#.hba" +
+      "se.pb.CoprocessorServiceRequest\032$.hbase." +
+      "pb.CoprocessorServiceResponse\0228\n\005Multi\022\026",
+      ".hbase.pb.MultiRequest\032\027.hbase.pb.MultiR" +
+      "esponseBB\n*org.apache.hadoop.hbase.proto" +
+      "buf.generatedB\014ClientProtosH\001\210\001\001\240\001\001"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
       new com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner() {
         public com.google.protobuf.ExtensionRegistry assignDescriptors(
             com.google.protobuf.Descriptors.FileDescriptor root) {
           descriptor = root;
-          internal_static_Authorizations_descriptor =
+          internal_static_hbase_pb_Authorizations_descriptor =
             getDescriptor().getMessageTypes().get(0);
-          internal_static_Authorizations_fieldAccessorTable = new
+          internal_static_hbase_pb_Authorizations_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Authorizations_descriptor,
+              internal_static_hbase_pb_Authorizations_descriptor,
               new java.lang.String[] { "Label", });
-          internal_static_CellVisibility_descriptor =
+          internal_static_hbase_pb_CellVisibility_descriptor =
             getDescriptor().getMessageTypes().get(1);
-          internal_static_CellVisibility_fieldAccessorTable = new
+          internal_static_hbase_pb_CellVisibility_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_CellVisibility_descriptor,
+              internal_static_hbase_pb_CellVisibility_descriptor,
               new java.lang.String[] { "Expression", });
-          internal_static_Column_descriptor =
+          internal_static_hbase_pb_Column_descriptor =
             getDescriptor().getMessageTypes().get(2);
-          internal_static_Column_fieldAccessorTable = new
+          internal_static_hbase_pb_Column_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Column_descriptor,
+              internal_static_hbase_pb_Column_descriptor,
               new java.lang.String[] { "Family", "Qualifier", });
-          internal_static_Get_descriptor =
+          internal_static_hbase_pb_Get_descriptor =
             getDescriptor().getMessageTypes().get(3);
-          internal_static_Get_fieldAccessorTable = new
+          internal_static_hbase_pb_Get_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Get_descriptor,
-              new java.lang.String[] { "Row", "Column", "Attribute", "Filter", "TimeRange", "MaxVersions", "CacheBlocks", "StoreLimit", "StoreOffset", "ExistenceOnly", "ClosestRowBefore", "Consistency", });
-          internal_static_Result_descriptor =
+              internal_static_hbase_pb_Get_descriptor,
+              new java.lang.String[] { "Row", "Column", "Attribute", "Filter", "TimeRange", "MaxVersions", "CacheBlocks", "StoreLimit", "StoreOffset", "ExistenceOnly", "Consistency", });
+          internal_static_hbase_pb_Result_descriptor =
             getDescriptor().getMessageTypes().get(4);
-          internal_static_Result_fieldAccessorTable = new
+          internal_static_hbase_pb_Result_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Result_descriptor,
+              internal_static_hbase_pb_Result_descriptor,
               new java.lang.String[] { "Cell", "AssociatedCellCount", "Exists", "Stale", "Partial", });
-          internal_static_GetRequest_descriptor =
+          internal_static_hbase_pb_GetRequest_descriptor =
             getDescriptor().getMessageTypes().get(5);
-          internal_static_GetRequest_fieldAccessorTable = new
+          internal_static_hbase_pb_GetRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_GetRequest_descriptor,
+              internal_static_hbase_pb_GetRequest_descriptor,
               new java.lang.String[] { "Region", "Get", });
-          internal_static_GetResponse_descriptor =
+          internal_static_hbase_pb_GetResponse_descriptor =
             getDescriptor().getMessageTypes().get(6);
-          internal_static_GetResponse_fieldAccessorTable = new
+          internal_static_hbase_pb_GetResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_GetResponse_descriptor,
+              internal_static_hbase_pb_GetResponse_descriptor,
               new java.lang.String[] { "Result", });
-          internal_static_Condition_descriptor =
+          internal_static_hbase_pb_Condition_descriptor =
             getDescriptor().getMessageTypes().get(7);
-          internal_static_Condition_fieldAccessorTable = new
+          internal_static_hbase_pb_Condition_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Condition_descriptor,
+              internal_static_hbase_pb_Condition_descriptor,
               new java.lang.String[] { "Row", "Family", "Qualifier", "CompareType", "Comparator", });
-          internal_static_MutationProto_descriptor =
+          internal_static_hbase_pb_MutationProto_descriptor =
             getDescriptor().getMessageTypes().get(8);
-          internal_static_MutationProto_fieldAccessorTable = new
+          internal_static_hbase_pb_MutationProto_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MutationProto_descriptor,
+              internal_static_hbase_pb_MutationProto_descriptor,
               new java.lang.String[] { "Row", "MutateType", "ColumnValue", "Timestamp", "Attribute", "Durability", "TimeRange", "AssociatedCellCount", "Nonce", });
-          internal_static_MutationProto_ColumnValue_descriptor =
-            internal_static_MutationProto_descriptor.getNestedTypes().get(0);
-          internal_static_MutationProto_ColumnValue_fieldAccessorTable = new
+          internal_static_hbase_pb_MutationProto_ColumnValue_descriptor =
+            internal_static_hbase_pb_MutationProto_descriptor.getNestedTypes().get(0);
+          internal_static_hbase_pb_MutationProto_ColumnValue_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MutationProto_ColumnValue_descriptor,
+              internal_static_hbase_pb_MutationProto_ColumnValue_descriptor,
               new java.lang.String[] { "Family", "QualifierValue", });
-          internal_static_MutationProto_ColumnValue_QualifierValue_descriptor =
-            internal_static_MutationProto_ColumnValue_descriptor.getNestedTypes().get(0);
-          internal_static_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable = new
+          internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_descriptor =
+            internal_static_hbase_pb_MutationProto_ColumnValue_descriptor.getNestedTypes().get(0);
+          internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MutationProto_ColumnValue_QualifierValue_descriptor,
+              internal_static_hbase_pb_MutationProto_ColumnValue_QualifierValue_descriptor,
               new java.lang.String[] { "Qualifier", "Value", "Timestamp", "DeleteType", "Tags", });
-          internal_static_MutateRequest_descriptor =
+          internal_static_hbase_pb_MutateRequest_descriptor =
             getDescriptor().getMessageTypes().get(9);
-          internal_static_MutateRequest_fieldAccessorTable = new
+          internal_static_hbase_pb_MutateRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MutateRequest_descriptor,
+              internal_static_hbase_pb_MutateRequest_descriptor,
               new java.lang.String[] { "Region", "Mutation", "Condition", "NonceGroup", });
-          internal_static_MutateResponse_descriptor =
+          internal_static_hbase_pb_MutateResponse_descriptor =
             getDescriptor().getMessageTypes().get(10);
-          internal_static_MutateResponse_fieldAccessorTable = new
+          internal_static_hbase_pb_MutateResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MutateResponse_descriptor,
+              internal_static_hbase_pb_MutateResponse_descriptor,
               new java.lang.String[] { "Result", "Processed", });
-          internal_static_Scan_descriptor =
+          internal_static_hbase_pb_Scan_descriptor =
             getDescriptor().getMessageTypes().get(11);
-          internal_static_Scan_fieldAccessorTable = new
+          internal_static_hbase_pb_Scan_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Scan_descriptor,
+              internal_static_hbase_pb_Scan_descriptor,
               new java.lang.String[] { "Column", "Attribute", "StartRow", "StopRow", "Filter", "TimeRange", "MaxVersions", "CacheBlocks", "BatchSize", "MaxResultSize", "StoreLimit", "StoreOffset", "LoadColumnFamiliesOnDemand", "Small", "Reversed", "Consistency", "Caching", });
-          internal_static_ScanRequest_descriptor =
+          internal_static_hbase_pb_ScanRequest_descriptor =
             getDescriptor().getMessageTypes().get(12);
-          internal_static_ScanRequest_fieldAccessorTable = new
+          internal_static_hbase_pb_ScanRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_ScanRequest_descriptor,
+              internal_static_hbase_pb_ScanRequest_descriptor,
               new java.lang.String[] { "Region", "Scan", "ScannerId", "NumberOfRows", "CloseScanner", "NextCallSeq", "ClientHandlesPartials", "ClientHandlesHeartbeats", "TrackScanMetrics", });
-          internal_static_ScanResponse_descriptor =
+          internal_static_hbase_pb_ScanResponse_descriptor =
             getDescriptor().getMessageTypes().get(13);
-          internal_static_ScanResponse_fieldAccessorTable = new
+          internal_static_hbase_pb_ScanResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_ScanResponse_descriptor,
+              internal_static_hbase_pb_ScanResponse_descriptor,
               new java.lang.String[] { "CellsPerResult", "ScannerId", "MoreResults", "Ttl", "Results", "Stale", "PartialFlagPerResult", "MoreResultsInRegion", "HeartbeatMessage", "ScanMetrics", });
-          internal_static_BulkLoadHFileRequest_descriptor =
+          internal_static_hbase_pb_BulkLoadHFileRequest_descriptor =
             getDescriptor().getMessageTypes().get(14);
-          internal_static_BulkLoadHFileRequest_fieldAccessorTable = new
+          internal_static_hbase_pb_BulkLoadHFileRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_BulkLoadHFileRequest_descriptor,
+              internal_static_hbase_pb_BulkLoadHFileRequest_descriptor,
               new java.lang.String[] { "Region", "FamilyPath", "AssignSeqNum", });
-          internal_static_BulkLoadHFileRequest_FamilyPath_descriptor =
-            internal_static_BulkLoadHFileRequest_descriptor.getNestedTypes().get(0);
-          internal_static_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable = new
+          internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_descriptor =
+            internal_static_hbase_pb_BulkLoadHFileRequest_descriptor.getNestedTypes().get(0);
+          internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_BulkLoadHFileRequest_FamilyPath_descriptor,
+              internal_static_hbase_pb_BulkLoadHFileRequest_FamilyPath_descriptor,
               new java.lang.String[] { "Family", "Path", });
-          internal_static_BulkLoadHFileResponse_descriptor =
+          internal_static_hbase_pb_BulkLoadHFileResponse_descriptor =
             getDescriptor().getMessageTypes().get(15);
-          internal_static_BulkLoadHFileResponse_fieldAccessorTable = new
+          internal_static_hbase_pb_BulkLoadHFileResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_BulkLoadHFileResponse_descriptor,
+              internal_static_hbase_pb_BulkLoadHFileResponse_descriptor,
               new java.lang.String[] { "Loaded", });
-          internal_static_CoprocessorServiceCall_descriptor =
+          internal_static_hbase_pb_CoprocessorServiceCall_descriptor =
             getDescriptor().getMessageTypes().get(16);
-          internal_static_CoprocessorServiceCall_fieldAccessorTable = new
+          internal_static_hbase_pb_CoprocessorServiceCall_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_CoprocessorServiceCall_descriptor,
+              internal_static_hbase_pb_CoprocessorServiceCall_descriptor,
               new java.lang.String[] { "Row", "ServiceName", "MethodName", "Request", });
-          internal_static_CoprocessorServiceResult_descriptor =
+          internal_static_hbase_pb_CoprocessorServiceResult_descriptor =
             getDescriptor().getMessageTypes().get(17);
-          internal_static_CoprocessorServiceResult_fieldAccessorTable = new
+          internal_static_hbase_pb_CoprocessorServiceResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_CoprocessorServiceResult_descriptor,
+              internal_static_hbase_pb_CoprocessorServiceResult_descriptor,
               new java.lang.String[] { "Value", });
-          internal_static_CoprocessorServiceRequest_descriptor =
+          internal_static_hbase_pb_CoprocessorServiceRequest_descriptor =
             getDescriptor().getMessageTypes().get(18);
-          internal_static_CoprocessorServiceRequest_fieldAccessorTable = new
+          internal_static_hbase_pb_CoprocessorServiceRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_CoprocessorServiceRequest_descriptor,
+              internal_static_hbase_pb_CoprocessorServiceRequest_descriptor,
               new java.lang.String[] { "Region", "Call", });
-          internal_static_CoprocessorServiceResponse_descriptor =
+          internal_static_hbase_pb_CoprocessorServiceResponse_descriptor =
             getDescriptor().getMessageTypes().get(19);
-          internal_static_CoprocessorServiceResponse_fieldAccessorTable = new
+          internal_static_hbase_pb_CoprocessorServiceResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_CoprocessorServiceResponse_descriptor,
+              internal_static_hbase_pb_CoprocessorServiceResponse_descriptor,
               new java.lang.String[] { "Region", "Value", });
-          internal_static_Action_descriptor =
+          internal_static_hbase_pb_Action_descriptor =
             getDescriptor().getMessageTypes().get(20);
-          internal_static_Action_fieldAccessorTable = new
+          internal_static_hbase_pb_Action_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_Action_descriptor,
+              internal_static_hbase_pb_Action_descriptor,
               new java.lang.String[] { "Index", "Mutation", "Get", "ServiceCall", });
-          internal_static_RegionAction_descriptor =
+          internal_static_hbase_pb_RegionAction_descriptor =
             getDescriptor().getMessageTypes().get(21);
-          internal_static_RegionAction_fieldAccessorTable = new
+          internal_static_hbase_pb_RegionAction_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_RegionAction_descriptor,
+              internal_static_hbase_pb_RegionAction_descriptor,
               new java.lang.String[] { "Region", "Atomic", "Action", });
-          internal_static_RegionLoadStats_descriptor =
+          internal_static_hbase_pb_RegionLoadStats_descriptor =
             getDescriptor().getMessageTypes().get(22);
-          internal_static_RegionLoadStats_fieldAccessorTable = new
+          internal_static_hbase_pb_RegionLoadStats_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_RegionLoadStats_descriptor,
+              internal_static_hbase_pb_RegionLoadStats_descriptor,
               new java.lang.String[] { "MemstoreLoad", "HeapOccupancy", });
-          internal_static_ResultOrException_descriptor =
+          internal_static_hbase_pb_ResultOrException_descriptor =
             getDescriptor().getMessageTypes().get(23);
-          internal_static_ResultOrException_fieldAccessorTable = new
+          internal_static_hbase_pb_ResultOrException_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_ResultOrException_descriptor,
+              internal_static_hbase_pb_ResultOrException_descriptor,
               new java.lang.String[] { "Index", "Result", "Exception", "ServiceResult", "LoadStats", });
-          internal_static_RegionActionResult_descriptor =
+          internal_static_hbase_pb_RegionActionResult_descriptor =
             getDescriptor().getMessageTypes().get(24);
-          internal_static_RegionActionResult_fieldAccessorTable = new
+          internal_static_hbase_pb_RegionActionResult_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_RegionActionResult_descriptor,
+              internal_static_hbase_pb_RegionActionResult_descriptor,
               new java.lang.String[] { "ResultOrException", "Exception", });
-          internal_static_MultiRequest_descriptor =
+          internal_static_hbase_pb_MultiRequest_descriptor =
             getDescriptor().getMessageTypes().get(25);
-          internal_static_MultiRequest_fieldAccessorTable = new
+          internal_static_hbase_pb_MultiRequest_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MultiRequest_descriptor,
+              internal_static_hbase_pb_MultiRequest_descriptor,
               new java.lang.String[] { "RegionAction", "NonceGroup", "Condition", });
-          internal_static_MultiResponse_descriptor =
+          internal_static_hbase_pb_MultiResponse_descriptor =
             getDescriptor().getMessageTypes().get(26);
-          internal_static_MultiResponse_fieldAccessorTable = new
+          internal_static_hbase_pb_MultiResponse_fieldAccessorTable = new
             com.google.protobuf.GeneratedMessage.FieldAccessorTable(
-              internal_static_MultiResponse_descriptor,
+              internal_static_hbase_pb_MultiResponse_descriptor,
               new java.lang.String[] { "RegionActionResult", "Processed", });
           return null;
         }

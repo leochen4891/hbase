@@ -21,7 +21,6 @@ package org.apache.hadoop.hbase.regionserver;
 import java.io.DataInput;
 import java.io.IOException;
 import java.net.InetSocketAddress;
-import java.nio.ByteBuffer;
 import java.util.Arrays;
 import java.util.Collection;
 import java.util.Collections;
@@ -51,6 +50,7 @@ import org.apache.hadoop.hbase.io.hfile.CacheConfig;
 import org.apache.hadoop.hbase.io.hfile.HFile;
 import org.apache.hadoop.hbase.io.hfile.HFileContext;
 import org.apache.hadoop.hbase.io.hfile.HFileScanner;
+import org.apache.hadoop.hbase.nio.ByteBuff;
 import org.apache.hadoop.hbase.regionserver.compactions.Compactor;
 import org.apache.hadoop.hbase.util.BloomFilter;
 import org.apache.hadoop.hbase.util.BloomFilterFactory;
@@ -1285,7 +1285,7 @@ public class StoreFile {
 
       try {
         boolean shouldCheckBloom;
-        ByteBuffer bloom;
+        ByteBuff bloom;
         if (bloomFilter.supportsAutoLoading()) {
           bloom = null;
           shouldCheckBloom = true;
@@ -1362,19 +1362,16 @@ public class StoreFile {
           && Bytes.equals(scan.getStopRow(), HConstants.EMPTY_END_ROW)) {
         return true;
       }
-      KeyValue smallestScanKeyValue = scan.isReversed() ? KeyValueUtil
-          .createFirstOnRow(scan.getStopRow()) : KeyValueUtil.createFirstOnRow(scan
-          .getStartRow());
-      KeyValue largestScanKeyValue = scan.isReversed() ? KeyValueUtil
-          .createLastOnRow(scan.getStartRow()) : KeyValueUtil.createLastOnRow(scan
-          .getStopRow());
+      byte[] smallestScanRow = scan.isReversed() ? scan.getStopRow() : scan.getStartRow();
+      byte[] largestScanRow = scan.isReversed() ? scan.getStartRow() : scan.getStopRow();
       Cell firstKeyKV = this.getFirstKey();
       Cell lastKeyKV = this.getLastKey();
-      boolean nonOverLapping = ((getComparator().compare(firstKeyKV, largestScanKeyValue)) > 0
+      boolean nonOverLapping = (getComparator().compareRows(firstKeyKV,
+          largestScanRow, 0, largestScanRow.length) > 0 
           && !Bytes
           .equals(scan.isReversed() ? scan.getStartRow() : scan.getStopRow(),
               HConstants.EMPTY_END_ROW))
-          || (getComparator().compare(lastKeyKV, smallestScanKeyValue)) < 0;
+          || getComparator().compareRows(lastKeyKV, smallestScanRow, 0, smallestScanRow.length) < 0;
       return !nonOverLapping;
     }
 

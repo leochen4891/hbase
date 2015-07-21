@@ -27,8 +27,10 @@ import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.KeyValueUtil;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
+import org.apache.hadoop.hbase.nio.ByteBuff;
 import org.apache.hadoop.hbase.util.ByteBufferUtils;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.hadoop.hbase.util.Pair;
 
 /**
  * Encoder similar to {@link DiffKeyDeltaEncoder} but supposedly faster.
@@ -354,18 +356,16 @@ public class FastDiffDeltaEncoder extends BufferedDataBlockEncoder {
   }
 
   @Override
-  public Cell getFirstKeyCellInBlock(ByteBuffer block) {
+  public Cell getFirstKeyCellInBlock(ByteBuff block) {
     block.mark();
     block.position(Bytes.SIZEOF_INT + Bytes.SIZEOF_BYTE);
-    int keyLength = ByteBufferUtils.readCompressedInt(block);
-    ByteBufferUtils.readCompressedInt(block); // valueLength
-    ByteBufferUtils.readCompressedInt(block); // commonLength
-    int pos = block.position();
+    int keyLength = ByteBuff.readCompressedInt(block);
+    // TODO : See if we can avoid these reads as the read values are not getting used
+    ByteBuff.readCompressedInt(block); // valueLength
+    ByteBuff.readCompressedInt(block); // commonLength
+    ByteBuffer key = block.asSubByteBuffer(keyLength).duplicate();
     block.reset();
-    ByteBuffer dup = block.duplicate();
-    dup.position(pos);
-    dup.limit(pos + keyLength);
-    return new KeyValue.KeyOnlyKeyValue(dup.array(), dup.arrayOffset() + pos, keyLength);
+    return createFirstKeyCell(key, keyLength);
   }
 
   @Override
@@ -378,6 +378,10 @@ public class FastDiffDeltaEncoder extends BufferedDataBlockEncoder {
         new byte[KeyValue.TIMESTAMP_TYPE_SIZE];
     private int rowLengthWithSize;
     private int familyLengthWithSize;
+
+    public FastDiffSeekerState(Pair<ByteBuffer, Integer> tmpPair, boolean includeTags) {
+      super(tmpPair, includeTags);
+    }
 
     @Override
     protected void copyFromNext(SeekerState that) {
@@ -404,14 +408,12 @@ public class FastDiffDeltaEncoder extends BufferedDataBlockEncoder {
                 current.prevTimestampAndType, 0,
                 current.prevTimestampAndType.length);
           }
-          current.keyLength = ByteBufferUtils.readCompressedInt(currentBuffer);
+          current.keyLength = ByteBuff.readCompressedInt(currentBuffer);
         }
         if ((flag & FLAG_SAME_VALUE_LENGTH) == 0) {
-          current.valueLength =
-              ByteBufferUtils.readCompressedInt(currentBuffer);
+          current.valueLength = ByteBuff.readCompressedInt(currentBuffer);
         }
-        current.lastCommonPrefix =
-            ByteBufferUtils.readCompressedInt(currentBuffer);
+        current.lastCommonPrefix = ByteBuff.readCompressedInt(currentBuffer);
 
         current.ensureSpaceForKey();
 
@@ -491,14 +493,14 @@ public class FastDiffDeltaEncoder extends BufferedDataBlockEncoder {
         // handle value
         if ((flag & FLAG_SAME_VALUE) == 0) {
           current.valueOffset = currentBuffer.position();
-          ByteBufferUtils.skip(currentBuffer, current.valueLength);
+          currentBuffer.skip(current.valueLength);
         }
 
         if (includesTags()) {
           decodeTags();
         }
         if (includesMvcc()) {
-          current.memstoreTS = ByteBufferUtils.readVLong(currentBuffer);
+          current.memstoreTS = ByteBuff.readVLong(currentBuffer);
         } else {
           current.memstoreTS = 0;
         }
@@ -507,7 +509,7 @@ public class FastDiffDeltaEncoder extends BufferedDataBlockEncoder {
 
       @Override
       protected void decodeFirst() {
-        ByteBufferUtils.skip(currentBuffer, Bytes.SIZEOF_INT);
+        currentBuffer.skip(Bytes.SIZEOF_INT);
         decode(true);
       }
 
@@ -518,7 +520,7 @@ public class FastDiffDeltaEncoder extends BufferedDataBlockEncoder {
 
       @Override
       protected FastDiffSeekerState createSeekerState() {
-        return new FastDiffSeekerState();
+        return new FastDiffSeekerState(this.tmpPair, this.includesTags());
       }
     };
   }

@@ -27,8 +27,10 @@ import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.KeyValueUtil;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
+import org.apache.hadoop.hbase.nio.ByteBuff;
 import org.apache.hadoop.hbase.util.ByteBufferUtils;
 import org.apache.hadoop.hbase.util.Bytes;
+import org.apache.hadoop.hbase.util.Pair;
 
 /**
  * Compress using:
@@ -305,15 +307,16 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
   }
 
   @Override
-  public Cell getFirstKeyCellInBlock(ByteBuffer block) {
+  public Cell getFirstKeyCellInBlock(ByteBuff block) {
     block.mark();
     block.position(Bytes.SIZEOF_INT);
     byte familyLength = block.get();
-    ByteBufferUtils.skip(block, familyLength);
+    block.skip(familyLength);
     byte flag = block.get();
-    int keyLength = ByteBufferUtils.readCompressedInt(block);
-    ByteBufferUtils.readCompressedInt(block); // valueLength
-    ByteBufferUtils.readCompressedInt(block); // commonLength
+    int keyLength  = ByteBuff.readCompressedInt(block);
+    // TODO : See if we can avoid these reads as the read values are not getting used
+    ByteBuff.readCompressedInt(block); // valueLength
+    ByteBuff.readCompressedInt(block); // commonLength
     ByteBuffer result = ByteBuffer.allocate(keyLength);
 
     // copy row
@@ -341,7 +344,7 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
     // copy the timestamp and type
     int timestampFitInBytes =
         ((flag & MASK_TIMESTAMP_LENGTH) >>> SHIFT_TIMESTAMP_LENGTH) + 1;
-    long timestamp = ByteBufferUtils.readLong(block, timestampFitInBytes);
+    long timestamp = ByteBuff.readLong(block, timestampFitInBytes);
     if ((flag & FLAG_TIMESTAMP_SIGN) != 0) {
       timestamp = -timestamp;
     }
@@ -350,6 +353,7 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
     block.get(result.array(), pos, Bytes.SIZEOF_BYTE);
 
     block.reset();
+    // The result is already a BB. So always we will create a KeyOnlyKv.
     return new KeyValue.KeyOnlyKeyValue(result.array(), 0, keyLength);
   }
 
@@ -359,8 +363,13 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
   }
 
   protected static class DiffSeekerState extends SeekerState {
+
     private int rowLengthWithSize;
     private long timestamp;
+
+    public DiffSeekerState(Pair<ByteBuffer, Integer> tmpPair, boolean includeTags) {
+      super(tmpPair, includeTags);
+    }
 
     @Override
     protected void copyFromNext(SeekerState that) {
@@ -386,14 +395,12 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
           if (!isFirst) {
             type = current.keyBuffer[current.keyLength - Bytes.SIZEOF_BYTE];
           }
-          current.keyLength = ByteBufferUtils.readCompressedInt(currentBuffer);
+          current.keyLength = ByteBuff.readCompressedInt(currentBuffer);
         }
         if ((flag & FLAG_SAME_VALUE_LENGTH) == 0) {
-          current.valueLength =
-              ByteBufferUtils.readCompressedInt(currentBuffer);
+          current.valueLength = ByteBuff.readCompressedInt(currentBuffer);
         }
-        current.lastCommonPrefix =
-            ByteBufferUtils.readCompressedInt(currentBuffer);
+        current.lastCommonPrefix = ByteBuff.readCompressedInt(currentBuffer);
 
         current.ensureSpaceForKey();
 
@@ -443,8 +450,7 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
         int pos = current.keyLength - TIMESTAMP_WITH_TYPE_LENGTH;
         int timestampFitInBytes = 1 +
             ((flag & MASK_TIMESTAMP_LENGTH) >>> SHIFT_TIMESTAMP_LENGTH);
-        long timestampOrDiff =
-            ByteBufferUtils.readLong(currentBuffer, timestampFitInBytes);
+        long timestampOrDiff = ByteBuff.readLong(currentBuffer, timestampFitInBytes);
         if ((flag & FLAG_TIMESTAMP_SIGN) != 0) {
           timestampOrDiff = -timestampOrDiff;
         }
@@ -464,13 +470,13 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
         }
 
         current.valueOffset = currentBuffer.position();
-        ByteBufferUtils.skip(currentBuffer, current.valueLength);
+        currentBuffer.skip(current.valueLength);
 
         if (includesTags()) {
           decodeTags();
         }
         if (includesMvcc()) {
-          current.memstoreTS = ByteBufferUtils.readVLong(currentBuffer);
+          current.memstoreTS = ByteBuff.readVLong(currentBuffer);
         } else {
           current.memstoreTS = 0;
         }
@@ -479,7 +485,7 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
 
       @Override
       protected void decodeFirst() {
-        ByteBufferUtils.skip(currentBuffer, Bytes.SIZEOF_INT);
+        currentBuffer.skip(Bytes.SIZEOF_INT);
 
         // read column family
         byte familyNameLength = currentBuffer.get();
@@ -497,7 +503,7 @@ public class DiffKeyDeltaEncoder extends BufferedDataBlockEncoder {
 
       @Override
       protected DiffSeekerState createSeekerState() {
-        return new DiffSeekerState();
+        return new DiffSeekerState(this.tmpPair, this.includesTags());
       }
     };
   }

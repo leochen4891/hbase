@@ -25,6 +25,7 @@ import org.apache.hadoop.hbase.Cell;
 import org.apache.hadoop.hbase.CellComparator;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.io.hfile.HFileContext;
+import org.apache.hadoop.hbase.nio.ByteBuff;
 
 /**
  * Encoding of KeyValue. It aims to be fast and efficient using assumptions:
@@ -90,7 +91,7 @@ public interface DataBlockEncoder {
    * @param block encoded block we want index, the position will not change
    * @return First key in block as a cell.
    */
-  Cell getFirstKeyCellInBlock(ByteBuffer block);
+  Cell getFirstKeyCellInBlock(ByteBuff block);
 
   /**
    * Create a HFileBlock seeker which find KeyValues within a block.
@@ -130,14 +131,14 @@ public interface DataBlockEncoder {
    * An interface which enable to seek while underlying data is encoded.
    *
    * It works on one HFileBlock, but it is reusable. See
-   * {@link #setCurrentBuffer(ByteBuffer)}.
+   * {@link #setCurrentBuffer(ByteBuff)}.
    */
   interface EncodedSeeker {
     /**
      * Set on which buffer there will be done seeking.
      * @param buffer Used for seeking.
      */
-    void setCurrentBuffer(ByteBuffer buffer);
+    void setCurrentBuffer(ByteBuff buffer);
 
     /**
      * From the current position creates a cell using the key part
@@ -159,10 +160,9 @@ public interface DataBlockEncoder {
     ByteBuffer getKeyValueBuffer();
 
     /**
-     * @return the KeyValue object at the current position. Includes memstore
-     *         timestamp.
+     * @return the Cell at the current position. Includes memstore timestamp.
      */
-    Cell getKeyValue();
+    Cell getCell();
 
     /** Set position to beginning of given block */
     void rewind();

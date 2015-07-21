@@ -200,6 +200,12 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
 
   public static final String LOAD_CFS_ON_DEMAND_CONFIG_KEY =
       "hbase.hregion.scan.loadColumnFamiliesOnDemand";
+  
+  // in milliseconds
+  private static final String MAX_WAIT_FOR_SEQ_ID_KEY =
+      "hbase.hregion.max.wait.for.seq.id";
+
+  private static final int DEFAULT_MAX_WAIT_FOR_SEQ_ID = 60000;
 
   /**
    * This is the global default value for durability. All tables/mutations not
@@ -331,6 +337,7 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
    */
   private boolean isLoadingCfsOnDemandDefault = false;
 
+  private int maxWaitForSeqId;
   private final AtomicInteger majorInProgress = new AtomicInteger(0);
   private final AtomicInteger minorInProgress = new AtomicInteger(0);
 
@@ -663,6 +670,7 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
     this.rowLockWaitDuration = conf.getInt("hbase.rowlock.wait.duration",
                     DEFAULT_ROWLOCK_WAIT_DURATION);
 
+    maxWaitForSeqId = conf.getInt(MAX_WAIT_FOR_SEQ_ID_KEY, DEFAULT_MAX_WAIT_FOR_SEQ_ID);
     this.isLoadingCfsOnDemandDefault = conf.getBoolean(LOAD_CFS_ON_DEMAND_CONFIG_KEY, true);
     this.htableDescriptor = htd;
     this.rsServices = rsServices;
@@ -2415,44 +2423,12 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
   @VisibleForTesting
   protected long getNextSequenceId(final WAL wal) throws IOException {
     WALKey key = this.appendEmptyEdit(wal, null);
-    return key.getSequenceId();
+    return key.getSequenceId(maxWaitForSeqId);
   }
 
   //////////////////////////////////////////////////////////////////////////////
   // get() methods for client use.
   //////////////////////////////////////////////////////////////////////////////
-
-  @Override
-  public Result getClosestRowBefore(final byte [] row, final byte [] family) throws IOException {
-    if (coprocessorHost != null) {
-      Result result = new Result();
-      if (coprocessorHost.preGetClosestRowBefore(row, family, result)) {
-        return result;
-      }
-    }
-    // look across all the HStores for this region and determine what the
-    // closest key is across all column families, since the data may be sparse
-    checkRow(row, "getClosestRowBefore");
-    startRegionOperation(Operation.GET);
-    this.readRequestsCount.increment();
-    try {
-      Store store = getStore(family);
-      // get the closest key. (HStore.getRowKeyAtOrBefore can return null)
-      Cell key = store.getRowKeyAtOrBefore(row);
-      Result result = null;
-      if (key != null) {
-        Get get = new Get(CellUtil.cloneRow(key));
-        get.addFamily(family);
-        result = get(get);
-      }
-      if (coprocessorHost != null) {
-        coprocessorHost.postGetClosestRowBefore(row, family, result);
-      }
-      return result;
-    } finally {
-      closeRegionOperation(Operation.GET);
-    }
-  }
 
   @Override
   public RegionScanner getScanner(Scan scan) throws IOException {
@@ -3310,8 +3286,7 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
           matches = true;
         } else if (result.size() == 1 && !valueIsNull) {
           Cell kv = result.get(0);
-          int compareResult = comparator.compareTo(kv.getValueArray(),
-              kv.getValueOffset(), kv.getValueLength());
+          int compareResult = CellComparator.compareValue(kv, comparator);
           switch (compareOp) {
           case LESS:
             matches = compareResult < 0;
@@ -3390,8 +3365,7 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
           matches = true;
         } else if (result.size() == 1 && !valueIsNull) {
           Cell kv = result.get(0);
-          int compareResult = comparator.compareTo(kv.getValueArray(),
-              kv.getValueOffset(), kv.getValueLength());
+          int compareResult = CellComparator.compareValue(kv, comparator);
           switch (compareOp) {
           case LESS:
             matches = compareResult < 0;
@@ -6840,10 +6814,7 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
                   newCell.getQualifierArray(), newCell.getQualifierOffset(),
                   cell.getQualifierLength());
                 // copy in the value
-                // TODO handle when oldCell is BBBacked
-                System.arraycopy(oldCell.getValueArray(), oldCell.getValueOffset(),
-                  newCell.getValueArray(), newCell.getValueOffset(),
-                  oldCell.getValueLength());
+                CellUtil.copyValueTo(oldCell, newCell.getValueArray(), newCell.getValueOffset());
                 System.arraycopy(cell.getValueArray(), cell.getValueOffset(),
                   newCell.getValueArray(),
                   newCell.getValueOffset() + oldCell.getValueLength(),
@@ -7220,7 +7191,7 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
   public static final long FIXED_OVERHEAD = ClassSize.align(
       ClassSize.OBJECT +
       ClassSize.ARRAY +
-      44 * ClassSize.REFERENCE + 2 * Bytes.SIZEOF_INT +
+      44 * ClassSize.REFERENCE + 3 * Bytes.SIZEOF_INT +
       (14 * Bytes.SIZEOF_LONG) +
       5 * Bytes.SIZEOF_BOOLEAN);
 

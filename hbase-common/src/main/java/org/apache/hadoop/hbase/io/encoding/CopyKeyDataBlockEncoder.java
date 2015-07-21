@@ -27,6 +27,7 @@ import org.apache.hadoop.hbase.CellUtil;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.KeyValueUtil;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
+import org.apache.hadoop.hbase.nio.ByteBuff;
 import org.apache.hadoop.hbase.util.ByteBufferUtils;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.io.WritableUtils;
@@ -66,13 +67,11 @@ public class CopyKeyDataBlockEncoder extends BufferedDataBlockEncoder {
   }
 
   @Override
-  public Cell getFirstKeyCellInBlock(ByteBuffer block) {
-    int keyLength = block.getInt(Bytes.SIZEOF_INT);
-    ByteBuffer dup = block.duplicate();
+  public Cell getFirstKeyCellInBlock(ByteBuff block) {
+    int keyLength = block.getIntAfterPosition(Bytes.SIZEOF_INT);
     int pos = 3 * Bytes.SIZEOF_INT;
-    dup.position(pos);
-    dup.limit(pos + keyLength);
-    return new KeyValue.KeyOnlyKeyValue(dup.array(), dup.arrayOffset() + pos, keyLength);
+    ByteBuffer key = block.asSubByteBuffer(pos + keyLength).duplicate();
+    return createFirstKeyCell(key, keyLength);
   }
 
   @Override
@@ -91,14 +90,14 @@ public class CopyKeyDataBlockEncoder extends BufferedDataBlockEncoder {
         current.ensureSpaceForKey();
         currentBuffer.get(current.keyBuffer, 0, current.keyLength);
         current.valueOffset = currentBuffer.position();
-        ByteBufferUtils.skip(currentBuffer, current.valueLength);
+        currentBuffer.skip(current.valueLength);
         if (includesTags()) {
           // Read short as unsigned, high byte first
           current.tagsLength = ((currentBuffer.get() & 0xff) << 8) ^ (currentBuffer.get() & 0xff);
-          ByteBufferUtils.skip(currentBuffer, current.tagsLength);
+          currentBuffer.skip(current.tagsLength);
         }
         if (includesMvcc()) {
-          current.memstoreTS = ByteBufferUtils.readVLong(currentBuffer);
+          current.memstoreTS = ByteBuff.readVLong(currentBuffer);
         } else {
           current.memstoreTS = 0;
         }
@@ -107,7 +106,7 @@ public class CopyKeyDataBlockEncoder extends BufferedDataBlockEncoder {
 
       @Override
       protected void decodeFirst() {
-        ByteBufferUtils.skip(currentBuffer, Bytes.SIZEOF_INT);
+        currentBuffer.skip(Bytes.SIZEOF_INT);
         current.lastCommonPrefix = 0;
         decodeNext();
       }
