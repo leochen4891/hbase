@@ -270,10 +270,13 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
   @Override
   public synchronized List<RegionPlan> balanceCluster(Map<ServerName,
     List<HRegionInfo>> clusterState) {
+    LOG.info("++++ mark 1");
     List<RegionPlan> plans = balanceMasterRegions(clusterState);
     if (plans != null || clusterState == null || clusterState.size() <= 1) {
       return plans;
     }
+
+    LOG.info("++++ mark 2");
     if (masterServerName != null && clusterState.containsKey(masterServerName)) {
       if (clusterState.size() <= 2) {
         return null;
@@ -281,6 +284,7 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
       clusterState = new HashMap<ServerName, List<HRegionInfo>>(clusterState);
       clusterState.remove(masterServerName);
     }
+    LOG.info("++++ mark 3");
 
     // On clusters with lots of HFileLinks or lots of reference files,
     // instantiating the storefile infos can be quite expensive.
@@ -299,6 +303,8 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
     if (!needsBalance(cluster)) {
       return null;
     }
+
+    LOG.info("++++ mark 4");
     
     long startTime = EnvironmentEdgeManager.currentTime();
 
@@ -389,6 +395,9 @@ public class StochasticLoadBalancer extends BaseLoadBalancer {
 
     // check if the metricsBalancer is MetricsStochasticBalancer before casting
     if (metricsBalancer instanceof MetricsStochasticBalancer) {
+
+      LOG.info("++++ mark 5, overall = " + overall);
+
       MetricsStochasticBalancer balancer = (MetricsStochasticBalancer) metricsBalancer;
       // overall cost
       balancer.updateStochasticCost(tableName.getNameAsString(), 
