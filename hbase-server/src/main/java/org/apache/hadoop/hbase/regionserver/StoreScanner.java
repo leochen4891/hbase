@@ -85,6 +85,8 @@ public class StoreScanner extends NonReversedNonLazyKeyValueScanner
   protected final long maxRowSize;
   protected final long cellsPerHeartbeatCheck;
 
+  // Collects all the KVHeap that are eagerly getting closed during the
+  // course of a scan
   protected Set<KeyValueHeap> heapsForDelayedClose = new HashSet<KeyValueHeap>();
 
   /**
@@ -123,7 +125,7 @@ public class StoreScanner extends NonReversedNonLazyKeyValueScanner
   private boolean scanUsePread = false;
   protected ReentrantLock lock = new ReentrantLock();
   
-  private final long readPt;
+  protected final long readPt;
 
   // used by the injection framework to test race between StoreScanner construction and compaction
   enum StoreScannerCompactionRace {
@@ -305,8 +307,8 @@ public class StoreScanner extends NonReversedNonLazyKeyValueScanner
       // 0 is passed as readpoint because the test bypasses Store
       0);
   }
-  
-  private StoreScanner(final Scan scan, ScanInfo scanInfo,
+
+  public StoreScanner(final Scan scan, ScanInfo scanInfo,
       ScanType scanType, final NavigableSet<byte[]> columns,
       final List<KeyValueScanner> scanners, long earliestPutTs, long readPt)
           throws IOException {
@@ -446,8 +448,10 @@ public class StoreScanner extends NonReversedNonLazyKeyValueScanner
   private void close(boolean withHeapClose){
     lock.lock();
     try {
-      if (this.closing) return;
-      this.closing = true;
+      if (this.closing) {
+        return;
+      }
+      if (withHeapClose) this.closing = true;
       // under test, we dont have a this.store
       if (this.store != null) this.store.deleteChangedReaderObserver(this);
       if (withHeapClose) {
@@ -509,6 +513,7 @@ public class StoreScanner extends NonReversedNonLazyKeyValueScanner
     // if the heap was left null, then the scanners had previously run out anyways, close and
     // return.
     if (this.heap == null) {
+      // By this time partial close should happened because already heap is null
       close(false);// Do all cleanup except heap.close()
       return scannerContext.setScannerState(NextState.NO_MORE_VALUES).hasMoreValues();
     }
