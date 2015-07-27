@@ -37,12 +37,7 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
   private int metricsSize = 1000;
   private int mruCap = calcMruCap(metricsSize);
 
-  private Map<String, Map<String, Double>> stochasticCosts = null;
-  private Map<String, String> costFunctionDescs = null;
-
-  public MetricsStochasticBalancerSourceImpl() {
-    stochasticCosts =
-        new LinkedHashMap<String, Map<String, Double>>(mruCap, MRU_LOAD_FACTOR, true) {
+  private Map<String, Map<String, Double>> stochasticCosts = new LinkedHashMap<String, Map<String, Double>>(mruCap, MRU_LOAD_FACTOR, true) {
           private static final long serialVersionUID = 8204713453436906599L;
 
           @Override
@@ -50,8 +45,8 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
             return size() > mruCap;
           }
         };
-    costFunctionDescs = new ConcurrentHashMap<String, String>();
-  }
+  private Map<String, String> costFunctionDescs = new ConcurrentHashMap<String, String>();
+
 
   /**
    * Calculates the mru cache capacity from the metrics size
@@ -96,14 +91,16 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
   public void getMetrics(MetricsCollector metricsCollector, boolean all) {
     MetricsRecordBuilder metricsRecordBuilder = metricsCollector.addRecord(metricsName);
 
-    synchronized (stochasticCosts) {
-      for (Map.Entry<String, Map<String, Double>> tableEntry : stochasticCosts.entrySet()) {
-        for (Map.Entry<String, Double> costEntry : tableEntry.getValue().entrySet()) {
-          String attrName = tableEntry.getKey() + TABLE_FUNCTION_SEP + costEntry.getKey();
-          Double cost = costEntry.getValue();
-          String functionDesc = costFunctionDescs.get(costEntry.getKey());
-          if (functionDesc == null) functionDesc = costEntry.getKey();
-          metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
+    if (stochasticCosts != null) {
+      synchronized (stochasticCosts) {
+        for (Map.Entry<String, Map<String, Double>> tableEntry : stochasticCosts.entrySet()) {
+          for (Map.Entry<String, Double> costEntry : tableEntry.getValue().entrySet()) {
+            String attrName = tableEntry.getKey() + TABLE_FUNCTION_SEP + costEntry.getKey();
+            Double cost = costEntry.getValue();
+            String functionDesc = costFunctionDescs.get(costEntry.getKey());
+            if (functionDesc == null) functionDesc = costEntry.getKey();
+            metricsRecordBuilder.addGauge(Interns.info(attrName, functionDesc), cost);
+          }
         }
       }
     }
