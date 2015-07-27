@@ -23,6 +23,7 @@ import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.util.ByteBufferUtils;
 import org.apache.hadoop.hbase.util.Bytes;
 import org.apache.hadoop.hbase.util.Pair;
+import org.apache.hadoop.io.WritableUtils;
 
 /**
  * An abstract class that abstracts out as to how the byte buffers are used,
@@ -174,13 +175,13 @@ public abstract class ByteBuff {
   public abstract byte get(int index);
 
   /**
-   * Fetches the byte at the given index. Does not change position of the underlying ByteBuffers.
-   * The difference for this API from {@link #get(int)} the index specified should be after
-   * the current position. If not throws IndexOutOfBoundsException
-   * @param index
+   * Fetches the byte at the given offset from current position. Does not change position
+   * of the underlying ByteBuffers.
+   *
+   * @param offset
    * @return the byte value at the given index.
    */
-  public abstract byte getByteStrictlyForward(int index);
+  public abstract byte getByteAfterPosition(int offset);
 
   /**
    * Writes a byte to this ByteBuff at the current position and increments the position
@@ -265,13 +266,13 @@ public abstract class ByteBuff {
   public abstract short getShort(int index);
 
   /**
-   * Fetches the short at the given index. Does not change position of the underlying ByteBuffers.
-   * The difference for this API from {@link #getShort(int)} the index specified should be
-   * after the current position. If not throws IndexOutOfBoundsException
-   * @param index
+   * Fetches the short value at the given offset from current position. Does not change position
+   * of the underlying ByteBuffers.
+   *
+   * @param offset
    * @return the short value at the given index.
    */
-  public abstract short getShortStrictlyForward(int index);
+  public abstract short getShortAfterPosition(int offset);
 
   /**
    * Returns the int value at the current position. Also advances the position by the size of int
@@ -300,15 +301,14 @@ public abstract class ByteBuff {
   public abstract int getInt(int index);
 
   /**
-   * Fetches the int at the given index. Does not change position of the underlying ByteBuffers.
-   * The difference for this API from {@link #getInt(int)} the index specified should be after
-   * the current position. If not throws IndexOutOfBoundsException
-   * @param index
+   * Fetches the int value at the given offset from current position. Does not change position
+   * of the underlying ByteBuffers.
+   *
+   * @param offset
    * @return the int value at the given index.
    */
-  // TODO: any better name here?? getIntFromSubsequentPosition? or getIntAfterCurrentPosition?
-  // TODO : Make this relative wrt current position? Follow on JIRA
-  public abstract int getIntStrictlyForward(int index);
+  public abstract int getIntAfterPosition(int offset);
+
   /**
    * Returns the long value at the current position. Also advances the position by the size of long
    *
@@ -337,13 +337,13 @@ public abstract class ByteBuff {
   public abstract long getLong(int index);
 
   /**
-   * Fetches the long at the given index. Does not change position of the underlying ByteBuffers.
-   * The difference for this API from {@link #getLong(int)} the index specified should be after
-   * the current position. If not throws IndexOutOfBoundsException
-   * @param index
+   * Fetches the long value at the given offset from current position. Does not change position
+   * of the underlying ByteBuffers.
+   *
+   * @param offset
    * @return the long value at the given index.
    */
-  public abstract long getLongStrictlyForward(int index);
+  public abstract long getLongAfterPosition(int offset);
 
   /**
    * Copy the content from this ByteBuff to a byte[] based on the given offset and
@@ -434,5 +434,24 @@ public abstract class ByteBuff {
       tmpLength |= (in.get() & 0xffl) << (8l * i);
     }
     return tmpLength;
+  }
+
+  /**
+   * Similar to {@link WritableUtils#readVLong(DataInput)} but reads from a
+   * {@link ByteBuff}.
+   */
+  public static long readVLong(ByteBuff in) {
+    byte firstByte = in.get();
+    int len = WritableUtils.decodeVIntSize(firstByte);
+    if (len == 1) {
+      return firstByte;
+    }
+    long i = 0;
+    for (int idx = 0; idx < len-1; idx++) {
+      byte b = in.get();
+      i = i << 8;
+      i = i | (b & 0xFF);
+    }
+    return (WritableUtils.isNegativeVInt(firstByte) ? (i ^ -1L) : i);
   }
 }

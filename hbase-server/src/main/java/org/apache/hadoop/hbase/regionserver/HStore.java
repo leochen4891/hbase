@@ -127,11 +127,11 @@ public class HStore implements Store {
 
   protected final MemStore memstore;
   // This stores directory in the filesystem.
-  private final HRegion region;
+  protected final HRegion region;
   private final HColumnDescriptor family;
   private final HRegionFileSystem fs;
-  private Configuration conf;
-  private final CacheConfig cacheConf;
+  protected Configuration conf;
+  protected CacheConfig cacheConf;
   private long lastCompactSize = 0;
   volatile boolean forceMajor = false;
   /* how many bytes to write between status checks */
@@ -160,12 +160,12 @@ public class HStore implements Store {
   private final Set<ChangedReadersObserver> changedReaderObservers =
     Collections.newSetFromMap(new ConcurrentHashMap<ChangedReadersObserver, Boolean>());
 
-  private final int blocksize;
+  protected final int blocksize;
   private HFileDataBlockEncoder dataBlockEncoder;
 
   /** Checksum configuration */
-  private ChecksumType checksumType;
-  private int bytesPerChecksum;
+  protected ChecksumType checksumType;
+  protected int bytesPerChecksum;
 
   // Comparing KeyValues
   private final CellComparator comparator;
@@ -182,7 +182,7 @@ public class HStore implements Store {
   private long blockingFileCount;
   private int compactionCheckMultiplier;
 
-  private Encryption.Context cryptoContext = Encryption.Context.NONE;
+  protected Encryption.Context cryptoContext = Encryption.Context.NONE;
 
   private volatile long flushedCellsCount = 0;
   private volatile long compactedCellsCount = 0;
@@ -202,7 +202,6 @@ public class HStore implements Store {
   protected HStore(final HRegion region, final HColumnDescriptor family,
       final Configuration confParam) throws IOException {
 
-    HRegionInfo info = region.getRegionInfo();
     this.fs = region.getRegionFileSystem();
 
     // Assemble the store's home directory and Ensure it exists.
@@ -239,7 +238,7 @@ public class HStore implements Store {
     this.offPeakHours = OffPeakHours.getInstance(conf);
 
     // Setting up cache configuration for this family
-    this.cacheConf = new CacheConfig(conf, family);
+    createCacheConf(family);
 
     this.verifyBulkLoads = conf.getBoolean("hbase.hstore.bulkload.verify", false);
 
@@ -258,7 +257,7 @@ public class HStore implements Store {
           "hbase.hstore.close.check.interval", 10*1000*1000 /* 10 MB */);
     }
 
-    this.storeEngine = StoreEngine.create(this, this.conf, this.comparator);
+    this.storeEngine = createStoreEngine(this, this.conf, this.comparator);
     this.storeEngine.getStoreFileManager().loadFiles(loadStoreFiles());
 
     // Initialize checksum type from name. The names are CRC32, CRC32C, etc.
@@ -333,10 +332,31 @@ public class HStore implements Store {
   }
 
   /**
+   * Creates the cache config.
+   * @param family The current column family.
+   */
+  protected void createCacheConf(final HColumnDescriptor family) {
+    this.cacheConf = new CacheConfig(conf, family);
+  }
+
+  /**
+   * Creates the store engine configured for the given Store.
+   * @param store The store. An unfortunate dependency needed due to it
+   *              being passed to coprocessors via the compactor.
+   * @param conf Store configuration.
+   * @param kvComparator KVComparator for storeFileManager.
+   * @return StoreEngine to use.
+   */
+  protected StoreEngine<?, ?, ?, ?> createStoreEngine(Store store, Configuration conf,
+      CellComparator kvComparator) throws IOException {
+    return StoreEngine.create(store, conf, comparator);
+  }
+
+  /**
    * @param family
    * @return TTL in seconds of the specified family
    */
-  private static long determineTTLFromFamily(final HColumnDescriptor family) {
+  public static long determineTTLFromFamily(final HColumnDescriptor family) {
     // HCD.getTimeToLive returns ttl in seconds.  Convert to milliseconds.
     long ttl = family.getTimeToLive();
     if (ttl == HConstants.FOREVER) {
@@ -1775,154 +1795,6 @@ public class HStore implements Store {
   }
 
   @Override
-  public Cell getRowKeyAtOrBefore(final byte[] row) throws IOException {
-    // If minVersions is set, we will not ignore expired KVs.
-    // As we're only looking for the latest matches, that should be OK.
-    // With minVersions > 0 we guarantee that any KV that has any version
-    // at all (expired or not) has at least one version that will not expire.
-    // Note that this method used to take a KeyValue as arguments. KeyValue
-    // can be back-dated, a row key cannot.
-    long ttlToUse = scanInfo.getMinVersions() > 0 ? Long.MAX_VALUE : this.scanInfo.getTtl();
-
-    KeyValue kv = new KeyValue(row, HConstants.LATEST_TIMESTAMP);
-
-    GetClosestRowBeforeTracker state = new GetClosestRowBeforeTracker(
-      this.comparator, kv, ttlToUse, this.getRegionInfo().isMetaRegion());
-    this.lock.readLock().lock();
-    try {
-      // First go to the memstore.  Pick up deletes and candidates.
-      this.memstore.getRowKeyAtOrBefore(state);
-      // Check if match, if we got a candidate on the asked for 'kv' row.
-      // Process each relevant store file. Run through from newest to oldest.
-      Iterator<StoreFile> sfIterator = this.storeEngine.getStoreFileManager()
-          .getCandidateFilesForRowKeyBefore(state.getTargetKey());
-      while (sfIterator.hasNext()) {
-        StoreFile sf = sfIterator.next();
-        sfIterator.remove(); // Remove sf from iterator.
-        boolean haveNewCandidate = rowAtOrBeforeFromStoreFile(sf, state);
-        Cell candidate = state.getCandidate();
-        // we have an optimization here which stops the search if we find exact match.
-        if (candidate != null && CellUtil.matchingRow(candidate, row)) {
-          return candidate;
-        }
-        if (haveNewCandidate) {
-          sfIterator = this.storeEngine.getStoreFileManager().updateCandidateFilesForRowKeyBefore(
-              sfIterator, state.getTargetKey(), candidate);
-        }
-      }
-      return state.getCandidate();
-    } finally {
-      this.lock.readLock().unlock();
-    }
-  }
-
-  /*
-   * Check an individual MapFile for the row at or before a given row.
-   * @param f
-   * @param state
-   * @throws IOException
-   * @return True iff the candidate has been updated in the state.
-   */
-  private boolean rowAtOrBeforeFromStoreFile(final StoreFile f,
-                                          final GetClosestRowBeforeTracker state)
-      throws IOException {
-    StoreFile.Reader r = f.getReader();
-    if (r == null) {
-      LOG.warn("StoreFile " + f + " has a null Reader");
-      return false;
-    }
-    if (r.getEntries() == 0) {
-      LOG.warn("StoreFile " + f + " is a empty store file");
-      return false;
-    }
-    // TODO: Cache these keys rather than make each time?
-    Cell  firstKV = r.getFirstKey();
-    if (firstKV == null) return false;
-    Cell lastKV = r.getLastKey();
-    Cell firstOnRow = state.getTargetKey();
-    if (this.comparator.compareRows(lastKV, firstOnRow) < 0) {
-      // If last key in file is not of the target table, no candidates in this
-      // file.  Return.
-      if (!state.isTargetTable(lastKV)) return false;
-      // If the row we're looking for is past the end of file, set search key to
-      // last key. TODO: Cache last and first key rather than make each time.
-      firstOnRow = CellUtil.createFirstOnRow(lastKV);
-    }
-    // Get a scanner that caches blocks and that uses pread.
-    HFileScanner scanner = r.getScanner(true, true, false);
-    // Seek scanner.  If can't seek it, return.
-    if (!seekToScanner(scanner, firstOnRow, firstKV)) return false;
-    // If we found candidate on firstOnRow, just return. THIS WILL NEVER HAPPEN!
-    // Unlikely that there'll be an instance of actual first row in table.
-    if (walkForwardInSingleRow(scanner, firstOnRow, state)) return true;
-    // If here, need to start backing up.
-    while (scanner.seekBefore(firstOnRow)) {
-      Cell kv = scanner.getCell();
-      if (!state.isTargetTable(kv)) break;
-      if (!state.isBetterCandidate(kv)) break;
-      // Make new first on row.
-      firstOnRow = CellUtil.createFirstOnRow(kv);
-      // Seek scanner.  If can't seek it, break.
-      if (!seekToScanner(scanner, firstOnRow, firstKV)) return false;
-      // If we find something, break;
-      if (walkForwardInSingleRow(scanner, firstOnRow, state)) return true;
-    }
-    return false;
-  }
-
-  /*
-   * Seek the file scanner to firstOnRow or first entry in file.
-   * @param scanner
-   * @param firstOnRow
-   * @param firstKV
-   * @return True if we successfully seeked scanner.
-   * @throws IOException
-   */
-  private boolean seekToScanner(final HFileScanner scanner,
-                                final Cell firstOnRow,
-                                final Cell firstKV)
-      throws IOException {
-    Cell kv = firstOnRow;
-    // If firstOnRow < firstKV, set to firstKV
-    if (this.comparator.compareRows(firstKV, firstOnRow) == 0) kv = firstKV;
-    int result = scanner.seekTo(kv);
-    return result != -1;
-  }
-
-  /*
-   * When we come in here, we are probably at the kv just before we break into
-   * the row that firstOnRow is on.  Usually need to increment one time to get
-   * on to the row we are interested in.
-   * @param scanner
-   * @param firstOnRow
-   * @param state
-   * @return True we found a candidate.
-   * @throws IOException
-   */
-  private boolean walkForwardInSingleRow(final HFileScanner scanner,
-                                         final Cell firstOnRow,
-                                         final GetClosestRowBeforeTracker state)
-      throws IOException {
-    boolean foundCandidate = false;
-    do {
-      Cell kv = scanner.getCell();
-      // If we are not in the row, skip.
-      if (this.comparator.compareRows(kv, firstOnRow) < 0) continue;
-      // Did we go beyond the target row? If so break.
-      if (state.isTooFar(kv, firstOnRow)) break;
-      if (state.isExpired(kv)) {
-        continue;
-      }
-      // If we added something, this row is a contender. break.
-      if (state.handle(kv)) {
-        foundCandidate = true;
-        break;
-      }
-    } while(scanner.next());
-    return foundCandidate;
-  }
-
-  @Override
   public boolean canSplit() {
     this.lock.readLock().lock();
     try {
@@ -1985,15 +1857,21 @@ public class HStore implements Store {
       if (this.getCoprocessorHost() != null) {
         scanner = this.getCoprocessorHost().preStoreScannerOpen(this, scan, targetCols);
       }
-      if (scanner == null) {
-        scanner = scan.isReversed() ? new ReversedStoreScanner(this,
-            getScanInfo(), scan, targetCols, readPt) : new StoreScanner(this,
-            getScanInfo(), scan, targetCols, readPt);
-      }
+      scanner = createScanner(scan, targetCols, readPt, scanner);
       return scanner;
     } finally {
       lock.readLock().unlock();
     }
+  }
+
+  protected KeyValueScanner createScanner(Scan scan, final NavigableSet<byte[]> targetCols,
+      long readPt, KeyValueScanner scanner) throws IOException {
+    if (scanner == null) {
+      scanner = scan.isReversed() ? new ReversedStoreScanner(this,
+          getScanInfo(), scan, targetCols, readPt) : new StoreScanner(this,
+          getScanInfo(), scan, targetCols, readPt);
+    }
+    return scanner;
   }
 
   @Override

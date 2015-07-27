@@ -328,21 +328,6 @@ public class KeyValueUtil {
   }
 
   /**
-   * Create a Delete Family KeyValue for the specified row and family that would
-   * be smaller than all other possible Delete Family KeyValues that have the
-   * same row and family.
-   * Used for seeking.
-   * @param row - row key (arbitrary byte array)
-   * @param family - family name
-   * @return First Delete Family possible key on passed <code>row</code>.
-   */
-  public static KeyValue createFirstDeleteFamilyOnRow(final byte [] row,
-      final byte [] family) {
-    return new KeyValue(row, family, null, HConstants.LATEST_TIMESTAMP,
-        Type.DeleteFamily);
-  }
-
-  /**
    * @param row - row key (arbitrary byte array)
    * @param f - family name
    * @param q - column qualifier
@@ -604,11 +589,11 @@ public class KeyValueUtil {
       int tlen = cell.getTagsLength();
 
       // write total length
-      KeyValue.writeInt(out, length(rlen, flen, qlen, vlen, tlen, withTags));
+      ByteBufferUtils.putInt(out, length(rlen, flen, qlen, vlen, tlen, withTags));
       // write key length
-      KeyValue.writeInt(out, keyLength(rlen, flen, qlen));
+      ByteBufferUtils.putInt(out, keyLength(rlen, flen, qlen));
       // write value length
-      KeyValue.writeInt(out, vlen);
+      ByteBufferUtils.putInt(out, vlen);
       // Write rowkey - 2 bytes rk length followed by rowkey bytes
       StreamUtils.writeShort(out, rlen);
       out.write(cell.getRowArray(), cell.getRowOffset(), rlen);

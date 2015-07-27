@@ -27,6 +27,8 @@ import java.nio.ByteBuffer;
 
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.classification.InterfaceStability;
+import org.apache.hadoop.hbase.io.ByteBufferOutputStream;
+import org.apache.hadoop.hbase.io.util.StreamUtils;
 import org.apache.hadoop.io.IOUtils;
 import org.apache.hadoop.io.WritableUtils;
 
@@ -134,8 +136,13 @@ public final class ByteBufferUtils {
     */
    public static void putInt(OutputStream out, final int value)
        throws IOException {
-     for (int i = Bytes.SIZEOF_INT - 1; i >= 0; --i) {
-       out.write((byte) (value >>> (i * 8)));
+     // We have writeInt in ByteBufferOutputStream so that it can directly write
+     // int to underlying
+     // ByteBuffer in one step.
+     if (out instanceof ByteBufferOutputStream) {
+       ((ByteBufferOutputStream) out).writeInt(value);
+     } else {
+       StreamUtils.writeInt(out, value);
      }
    }
 
@@ -539,17 +546,17 @@ public final class ByteBufferUtils {
     if (UnsafeAccess.isAvailable()) {
       long offset1Adj, offset2Adj;
       Object refObj1 = null, refObj2 = null;
-      if (buf1.hasArray()) {
+      if (buf1.isDirect()) {
+        offset1Adj = o1 + ((DirectBuffer) buf1).address();
+      } else {
         offset1Adj = o1 + buf1.arrayOffset() + UnsafeAccess.BYTE_ARRAY_BASE_OFFSET;
         refObj1 = buf1.array();
-      } else {
-        offset1Adj = o1 + ((DirectBuffer) buf1).address();
       }
-      if (buf2.hasArray()) {
+      if (buf2.isDirect()) {
+        offset2Adj = o2 + ((DirectBuffer) buf2).address();
+      } else {
         offset2Adj = o2 + buf2.arrayOffset() + UnsafeAccess.BYTE_ARRAY_BASE_OFFSET;
         refObj2 = buf2.array();
-      } else {
-        offset2Adj = o2 + ((DirectBuffer) buf2).address();
       }
       return compareToUnsafe(refObj1, offset1Adj, l1, refObj2, offset2Adj, l2);
     }
@@ -569,11 +576,11 @@ public final class ByteBufferUtils {
     if (UnsafeAccess.isAvailable()) {
       long offset1Adj;
       Object refObj1 = null;
-      if (buf1.hasArray()) {
+      if (buf1.isDirect()) {
+        offset1Adj = o1 + ((DirectBuffer) buf1).address();
+      } else {
         offset1Adj = o1 + buf1.arrayOffset() + UnsafeAccess.BYTE_ARRAY_BASE_OFFSET;
         refObj1 = buf1.array();
-      } else {
-        offset1Adj = o1 + ((DirectBuffer) buf1).address();
       }
       return compareToUnsafe(refObj1, offset1Adj, l1, buf2, o2
           + UnsafeAccess.BYTE_ARRAY_BASE_OFFSET, l2);
@@ -828,5 +835,42 @@ public final class ByteBufferUtils {
         out[destinationOffset + i] = in.get(sourceOffset + i);
       }
     }
+  }
+
+  public static void writeByteBuffer(OutputStream out, ByteBuffer b, int offset, int length)
+      throws IOException {
+    // We have write which takes ByteBuffer in ByteBufferOutputStream so that it
+    // can directly write
+    // bytes from the src ByteBuffer to the destination ByteBuffer. This avoid
+    // need for temp array
+    // creation and copy
+    if (out instanceof ByteBufferOutputStream) {
+      ((ByteBufferOutputStream) out).write(b, offset, length);
+    } else {
+      ByteBufferUtils.copyBufferToStream(out, b, offset, length);
+    }
+  }
+  // For testing purpose
+  public static String toStringBinary(final ByteBuffer b, int off, int len) {
+    StringBuilder result = new StringBuilder();
+    // Just in case we are passed a 'len' that is > buffer length...
+    if (off >= b.capacity())
+      return result.toString();
+    if (off + len > b.capacity())
+      len = b.capacity() - off;
+    for (int i = off; i < off + len; ++i) {
+      int ch = b.get(i) & 0xFF;
+      if ((ch >= '0' && ch <= '9') || (ch >= 'A' && ch <= 'Z') || (ch >= 'a' && ch <= 'z')
+          || " `~!@#$%^&*()-_=+[]{}|;:'\",.<>/?".indexOf(ch) >= 0) {
+        result.append((char) ch);
+      } else {
+        result.append(String.format("\\x%02X", ch));
+      }
+    }
+    return result.toString();
+  }
+
+  public static String toStringBinary(final ByteBuffer b) {
+    return toStringBinary(b, 0, b.capacity());
   }
 }

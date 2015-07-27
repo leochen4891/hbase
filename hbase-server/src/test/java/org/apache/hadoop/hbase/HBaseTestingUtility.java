@@ -65,7 +65,6 @@ import org.apache.hadoop.hbase.client.Durability;
 import org.apache.hadoop.hbase.client.Get;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
 import org.apache.hadoop.hbase.client.HConnection;
-import org.apache.hadoop.hbase.client.HRegionLocator;
 import org.apache.hadoop.hbase.client.HTable;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.RegionLocator;
@@ -93,6 +92,7 @@ import org.apache.hadoop.hbase.regionserver.HRegionServer;
 import org.apache.hadoop.hbase.regionserver.HStore;
 import org.apache.hadoop.hbase.regionserver.InternalScanner;
 import org.apache.hadoop.hbase.regionserver.Region;
+import org.apache.hadoop.hbase.regionserver.RegionScanner;
 import org.apache.hadoop.hbase.regionserver.RegionServerServices;
 import org.apache.hadoop.hbase.regionserver.RegionServerStoppedException;
 import org.apache.hadoop.hbase.regionserver.wal.MetricsWAL;
@@ -246,6 +246,19 @@ public class HBaseTestingUtility extends HBaseCommonTestingUtility {
     configurations.add(new Object[] { false, true });
     configurations.add(new Object[] { true, false });
     configurations.add(new Object[] { true, true });
+    return Collections.unmodifiableList(configurations);
+  }
+
+  public static List<Object[]> memStoreTSTagsAndOffheapCombination() {
+    List<Object[]> configurations = new ArrayList<Object[]>();
+    configurations.add(new Object[] { false, false, true });
+    configurations.add(new Object[] { false, false, false });
+    configurations.add(new Object[] { false, true, true });
+    configurations.add(new Object[] { false, true, false });
+    configurations.add(new Object[] { true, false, true });
+    configurations.add(new Object[] { true, false, false });
+    configurations.add(new Object[] { true, true, true });
+    configurations.add(new Object[] { true, true, false });
     return Collections.unmodifiableList(configurations);
   }
 
@@ -1393,7 +1406,8 @@ public class HBaseTestingUtility extends HBaseCommonTestingUtility {
       desc.addFamily(hcd);
     }
     getHBaseAdmin().createTable(desc, startKey, endKey, numRegions);
-    // HBaseAdmin only waits for regions to appear in hbase:meta we should wait until they are assigned
+    // HBaseAdmin only waits for regions to appear in hbase:meta we
+    // should wait until they are assigned
     waitUntilAllRegionsAssigned(tableName);
     return (HTable) getConnection().getTable(tableName);
   }
@@ -1431,8 +1445,8 @@ public class HBaseTestingUtility extends HBaseCommonTestingUtility {
       htd.addFamily(hcd);
     }
     getHBaseAdmin().createTable(htd, splitKeys);
-    // HBaseAdmin only waits for regions to appear in hbase:meta we should wait until they are
-    // assigned
+    // HBaseAdmin only waits for regions to appear in hbase:meta
+    // we should wait until they are assigned
     waitUntilAllRegionsAssigned(htd.getTableName());
     return (HTable) getConnection().getTable(htd.getTableName());
   }
@@ -1447,7 +1461,8 @@ public class HBaseTestingUtility extends HBaseCommonTestingUtility {
   public HTable createTable(HTableDescriptor htd, byte[][] splitRows)
       throws IOException {
     getHBaseAdmin().createTable(htd, splitRows);
-    // HBaseAdmin only waits for regions to appear in hbase:meta we should wait until they are assigned
+    // HBaseAdmin only waits for regions to appear in hbase:meta
+    // we should wait until they are assigned
     waitUntilAllRegionsAssigned(htd.getTableName());
     return (HTable) getConnection().getTable(htd.getTableName());
   }
@@ -1686,6 +1701,24 @@ public class HBaseTestingUtility extends HBaseCommonTestingUtility {
     waitUntilAllRegionsAssigned(tableName);
     return (HTable) getConnection().getTable(tableName);
   }
+
+  public HTable createTable(TableName tableName, byte[][] families,
+      int numVersions, int blockSize, String cpName) throws IOException {
+      HTableDescriptor desc = new HTableDescriptor(tableName);
+      for (byte[] family : families) {
+        HColumnDescriptor hcd = new HColumnDescriptor(family)
+            .setMaxVersions(numVersions)
+            .setBlocksize(blockSize);
+        desc.addFamily(hcd);
+      }
+      if(cpName != null) {
+        desc.addCoprocessor(cpName);
+      }
+      getHBaseAdmin().createTable(desc);
+      // HBaseAdmin only waits for regions to appear in hbase:meta we should wait until they are assigned
+      waitUntilAllRegionsAssigned(tableName);
+      return (HTable) getConnection().getTable(tableName);
+    }
 
   /**
    * Create a table.
@@ -4142,5 +4175,29 @@ public class HBaseTestingUtility extends HBaseCommonTestingUtility {
       }
     }
     return supportedAlgos.toArray(new Algorithm[supportedAlgos.size()]);
+  }
+
+  public Result getClosestRowBefore(Region r, byte[] row, byte[] family) throws IOException {
+    Scan scan = new Scan(row);
+    scan.setSmall(true);
+    scan.setCaching(1);
+    scan.setReversed(true);
+    scan.addFamily(family);
+    try (RegionScanner scanner = r.getScanner(scan)) {
+      List<Cell> cells = new ArrayList<Cell>(1);
+      scanner.next(cells);
+      if (r.getRegionInfo().isMetaRegion() && !isTargetTable(row, cells.get(0))) {
+        return null;
+      }
+      return Result.create(cells);
+    }
+  }
+
+  private boolean isTargetTable(final byte[] inRow, Cell c) {
+    String inputRowString = Bytes.toString(inRow);
+    int i = inputRowString.indexOf(HConstants.DELIMITER);
+    String outputRowString = Bytes.toString(c.getRowArray(), c.getRowOffset(), c.getRowLength());
+    int o = outputRowString.indexOf(HConstants.DELIMITER);
+    return inputRowString.substring(0, i).equals(outputRowString.substring(0, o));
   }
 }
