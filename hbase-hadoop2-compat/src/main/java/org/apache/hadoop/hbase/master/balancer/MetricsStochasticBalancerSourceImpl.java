@@ -37,16 +37,16 @@ public class MetricsStochasticBalancerSourceImpl extends MetricsBalancerSourceIm
   private int metricsSize = 1000;
   private int mruCap = calcMruCap(metricsSize);
 
-  private Map<String, Map<String, Double>> stochasticCosts = new LinkedHashMap<String, Map<String, Double>>(mruCap, MRU_LOAD_FACTOR, true) {
-          private static final long serialVersionUID = 8204713453436906599L;
+  private Map<String, Map<String, Double>> stochasticCosts =
+      new LinkedHashMap<String, Map<String, Double>>(mruCap, MRU_LOAD_FACTOR, true) {
+        private static final long serialVersionUID = 8204713453436906599L;
 
-          @Override
-          protected boolean removeEldestEntry(Map.Entry<String, Map<String, Double>> eldest) {
-            return size() > mruCap;
-          }
-        };
+        @Override
+        protected boolean removeEldestEntry(Map.Entry<String, Map<String, Double>> eldest) {
+          return size() > mruCap;
+        }
+      };
   private Map<String, String> costFunctionDescs = new ConcurrentHashMap<String, String>();
-
 
   /**
    * Calculates the mru cache capacity from the metrics size
