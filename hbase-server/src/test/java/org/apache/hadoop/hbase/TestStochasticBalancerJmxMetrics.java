@@ -54,7 +54,7 @@ import org.junit.runners.MethodSorters;
 public class TestStochasticBalancerJmxMetrics extends BalancerTestBase {
   private static final Log LOG = LogFactory.getLog(TestStochasticBalancerJmxMetrics.class);
   private static HBaseTestingUtility UTIL = new HBaseTestingUtility();
-  private static int connectorPort = 61120;
+  private static int connectorPort = 61121;
   private static StochasticLoadBalancer loadBalancer;
   /**
    * a simple cluster for testing JMX.
