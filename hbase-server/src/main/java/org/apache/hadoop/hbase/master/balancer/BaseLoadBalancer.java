@@ -88,14 +88,11 @@ public abstract class BaseLoadBalancer implements LoadBalancer {
   }
   
   /**
-   * This constructor that accepts an instance of MetricsBalancer, 
+   * This Constructor accepts an instance of MetricsBalancer, 
    * which will be used instead of creating a new one
    */
   protected BaseLoadBalancer(MetricsBalancer metricsBalancer) {
-    if (metricsBalancer != null)
-      this.metricsBalancer = metricsBalancer; 
-    else
-      this.metricsBalancer = new MetricsBalancer();
+    this.metricsBalancer = (metricsBalancer != null) ? metricsBalancer : new MetricsBalancer();
   }
 
   /**
