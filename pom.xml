@@ -66,6 +66,7 @@
     <module>hbase-rest</module>
     <module>hbase-checkstyle</module>
     <module>hbase-shaded</module>
+    <module>hbase-spark</module>
   </modules>
   <!--Add apache snapshots in case we want to use unreleased versions of plugins:
       e.g. surefire 2.18-SNAPSHOT-->
@@ -747,16 +748,14 @@
               <exclude>**/*.iml</exclude>
               <exclude>**/target/**</exclude>
               <exclude>**/CHANGES.txt</exclude>
-              <exclude>**/README.md</exclude>
               <exclude>**/generated/**</exclude>
               <exclude>**/gen-*/**</exclude>
-              <exclude>**/conf/*</exclude>
+              <!-- No material contents -->
+              <exclude>conf/regionservers</exclude>
               <exclude>**/*.avpr</exclude>
               <exclude>**/*.svg</exclude>
-              <exclude>**/META-INF/services/**</exclude>
               <!-- MIT: https://github.com/twbs/bootstrap/blob/master/LICENSE -->
               <exclude>**/src/main/asciidoc/hbase.css</exclude>
-              <exclude>**/src/main/asciidoc/asciidoctor.css</exclude>
               <exclude>**/bootstrap-theme.css</exclude>
               <exclude>**/bootstrap-theme.min.css</exclude>
               <!-- MIT http://jquery.org/license -->
@@ -769,10 +768,6 @@
               <exclude>docs/*</exclude>
               <exclude>logs/*</exclude>
               <!-- auto-gen docs -->
-              <!--It don't like freebsd license-->
-              <exclude>**/src/main/site/resources/css/freebsd_docbook.css</exclude>
-              <exclude>dev-support/hbase_docker/README.md</exclude>
-              <exclude>src/main/asciidoc/asciidoctor.css</exclude>
               <!--  exclude source control files -->
               <exclude>.git/**</exclude>
               <exclude>.svn/**</exclude>

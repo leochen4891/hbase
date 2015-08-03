@@ -1,17 +1,21 @@
 /*
- * Licensed under the Apache License, Version 2.0 (the "License");
- * you may not use this file except in compliance with the License.
- * You may obtain a copy of the License at
+ * Licensed to the Apache Software Foundation (ASF) under one
+ * or more contributor license agreements.  See the NOTICE file
+ * distributed with this work for additional information
+ * regarding copyright ownership.  The ASF licenses this file
+ * to you under the Apache License, Version 2.0 (the
+ * "License"); you may not use this file except in compliance
+ * with the License.  You may obtain a copy of the License at
  *
- *     http://www.apache.org/licenses/LICENSE-2.0
+ *   http://www.apache.org/licenses/LICENSE-2.0
  *
- * Unless required by applicable law or agreed to in writing, software
- * distributed under the License is distributed on an "AS IS" BASIS,
- * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- * See the License for the specific language governing permissions and
- * limitations under the License.
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
  */
-
 package org.apache.hadoop.hbase.security.access;
 
 import java.io.IOException;
@@ -1105,7 +1109,7 @@ public class AccessController extends BaseMasterAndRegionObserver
       @Override
       public Void run() throws Exception {
         UserPermission userperm = new UserPermission(Bytes.toBytes(owner),
-          htd.getTableName(), null, Action.values());
+            htd.getTableName(), null, Action.values());
         AccessControlLists.addUserPermission(conf, userperm);
         return null;
       }
@@ -1735,7 +1739,7 @@ public class AccessController extends BaseMasterAndRegionObserver
     Map<byte[],? extends Collection<byte[]>> families = makeFamilyMap(family, qualifier);
     User user = getActiveUser();
     AuthResult authResult = permissionGranted(OpType.CHECK_AND_DELETE, user, env, families,
-      Action.READ, Action.WRITE);
+        Action.READ, Action.WRITE);
     logResult(authResult);
     if (!authResult.isAllowed()) {
       if (cellFeaturesEnabled && !compatibleEarlyTermination) {
@@ -1787,7 +1791,7 @@ public class AccessController extends BaseMasterAndRegionObserver
     Map<byte[],? extends Collection<byte[]>> families = makeFamilyMap(family, qualifier);
     User user = getActiveUser();
     AuthResult authResult = permissionGranted(OpType.INCREMENT_COLUMN_VALUE, user, env, families,
-      Action.WRITE);
+        Action.WRITE);
     if (!authResult.isAllowed() && cellFeaturesEnabled && !compatibleEarlyTermination) {
       authResult.setAllowed(checkCoveringPermission(OpType.INCREMENT_COLUMN_VALUE, env, row,
         families, HConstants.LATEST_TIMESTAMP, Action.WRITE));
@@ -1969,7 +1973,7 @@ public class AccessController extends BaseMasterAndRegionObserver
           LOG.trace("Carrying forward ACLs from " + oldCell + ": " + perms);
         }
         tags.add(new Tag(AccessControlLists.ACL_TAG_TYPE,
-          ProtobufUtil.toUsersAndPermissions(perms).toByteArray()));
+            ProtobufUtil.toUsersAndPermissions(perms).toByteArray()));
       }
     }
 
@@ -2254,6 +2258,13 @@ public class AccessController extends BaseMasterAndRegionObserver
               return AccessControlLists.getUserPermissions(regionEnv.getConfiguration(), null);
             }
           });
+          // Adding superusers explicitly to the result set as AccessControlLists do not store them.
+          // Also using acl as table name to be inline  with the results of global admin and will
+          // help in avoiding any leakage of information about being superusers.
+          for (String user: Superusers.getSuperUsers()) {
+            perms.add(new UserPermission(user.getBytes(), AccessControlLists.ACL_TABLE_NAME, null,
+                Action.values()));
+          }
         }
         response = ResponseConverter.buildGetUserPermissionsResponse(perms);
       } else {
