@@ -83,7 +83,6 @@ import org.apache.hadoop.util.ReflectionUtils;
 import org.apache.hadoop.util.StringUtils;
 
 import com.google.common.primitives.Ints;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 /**
  * Utility methods for interacting with the underlying file system.
@@ -363,11 +362,12 @@ public abstract class FSUtils {
    * <li>overwrite the file if it exists</li>
    * <li>apply the umask in the configuration (if it is enabled)</li>
    * <li>use the fs configured buffer size (or 4096 if not set)</li>
-   * <li>use the default replication</li>
+   * <li>use the configured column family replication or default replication if
+   * {@link HColumnDescriptor#DEFAULT_DFS_REPLICATION}</li>
    * <li>use the default block size</li>
    * <li>not track progress</li>
    * </ol>
-   *
+   * @param conf configurations
    * @param fs {@link FileSystem} on which to write the file
    * @param path {@link Path} to the file to write
    * @param perm permissions
@@ -375,23 +375,22 @@ public abstract class FSUtils {
    * @return output stream to the created file
    * @throws IOException if the file cannot be created
    */
-  public static FSDataOutputStream create(FileSystem fs, Path path,
+  public static FSDataOutputStream create(Configuration conf, FileSystem fs, Path path,
       FsPermission perm, InetSocketAddress[] favoredNodes) throws IOException {
     if (fs instanceof HFileSystem) {
       FileSystem backingFs = ((HFileSystem)fs).getBackingFs();
       if (backingFs instanceof DistributedFileSystem) {
         // Try to use the favoredNodes version via reflection to allow backwards-
         // compatibility.
+        short replication = Short.parseShort(conf.get(HColumnDescriptor.DFS_REPLICATION,
+          String.valueOf(HColumnDescriptor.DEFAULT_DFS_REPLICATION)));
         try {
-          return (FSDataOutputStream) (DistributedFileSystem.class
-              .getDeclaredMethod("create", Path.class, FsPermission.class,
-                  boolean.class, int.class, short.class, long.class,
-                  Progressable.class, InetSocketAddress[].class)
-                  .invoke(backingFs, path, perm, true,
-                      getDefaultBufferSize(backingFs),
-                      getDefaultReplication(backingFs, path),
-                      getDefaultBlockSize(backingFs, path),
-                      null, favoredNodes));
+          return (FSDataOutputStream) (DistributedFileSystem.class.getDeclaredMethod("create",
+            Path.class, FsPermission.class, boolean.class, int.class, short.class, long.class,
+            Progressable.class, InetSocketAddress[].class).invoke(backingFs, path, perm, true,
+            getDefaultBufferSize(backingFs),
+            replication > 0 ? replication : getDefaultReplication(backingFs, path),
+            getDefaultBlockSize(backingFs, path), null, favoredNodes));
         } catch (InvocationTargetException ite) {
           // Function was properly called, but threw it's own exception.
           throw new IOException(ite.getCause());
@@ -607,11 +606,10 @@ public abstract class FSUtils {
     int pblen = ProtobufUtil.lengthOfPBMagic();
     FSProtos.HBaseVersionFileContent.Builder builder =
       FSProtos.HBaseVersionFileContent.newBuilder();
-    FSProtos.HBaseVersionFileContent fileContent;
     try {
-      fileContent = builder.mergeFrom(bytes, pblen, bytes.length - pblen).build();
-      return fileContent.getVersion();
-    } catch (InvalidProtocolBufferException e) {
+      ProtobufUtil.mergeFrom(builder, bytes, pblen, bytes.length - pblen);
+      return builder.getVersion();
+    } catch (IOException e) {
       // Convert
       throw new DeserializationException(e);
     }

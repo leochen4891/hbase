@@ -758,7 +758,8 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
     }
     this.memstoreFlushSize = flushSize;
     this.blockingMemStoreSize = this.memstoreFlushSize *
-        conf.getLong("hbase.hregion.memstore.block.multiplier", 2);
+        conf.getLong(HConstants.HREGION_MEMSTORE_BLOCK_MULTIPLIER,
+                HConstants.DEFAULT_HREGION_MEMSTORE_BLOCK_MULTIPLIER);
   }
 
   /**
@@ -7359,8 +7360,9 @@ public class HRegion implements HeapSize, PropagatingConfigurationObserver, Regi
               " in region "+Bytes.toStringBinary(getRegionInfo().getRegionName()));
     }
 
-    Message request = service.getRequestPrototype(methodDesc).newBuilderForType()
-        .mergeFrom(call.getRequest()).build();
+    Message.Builder builder = service.getRequestPrototype(methodDesc).newBuilderForType();
+    ProtobufUtil.mergeFrom(builder, call.getRequest());
+    Message request = builder.build();
 
     if (coprocessorHost != null) {
       request = coprocessorHost.preEndpointInvocation(service, methodName, request);

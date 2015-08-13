@@ -18,6 +18,7 @@
  */
 package org.apache.hadoop.hbase;
 
+import java.io.IOException;
 import java.util.Collections;
 import java.util.HashMap;
 import java.util.HashSet;
@@ -27,6 +28,7 @@ import java.util.Set;
 import org.apache.hadoop.hbase.classification.InterfaceAudience;
 import org.apache.hadoop.hbase.classification.InterfaceStability;
 import org.apache.hadoop.hbase.exceptions.DeserializationException;
+import org.apache.hadoop.hbase.exceptions.HBaseException;
 import org.apache.hadoop.hbase.io.compress.Compression;
 import org.apache.hadoop.hbase.io.encoding.DataBlockEncoding;
 import org.apache.hadoop.hbase.protobuf.ProtobufUtil;
@@ -40,7 +42,6 @@ import org.apache.hadoop.hbase.util.PrettyPrinter;
 import org.apache.hadoop.hbase.util.PrettyPrinter.Unit;
 
 import com.google.common.base.Preconditions;
-import com.google.protobuf.InvalidProtocolBufferException;
 
 /**
  * An HColumnDescriptor contains information about a column family such as the
@@ -128,6 +129,9 @@ public class HColumnDescriptor implements Comparable<HColumnDescriptor> {
   public static final String MOB_THRESHOLD = "MOB_THRESHOLD";
   public static final byte[] MOB_THRESHOLD_BYTES = Bytes.toBytes(MOB_THRESHOLD);
   public static final long DEFAULT_MOB_THRESHOLD = 100 * 1024; // 100k
+
+  public static final String DFS_REPLICATION = "DFS_REPLICATION";
+  public static final short DEFAULT_DFS_REPLICATION = 0;
 
   /**
    * Default compression type.
@@ -714,6 +718,15 @@ public class HColumnDescriptor implements Comparable<HColumnDescriptor> {
   }
 
   /**
+   * @param timeToLive Time to live of cell contents, in human readable format
+   *                   @see org.apache.hadoop.hbase.util.PrettyPrinter#format(String, Unit)
+   * @return this (for chained invocation)
+   */
+  public HColumnDescriptor setTimeToLive(String timeToLive) throws HBaseException {
+    return setValue(TTL, PrettyPrinter.valueOf(timeToLive, Unit.TIME_INTERVAL));
+  }
+
+  /**
    * @return The minimum number of versions to keep.
    */
   public int getMinVersions() {
@@ -1075,8 +1088,9 @@ public class HColumnDescriptor implements Comparable<HColumnDescriptor> {
     ColumnFamilySchema.Builder builder = ColumnFamilySchema.newBuilder();
     ColumnFamilySchema cfs = null;
     try {
-      cfs = builder.mergeFrom(bytes, pblen, bytes.length - pblen).build();
-    } catch (InvalidProtocolBufferException e) {
+      ProtobufUtil.mergeFrom(builder, bytes, pblen, bytes.length - pblen);
+      cfs = builder.build();
+    } catch (IOException e) {
       throw new DeserializationException(e);
     }
     return convert(cfs);
@@ -1224,6 +1238,34 @@ public class HColumnDescriptor implements Comparable<HColumnDescriptor> {
    */
   public HColumnDescriptor setMobEnabled(boolean isMobEnabled) {
     setValue(IS_MOB_BYTES, Bytes.toBytes(isMobEnabled));
+    return this;
+  }
+
+  /**
+   * @return replication factor set for this CF or {@link #DEFAULT_DFS_REPLICATION} if not set.
+   *         <p>
+   *         {@link #DEFAULT_DFS_REPLICATION} value indicates that user has explicitly not set any
+   *         block replication factor for this CF, hence use the default replication factor set in
+   *         the file system.
+   */
+  public short getDFSReplication() {
+    String rf = getValue(DFS_REPLICATION);
+    return rf == null ? DEFAULT_DFS_REPLICATION : Short.valueOf(rf);
+  }
+
+  /**
+   * Set the replication factor to hfile(s) belonging to this family
+   * @param replication number of replicas the blocks(s) belonging to this CF should have, or
+   *          {@link #DEFAULT_DFS_REPLICATION} for the default replication factor set in the
+   *          filesystem
+   * @return this (for chained invocation)
+   */
+  public HColumnDescriptor setDFSReplication(short replication) {
+    if (replication < 1 && replication != DEFAULT_DFS_REPLICATION) {
+      throw new IllegalArgumentException(
+          "DFS replication factor cannot be less than 1 if explictly set.");
+    }
+    setValue(DFS_REPLICATION, Short.toString(replication));
     return this;
   }
 }

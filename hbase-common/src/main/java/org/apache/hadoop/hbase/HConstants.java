@@ -124,6 +124,12 @@ public final class HConstants {
   /** Config for pluggable load balancers */
   public static final String HBASE_MASTER_LOADBALANCER_CLASS = "hbase.master.loadbalancer.class";
 
+  /** Config for balancing the cluster by table */
+  public static final String HBASE_MASTER_LOADBALANCE_BYTABLE = "hbase.master.loadbalance.bytable";
+
+  /** The name of the ensemble table */
+  public static final String ENSEMBLE_TABLE_NAME = "hbase:ensemble";
+
   /** Config for pluggable region normalizer */
   public static final String HBASE_MASTER_NORMALIZER_CLASS =
     "hbase.master.normalizer.class";
@@ -349,6 +355,18 @@ public final class HConstants {
    */
   public static final int DEFAULT_HSTORE_OPEN_AND_CLOSE_THREADS_MAX = 1;
 
+  /**
+   * Block updates if memstore has hbase.hregion.memstore.block.multiplier
+   * times hbase.hregion.memstore.flush.size bytes.  Useful preventing
+   * runaway memstore during spikes in update traffic.
+   */
+  public static final String HREGION_MEMSTORE_BLOCK_MULTIPLIER =
+          "hbase.hregion.memstore.block.multiplier";
+
+  /**
+   * Default value for hbase.hregion.memstore.block.multiplier
+   */
+  public static final int DEFAULT_HREGION_MEMSTORE_BLOCK_MULTIPLIER = 4;
 
   /** Conf key for the memstore size at which we flush the memstore */
   public static final String HREGION_MEMSTORE_FLUSH_SIZE =

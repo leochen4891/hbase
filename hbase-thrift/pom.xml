@@ -29,7 +29,7 @@
     <relativePath>..</relativePath>
   </parent>
   <artifactId>hbase-thrift</artifactId>
-  <name>HBase - Thrift</name>
+  <name>Apache HBase - Thrift</name>
   <description>HBase Thrift Server</description>
 
   <build>
@@ -44,6 +44,17 @@
         </includes>
       </resource>
     </resources>
+    <testResources>
+      <testResource>
+        <directory>src/test/resources/META-INF/</directory>
+        <targetPath>META-INF/</targetPath>
+        <includes>
+          <include>LICENSE</include>
+          <include>NOTICE</include>
+        </includes>
+        <filtering>true</filtering>
+      </testResource>
+    </testResources>
 
     <plugins>
       <plugin>
@@ -363,12 +374,12 @@
                     <requireProperty>
                       <property>thrift.version</property>
                       <message>"The Thrift version must be specified."</message>
-                      <regex>0\.9\.0</regex>
+                      <regex>0\.9\.2</regex>
                       <regexMessage>
 -
 -
 [FATAL] ==========================================================================================
-[FATAL] HBase Thrift requires the thrift generator version 0.9.0.
+[FATAL] HBase Thrift requires the thrift generator version 0.9.2.
 [FATAL] Setting it to something else needs to be reviewed for wire and behavior compatibility.
 [FATAL] ==========================================================================================
 -

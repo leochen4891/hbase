@@ -34,6 +34,7 @@ import java.util.HashSet;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
+import java.util.Map.Entry;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
@@ -1256,12 +1257,14 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
         this.assignmentManager.getRegionStates().getAssignmentsByTable();
 
       List<RegionPlan> plans = new ArrayList<RegionPlan>();
+
       //Give the balancer the current cluster state.
       this.balancer.setClusterStatus(getClusterStatus());
-      for (Map<ServerName, List<HRegionInfo>> assignments : assignmentsByTable.values()) {
-        List<RegionPlan> partialPlans = this.balancer.balanceCluster(assignments);
+      for (Entry<TableName, Map<ServerName, List<HRegionInfo>>> e : assignmentsByTable.entrySet()) {
+        List<RegionPlan> partialPlans = this.balancer.balanceCluster(e.getKey(), e.getValue());
         if (partialPlans != null) plans.addAll(partialPlans);
       }
+
       long cutoffTime = System.currentTimeMillis() + maximumBalanceTime;
       int rpCount = 0;  // number of RegionPlans balanced so far
       long totalRegPlanExecTime = 0;
@@ -1580,6 +1583,14 @@ public class HMaster extends HRegionServer implements MasterServices, Server {
       if (hcd.getScope() < 0) {
         String message = "Replication scope for column family "
           + hcd.getNameAsString() + "  must be positive.";
+        warnOrThrowExceptionForFailure(logWarn, CONF_KEY, message, null);
+      }
+
+      // check data replication factor, it can be 0(default value) when user has not explicitly
+      // set the value, in this case we use default replication factor set in the file system.
+      if (hcd.getDFSReplication() < 0) {
+        String message = "HFile Replication for column family " + hcd.getNameAsString()
+            + "  must be greater than zero.";
         warnOrThrowExceptionForFailure(logWarn, CONF_KEY, message, null);
       }
 

@@ -33,6 +33,7 @@ import org.apache.hadoop.hbase.classification.InterfaceStability;
 import org.apache.hadoop.hbase.client.Admin;
 import org.apache.hadoop.hbase.client.Connection;
 import org.apache.hadoop.hbase.client.Table;
+import org.apache.hadoop.hbase.client.security.SecurityCapability;
 import org.apache.hadoop.hbase.ipc.CoprocessorRpcChannel;
 import org.apache.hadoop.hbase.protobuf.ProtobufUtil;
 import org.apache.hadoop.hbase.protobuf.generated.AccessControlProtos;
@@ -47,6 +48,28 @@ import org.apache.hadoop.hbase.util.Bytes;
 public class AccessControlClient {
   public static final TableName ACL_TABLE_NAME =
       TableName.valueOf(NamespaceDescriptor.SYSTEM_NAMESPACE_NAME_STR, "acl");
+
+  /**
+   * Return true if authorization is supported and enabled
+   * @param connection The connection to use
+   * @return true if authorization is supported and enabled, false otherwise
+   * @throws IOException
+   */
+  public static boolean isAuthorizationEnabled(Connection connection) throws IOException {
+    return connection.getAdmin().getSecurityCapabilities()
+        .contains(SecurityCapability.AUTHORIZATION);
+  }
+
+  /**
+   * Return true if cell authorization is supported and enabled
+   * @param connection The connection to use
+   * @return true if cell authorization is supported and enabled, false otherwise
+   * @throws IOException
+   */
+  public static boolean isCellAuthorizationEnabled(Connection connection) throws IOException {
+    return connection.getAdmin().getSecurityCapabilities()
+        .contains(SecurityCapability.CELL_AUTHORIZATION);
+  }
 
   private static BlockingInterface getAccessControlServiceStub(Table ht)
       throws IOException {
@@ -155,7 +178,9 @@ public class AccessControlClient {
   }
 
   /**
-   * List all the userPermissions matching the given pattern.
+   * List all the userPermissions matching the given pattern. If pattern is null, the behavior is
+   * dependent on whether user has global admin privileges or not. If yes, the global permissions
+   * along with the list of superusers would be returned. Else, no rows get returned.
    * @param connection The Connection instance to use
    * @param tableRegex The regular expression string to match against
    * @return - returns an array of UserPermissions
