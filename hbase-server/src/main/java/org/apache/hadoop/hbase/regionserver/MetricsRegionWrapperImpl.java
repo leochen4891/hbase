@@ -171,7 +171,7 @@ public class MetricsRegionWrapperImpl implements MetricsRegionWrapper, Closeable
 
   @Override
   public int getReplicaId() {
-    return 0;
+    return region.getRegionInfo().getReplicaId();
   }
 
 }
