@@ -88,4 +88,9 @@ public interface MetricsRegionWrapper {
    * Get the time spent by coprocessors in this region.
    */
   Map<String, DescriptiveStatistics> getCoprocessorExecutionStatistics();
+
+  /**
+   * Get the replica id of this region. 0: primary, >0: secondary
+   */
+  int getReplicaId();
 }

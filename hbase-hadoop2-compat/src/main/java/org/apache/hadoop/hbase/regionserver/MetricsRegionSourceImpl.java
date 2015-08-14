@@ -197,6 +197,9 @@ public class MetricsRegionSourceImpl implements MetricsRegionSource {
     mrb.addCounter(Interns.info(regionNamePrefix + MetricsRegionSource.NUM_FILES_COMPACTED_COUNT,
         MetricsRegionSource.NUM_FILES_COMPACTED_DESC),
         this.regionWrapper.getNumFilesCompacted());
+    mrb.addCounter(Interns.info(regionNamePrefix + MetricsRegionSource.REPLICA_ID,
+        MetricsRegionSource.REPLICA_ID_DESC),
+        this.regionWrapper.getReplicaId());
     for (Map.Entry<String, DescriptiveStatistics> entry : this.regionWrapper
         .getCoprocessorExecutionStatistics()
         .entrySet()) {
