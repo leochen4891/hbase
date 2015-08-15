@@ -26,10 +26,16 @@ import org.apache.commons.math.stat.descriptive.DescriptiveStatistics;
 public class MetricsRegionWrapperStub implements MetricsRegionWrapper {
   int replicaid = 0;
 
+  /**
+   * Replica ID set to 0
+   */
   public MetricsRegionWrapperStub() {
     this.replicaid = 0;
   }
 
+  /**
+   * Pass in replica ID
+   */
   public MetricsRegionWrapperStub(int replicaid) {
     this.replicaid = replicaid;
   }
