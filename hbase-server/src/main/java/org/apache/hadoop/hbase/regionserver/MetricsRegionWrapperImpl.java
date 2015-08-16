@@ -169,6 +169,9 @@ public class MetricsRegionWrapperImpl implements MetricsRegionWrapper, Closeable
     return coprocessorTimes;
   }
 
+  /**
+   * Get the replica id of this region.
+   */
   @Override
   public int getReplicaId() {
     return region.getRegionInfo().getReplicaId();

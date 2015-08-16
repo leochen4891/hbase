@@ -90,7 +90,7 @@ public interface MetricsRegionWrapper {
   Map<String, DescriptiveStatistics> getCoprocessorExecutionStatistics();
 
   /**
-   * Get the replica id of this region. 0: primary, >0: secondary
+   * Get the replica id of this region.
    */
   int getReplicaId();
 }

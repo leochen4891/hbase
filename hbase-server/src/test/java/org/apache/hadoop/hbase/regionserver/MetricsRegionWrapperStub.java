@@ -105,6 +105,9 @@ public class MetricsRegionWrapperStub implements MetricsRegionWrapper {
     return new HashMap<String, DescriptiveStatistics>();
   }
 
+  /**
+   * Get the replica id of this region.
+   */
   @Override
   public int getReplicaId() {
     return replicaid;
